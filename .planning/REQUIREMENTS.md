@@ -42,8 +42,8 @@
 ### Service Pages
 
 - [ ] **SERV-01**: All service pages rebuilt from services.json (Gynecology, Obstetrics, Hormone Therapy, Biote Hormone Therapy, and all others in data)
-- [ ] **SERV-02**: Each service page includes visible FAQ section with Q&A relevant to that service
-- [ ] **SERV-03**: FAQPage schema.org JSON-LD on every service page
+- [x] **SERV-02**: Each service page includes visible FAQ section with Q&A relevant to that service
+- [x] **SERV-03**: FAQPage schema.org JSON-LD on every service page
 
 ### SEO Landing Pages
 
@@ -52,7 +52,7 @@
 
 ### Blog
 
-- [ ] **BLOG-01**: Blog index page with all posts listed and category filtering
+- [x] **BLOG-01**: Blog index page with all posts listed and category filtering
 - [ ] **BLOG-02**: All existing SM blog posts migrated as individual pages with original content
 - [ ] **BLOG-03**: Article schema.org JSON-LD on every blog post
 
@@ -60,7 +60,7 @@
 
 - [ ] **LOC-01**: Locations listing page with all clinic locations from locations.json
 - [ ] **LOC-02**: Individual location detail pages with address, phone, and directions CTA
-- [ ] **LOC-03**: MedicalClinic schema.org JSON-LD on each location page
+- [x] **LOC-03**: MedicalClinic schema.org JSON-LD on each location page
 
 ### Careers
 
@@ -126,16 +126,16 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DOC-02 | Phase 2 | Pending |
 | DOC-03 | Phase 2 | Pending |
 | SERV-01 | Phase 2 | Pending |
-| SERV-02 | Phase 2 | Pending |
-| SERV-03 | Phase 2 | Pending |
+| SERV-02 | Phase 2 | Complete |
+| SERV-03 | Phase 2 | Complete |
 | SEOLP-01 | Phase 2 | Pending |
 | SEOLP-02 | Phase 2 | Pending |
-| BLOG-01 | Phase 2 | Pending |
+| BLOG-01 | Phase 2 | Complete |
 | BLOG-02 | Phase 2 | Pending |
 | BLOG-03 | Phase 2 | Pending |
 | LOC-01 | Phase 2 | Pending |
 | LOC-02 | Phase 2 | Pending |
-| LOC-03 | Phase 2 | Pending |
+| LOC-03 | Phase 2 | Complete |
 | CAR-01 | Phase 2 | Pending |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |

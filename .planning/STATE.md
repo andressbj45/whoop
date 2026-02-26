@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** A warm, trustworthy online presence that makes patients feel confident booking with Stella Mattina — whether they find it through Google, ChatGPT, or a recommendation.
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 2 — Content Pages
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation)
-Plan: 5 of 5 in current phase
-Status: Awaiting human checkpoint (01-05 visual verification)
-Last activity: 2026-02-26 — Plan 01-05 automated pre-flight: build clean, Plausible confirmed, no GA4/Meta Pixel, content counts correct, dev server live at localhost:3000
+Phase: 2 of 4 (Content Pages)
+Plan: 1 of 8 in current phase
+Status: Executing — plan 02-01 complete
+Last activity: 2026-02-26 — 02-01 complete: remotePatterns, location-addresses.ts, faqs.ts, blog normalizeCategories
 
-Progress: [████░░░░░░] 24%
+Progress: [████░░░░░░] 27%
 
 ## Performance Metrics
 
@@ -38,6 +38,7 @@ Progress: [████░░░░░░] 24%
 | Phase 01-foundation P03 | 5min | 2 tasks | 6 files |
 | Phase 01-foundation P04 | 3min | 2 tasks | 17 files |
 | Phase 01-foundation P05 | 3min | 1 tasks | 0 files |
+| Phase 02-content-pages P01 | 6min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -56,6 +57,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: shadcn --defaults flag used instead of --yes to avoid interactive color prompt blocking automation
 - [01-04]: JSON data files copied to stella-mattina/src/data/ — Turbopack cannot resolve imports outside the Next.js project root via relative paths
 - [01-04]: MobileNav is the only 'use client' component in layout — all other layout components are Server Components
+- [02-01]: normalizeCategories uses unknown[] input with runtime typeof checks to handle malformed blog_posts.json category objects without modifying source JSON
+- [02-01]: location-addresses.ts structured as a standalone lookup table so page components need no changes when addresses are verified against live site
 
 ### Pending Todos
 
@@ -70,5 +73,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: 01-05-PLAN.md checkpoint — Automated pre-flight checks passed; awaiting human visual verification at http://localhost:3000 before proceeding to Phase 2
+Stopped at: Completed 02-01-PLAN.md — data layer blocking issues resolved. Next: 02-02
 Resume file: None
