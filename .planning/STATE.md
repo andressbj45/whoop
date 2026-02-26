@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 2 of 4 (Content Pages)
-Plan: 4 of 8 in current phase
-Status: Executing — plan 02-04 complete
-Last activity: 2026-02-26 — 02-04 complete: blog post detail pages with Article JSON-LD, 61 SSG routes
+Plan: 5 of 8 in current phase
+Status: Executing — plan 02-05 complete
+Last activity: 2026-02-26 — 02-05 complete: location detail pages with MedicalClinic JSON-LD, 7 SSG routes
 
-Progress: [█████░░░░░] 38%
+Progress: [█████░░░░░] 44%
 
 ## Performance Metrics
 
@@ -41,6 +41,8 @@ Progress: [█████░░░░░] 38%
 | Phase 02-content-pages P01 | 6min | 2 tasks | 4 files |
 | Phase 02-content-pages P02 | 8min | 1 tasks | 1 files |
 | Phase 02-content-pages P04 | 3 | 1 tasks | 9 files |
+| Phase 02-content-pages P05 | 2min | 1 tasks | 1 files |
+| Phase 02-content-pages P03 | 2min | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -65,6 +67,10 @@ Recent decisions affecting current work:
 - [Phase 02-content-pages]: Next.js 15 async params: type as Promise<{ slug: string }> and await in both generateMetadata and page component
 - [Phase 02-content-pages]: WithContext<FAQPage> and WithContext<Article> required for schema-dts types when @context is present — bare FAQPage/Article types reject @context field
 - [Phase 02-content-pages]: renderBlogContent strips tag cloud using word-count heuristic (>4 words per line = real content) rather than keyword matching
+- [Phase 02-content-pages]: ServiceFaqSection uses native details/summary HTML accordion — no shadcn, no client JS needed
+- [Phase 02-content-pages]: Module-level const service = getServiceBySlug(SLUG)! allows export const metadata to reference service data at build time
+- [Phase 02-content-pages]: patient-information page uses FAQPage schema with empty mainEntity — ServiceFaqSection renders null when faqs.length === 0
+- [02-05]: MedicalClinic JSON-LD uses Record<string,unknown> — schema-dts MedicalClinic union type (MedicalClinicLeaf | CovidTestingFacility | string) is incompatible with WithContext<T extends Thing>
 
 ### Pending Todos
 

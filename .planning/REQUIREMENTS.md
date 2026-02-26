@@ -41,14 +41,14 @@
 
 ### Service Pages
 
-- [ ] **SERV-01**: All service pages rebuilt from services.json (Gynecology, Obstetrics, Hormone Therapy, Biote Hormone Therapy, and all others in data)
+- [x] **SERV-01**: All service pages rebuilt from services.json (Gynecology, Obstetrics, Hormone Therapy, Biote Hormone Therapy, and all others in data)
 - [x] **SERV-02**: Each service page includes visible FAQ section with Q&A relevant to that service
 - [x] **SERV-03**: FAQPage schema.org JSON-LD on every service page
 
 ### SEO Landing Pages
 
-- [ ] **SEOLP-01**: Existing WordPress SEO landing pages rebuilt at exact same URL paths (e.g. `/gynecologist-dallas`, `/biote-hormone-therapy`, `/hormone-pellet-therapy-dallas`)
-- [ ] **SEOLP-02**: SEO landing pages include local keyword targeting and FAQ blocks
+- [x] **SEOLP-01**: Existing WordPress SEO landing pages rebuilt at exact same URL paths (e.g. `/gynecologist-dallas`, `/biote-hormone-therapy`, `/hormone-pellet-therapy-dallas`)
+- [x] **SEOLP-02**: SEO landing pages include local keyword targeting and FAQ blocks
 
 ### Blog
 
@@ -125,11 +125,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DOC-01 | Phase 2 | Pending |
 | DOC-02 | Phase 2 | Complete |
 | DOC-03 | Phase 2 | Complete |
-| SERV-01 | Phase 2 | Pending |
+| SERV-01 | Phase 2 | Complete |
 | SERV-02 | Phase 2 | Complete |
 | SERV-03 | Phase 2 | Complete |
-| SEOLP-01 | Phase 2 | Pending |
-| SEOLP-02 | Phase 2 | Pending |
+| SEOLP-01 | Phase 2 | Complete |
+| SEOLP-02 | Phase 2 | Complete |
 | BLOG-01 | Phase 2 | Complete |
 | BLOG-02 | Phase 2 | Complete |
 | BLOG-03 | Phase 2 | Complete |
