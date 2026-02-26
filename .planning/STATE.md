@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 2 of 4 (Content Pages)
-Plan: 1 of 8 in current phase
-Status: Executing — plan 02-01 complete
-Last activity: 2026-02-26 — 02-01 complete: remotePatterns, location-addresses.ts, faqs.ts, blog normalizeCategories
+Plan: 2 of 8 in current phase
+Status: Executing — plan 02-02 complete
+Last activity: 2026-02-26 — 02-02 complete: doctor bio detail pages with Physician JSON-LD, 29 SSG routes
 
-Progress: [████░░░░░░] 27%
+Progress: [████░░░░░░] 30%
 
 ## Performance Metrics
 
@@ -39,6 +39,7 @@ Progress: [████░░░░░░] 27%
 | Phase 01-foundation P04 | 3min | 2 tasks | 17 files |
 | Phase 01-foundation P05 | 3min | 1 tasks | 0 files |
 | Phase 02-content-pages P01 | 6min | 2 tasks | 4 files |
+| Phase 02-content-pages P02 | 8min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -59,6 +60,8 @@ Recent decisions affecting current work:
 - [01-04]: MobileNav is the only 'use client' component in layout — all other layout components are Server Components
 - [02-01]: normalizeCategories uses unknown[] input with runtime typeof checks to handle malformed blog_posts.json category objects without modifying source JSON
 - [02-01]: location-addresses.ts structured as a standalone lookup table so page components need no changes when addresses are verified against live site
+- [Phase 02-content-pages]: schema-dts MedicalSpecialty is strict enum — use Record<string,unknown> for jsonLd when custom specialty strings conflict with type
+- [Phase 02-content-pages]: Next.js 15 async params: type as Promise<{ slug: string }> and await in both generateMetadata and page component
 
 ### Pending Todos
 
@@ -73,5 +76,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-01-PLAN.md — data layer blocking issues resolved. Next: 02-02
+Stopped at: Completed 02-02-PLAN.md — doctor bio detail pages built. Next: 02-03
 Resume file: None

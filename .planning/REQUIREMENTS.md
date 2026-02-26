@@ -36,8 +36,8 @@
 ### Doctor Directory
 
 - [ ] **DOC-01**: Doctor directory listing page showing all practitioners from practitioners.json
-- [ ] **DOC-02**: Individual doctor bio pages with photo, credentials, specialties, and "Book with [Name]" CTA
-- [ ] **DOC-03**: Physician schema.org JSON-LD on each doctor bio page
+- [x] **DOC-02**: Individual doctor bio pages with photo, credentials, specialties, and "Book with [Name]" CTA
+- [x] **DOC-03**: Physician schema.org JSON-LD on each doctor bio page
 
 ### Service Pages
 
@@ -123,8 +123,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-01 | Phase 2 | Pending |
 | CONT-02 | Phase 2 | Pending |
 | DOC-01 | Phase 2 | Pending |
-| DOC-02 | Phase 2 | Pending |
-| DOC-03 | Phase 2 | Pending |
+| DOC-02 | Phase 2 | Complete |
+| DOC-03 | Phase 2 | Complete |
 | SERV-01 | Phase 2 | Pending |
 | SERV-02 | Phase 2 | Complete |
 | SERV-03 | Phase 2 | Complete |
