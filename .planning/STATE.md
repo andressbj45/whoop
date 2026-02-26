@@ -10,31 +10,33 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 1 of 5 in current phase
+Plan: 4 of 5 in current phase
 Status: In progress
-Last activity: 2026-02-26 — Plan 01-01 complete: Next.js 16 project scaffolded
+Last activity: 2026-02-26 — Plan 01-04 complete: Global layout shell built (Header, Footer, PageWrapper, BookingButton, MobileNav)
 
-Progress: [█░░░░░░░░░] 5%
+Progress: [████░░░░░░] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2min
-- Total execution time: 2min
+- Total plans completed: 4
+- Average duration: 4min
+- Total execution time: 15min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 1 | 2min | 2min |
+| 01-foundation | 4 | 15min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2min)
-- Trend: Baseline established
+- Last 5 plans: 01-01 (2min), 01-02 (5min), 01-03 (5min), 01-04 (3min)
+- Trend: Consistent
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 2min | 1 tasks | 22 files |
+| Phase 01-foundation P03 | 5min | 2 tasks | 6 files |
+| Phase 01-foundation P04 | 3min | 2 tasks | 17 files |
 
 ## Accumulated Context
 
@@ -46,10 +48,13 @@ Recent decisions affecting current work:
 - [Foundation]: No GA4 or Meta Pixel — use Plausible or Vercel Analytics only (HIPAA risk on medical site)
 - [Foundation]: All content served from five pre-extracted JSON files via typed content layer at build time
 - [All phases]: WordPress URL paths must be preserved exactly in Next.js app/ directory to protect SEO equity
-- [Phase 2]: blog_posts.json is 594MB — deduplicate by slug and sanitize HTML before rendering
+- [Phase 2]: blog_posts.json full_text confirmed as plain text (not HTML or WP blocks) — safe to render directly, no HTML sanitization needed
+- [01-03]: LOCATION_SHORT_NAMES must map actual SEO-pattern slugs from locations.json (e.g. "gynecologist-dallas-bishop-arts"), not assumed verbose slugs
 - [01-01]: shadcn --defaults flag used instead of --yes to avoid interactive color prompt blocking automation
 - [01-01]: shadcn init run before any brand token customization to prevent globals.css overwrite
 - [Phase 01-foundation]: shadcn --defaults flag used instead of --yes to avoid interactive color prompt blocking automation
+- [01-04]: JSON data files copied to stella-mattina/src/data/ — Turbopack cannot resolve imports outside the Next.js project root via relative paths
+- [01-04]: MobileNav is the only 'use client' component in layout — all other layout components are Server Components
 
 ### Pending Todos
 
@@ -57,12 +62,12 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Phase 2]: Blog post body format in blog_posts.json is unconfirmed (raw HTML vs Markdown vs WP block JSON) — inspect before Phase 2 planning
+- [RESOLVED - 01-03]: Blog post body format in blog_posts.json confirmed as plain text — no sanitization needed
 - [Phase 1]: Verify trailing slash behavior on existing WordPress canonical URLs before configuring Next.js trailingSlash setting
 - [Phase 2]: FAQPage schema eligibility criteria for Google AI Overviews are evolving — validate against current Search Central docs before implementing service page FAQs
 
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 01-01-PLAN.md — Next.js 16 scaffold done, ready for Plan 01-02
+Stopped at: Completed 01-04-PLAN.md — Layout shell done; Header, Footer, PageWrapper, BookingButton, MobileNav built; localhost:3000 returns HTTP 200 with SM branding
 Resume file: None
