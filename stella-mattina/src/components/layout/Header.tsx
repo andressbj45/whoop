@@ -42,7 +42,16 @@ export function Header() {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
+          <a
+            href="https://mycw160.ecwcloud.com/portal22103/jsp/100mp/login_otp.jsp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center text-xs font-medium tracking-wide text-white/60 hover:text-white transition-colors"
+          >
+            Patient Portal ↗
+          </a>
+          <span className="hidden md:block h-4 w-px bg-white/20" aria-hidden="true" />
           <BookingButton className="hidden sm:inline-flex items-center justify-center rounded-md border border-white font-semibold text-white hover:bg-white hover:text-sm-navy transition-colors px-4 py-2 text-sm" />
           <MobileNav />
         </div>
