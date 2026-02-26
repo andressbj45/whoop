@@ -29,7 +29,14 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The content layer reads practitioners, locations, services, blog posts, and contact info from JSON files with no runtime errors
   4. Plausible or Vercel Analytics loads on every page without Google Analytics or any cookie-consent prompt
   5. The site renders correctly on a 375px mobile screen (no horizontal scroll, no clipped content)
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Scaffold Next.js 16 project with all dependencies (FOUND-04)
+- [ ] 01-02-PLAN.md — SM brand tokens in globals.css + Plausible analytics in root layout (FOUND-02, FOUND-03, DESIGN-02)
+- [ ] 01-03-PLAN.md — Typed content layer: 5 modules reading extracted JSON files (FOUND-01)
+- [ ] 01-04-PLAN.md — Layout shell: Header, Footer, PageWrapper, BookingButton + shell homepage (DESIGN-01, DESIGN-03, DESIGN-04)
+- [ ] 01-05-PLAN.md — Human verification: brand, mobile responsive, analytics, Book Now CTA (DESIGN-02)
 
 ### Phase 2: Content Pages
 **Goal**: Every patient-facing content page exists and is viewable with real SM content and correct schema markup
@@ -70,7 +77,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/5 | Ready to execute | - |
 | 2. Content Pages | 0/TBD | Not started | - |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. SEO Hardening | 0/TBD | Not started | - |
