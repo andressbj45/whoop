@@ -25,9 +25,9 @@ export function MobileNav() {
           aria-label="Open navigation menu"
           className="flex md:hidden flex-col gap-1.5 p-2"
         >
-          <span className="block h-0.5 w-6 bg-sm-navy" />
-          <span className="block h-0.5 w-6 bg-sm-navy" />
-          <span className="block h-0.5 w-6 bg-sm-navy" />
+          <span className="block h-0.5 w-6 bg-white" />
+          <span className="block h-0.5 w-6 bg-white" />
+          <span className="block h-0.5 w-6 bg-white" />
         </button>
       </SheetTrigger>
       <SheetContent side="right" className="w-72 pt-8">
