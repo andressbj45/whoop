@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 5 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Scaffold Next.js 16 project with all dependencies (FOUND-04)
+- [x] 01-01-PLAN.md — Scaffold Next.js 16 project with all dependencies (FOUND-04)
 - [ ] 01-02-PLAN.md — SM brand tokens in globals.css + Plausible analytics in root layout (FOUND-02, FOUND-03, DESIGN-02)
 - [ ] 01-03-PLAN.md — Typed content layer: 5 modules reading extracted JSON files (FOUND-01)
 - [ ] 01-04-PLAN.md — Layout shell: Header, Footer, PageWrapper, BookingButton + shell homepage (DESIGN-01, DESIGN-03, DESIGN-04)
@@ -77,7 +77,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/5 | Ready to execute | - |
+| 1. Foundation | 1/5 | In Progress|  |
 | 2. Content Pages | 0/TBD | Not started | - |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. SEO Hardening | 0/TBD | Not started | - |

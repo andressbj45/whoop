@@ -10,7 +10,7 @@
 - [ ] **FOUND-01**: Content layer module (`src/lib/content/`) reads the 5 extracted JSON files (practitioners, locations, services, blog_posts, contact_info) as the single source of truth
 - [ ] **FOUND-02**: SM brand design tokens (colors, fonts, spacing) defined in Tailwind v4 config — extracted from existing WordPress theme
 - [ ] **FOUND-03**: HIPAA-safe analytics configured (Plausible or privacy-first solution — no GA4 on medical/service pages)
-- [ ] **FOUND-04**: Next.js 16.x project scaffolded with App Router, Tailwind v4, shadcn/ui, and schema-dts
+- [x] **FOUND-04**: Next.js 16.x project scaffolded with App Router, Tailwind v4, shadcn/ui, and schema-dts
 
 ### Design System
 
@@ -112,7 +112,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-01 | Phase 1 | Pending |
 | FOUND-02 | Phase 1 | Pending |
 | FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Complete |
 | DESIGN-01 | Phase 1 | Pending |
 | DESIGN-02 | Phase 1 | Pending |
 | DESIGN-03 | Phase 1 | Pending |
@@ -150,4 +150,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after roadmap creation — all requirements mapped*
+*Last updated: 2026-02-26 after plan 01-01 — FOUND-04 marked complete*
