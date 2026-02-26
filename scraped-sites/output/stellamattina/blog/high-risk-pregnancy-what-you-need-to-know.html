@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High-Risk Pregnancy – What You Need to Know | Stella Mattina Health Blog</title>
+  <meta name='description' content='Learn how to manage a high-risk pregnancy with expert care. Discover causes, symptoms, and how to protect your health and your baby’s well-being.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-white/60 mb-5">
+      <a href="../index.html" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-white">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-white/90">High-Risk Pregnancy – What You Need to Know</span>
+    </nav>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">ObGyn</span><span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Pregnancy</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white leading-snug mb-4">High-Risk Pregnancy – What You Need to Know</h1>
+    <div class="flex items-center gap-3 text-white/60 text-sm">
+      <span>February 22, 2024</span>
+      <span>·</span><span>By Dr. Theodore J. T. Krum</span>
+    </div>
+  </div>
+</section>
+<article class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <p class="text-lg text-muted leading-relaxed mb-6">Navigating through pregnancy is an exhilarating journey for most women. But unfortunately, that’s not always the case if you have a high-risk pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">High-risk pregnancies can turn this life milestone into a challenging and scary period due to its complexities and potential threats to the health of both mom and baby.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If that’s you, we’ve prepared a special guide to help you understand high-risk pregnancies, including diagnosis, specialized care, and habits to optimize your health and mitigate risks.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So, keep reading to delve into risk factors, medical assessments to help pregnant women identify potential pregnancy complications, and strategies to overcome the challenges of a high-risk pregnancy so that you can experience a safe and healthy journey to motherhood.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Table of Contents</p>
+<p class="text-textsecondary leading-relaxed mb-4">What is a High-Risk Pregnancy?</p>
+<p class="text-textsecondary leading-relaxed mb-4">Identifying a High-Risk Pregnancy</p>
+<p class="text-textsecondary leading-relaxed mb-4">Medical Assessments to Determine High-Risk Pregnancies</p>
+<p class="text-textsecondary leading-relaxed mb-4">What Are the Main Pregnancy Complications if You’re Considered High Risk?</p>
+<p class="text-textsecondary leading-relaxed mb-4">Managing a High-Risk Pregnancy</p>
+<p class="text-textsecondary leading-relaxed mb-4">High-Risk Pregnancy Appointments Timeline</p>
+<p class="text-textsecondary leading-relaxed mb-4">Let’s start with the basics.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Having a high-risk pregnancy means having certain factors that increase the likelihood of complications and threats for the mother, the baby, or both during gestation and delivery.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These factors can vary widely and may include:</p>
+<p class="text-textsecondary leading-relaxed mb-4">These are the most common factors for a pregnancy to be considered high risk. But that doesn’t mean that every woman who is older than 35 will experience pregnancy complications or premature labor, for example.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Many other factors, including overall health, prenatal care, and lifestyle choices, play significant roles in determining pregnancy outcomes.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But suppose your doctor determines that your pregnancy is considered high risk. In that case, closer monitoring and specialized care are paramount to minimize your risks and protect you and your baby during gestation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So, as soon as you find out you’re pregnant, see your healthcare provider – because the earlier you identify risk factors, the better you can implement appropriate measures to ensure a safe and healthy pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Now that you know the main factors that impact a healthy pregnancy, let’s dive deep into some of them and the medical assessments you’ll need to do to confirm or rule out a high-risk pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Here are some typical indicators and early warning signs of high-risk pregnancy:</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you suffer from chronic conditions such as diabetes, hypertension, thyroid disorders, autoimmune diseases, or certain infections, you’re at higher risk for complications during your pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">For this reason, you should give your doctor details of your medical history so they can follow your pregnancy with closer, specialized care.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Many people tend to believe that getting pregnant after the late 30s or 40s is more challenging. But for as long as you ovulate, there’s still a high risk of pregnancy and your age can come into play. That’s because advanced maternal age (typically defined as 35 years or older) is one of the main risk factors for certain complications during pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">However, young maternal age can also present its own set of challenges and considerations for maternal and fetal health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Teenage pregnancy may increase the likelihood of complications such as preterm labor, low birth weight, and preeclampsia. Additionally, young mothers may face social, economic, and emotional challenges that can impact their pregnancy outcomes.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Factors like inadequate prenatal care, limited access to resources, and higher rates of smoking or substance abuse among younger mothers can contribute to increased risks during pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A history of miscarriages, stillbirths, preterm births, or cesarean deliveries may indicate an increased risk for similar complications in future pregnancies.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Pregnancies with twins, triplets, or higher-order multiples are at high risk because they can trigger some complications like preterm birth, low birth weight, and preeclampsia.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Gestational diabetes, preeclampsia, placental abnormalities, and fetal growth restriction are examples of health conditions that can develop during pregnancy and may increase the risk of complications.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Smoking, alcohol consumption, substance abuse, poor nutrition, and obesity may all trigger a high-risk pregnancy. So, the best way to ensure a healthy gestation is to start preparing your body even before conceiving.</p>
+<p class="text-textsecondary leading-relaxed mb-4">By keeping a healthy weight, adopting a balanced diet, and ceasing smoking, alcohol, and substance abuse, you can significantly mitigate the risks and experience a healthy journey to motherhood.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A family history of genetic disorders or chromosomal abnormalities may increase the risk of certain complications and the development of specific conditions in the fetus.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So, suppose you have a family history of genetic disorders. In that case, your doctor may recommend comprehensive assessments and screenings at the earliest stages of pregnancy. This is so you can adopt the proper measures to manage any eventual condition and make informed decisions about pursuing your pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In addition to the indicators described above, some specific prenatal tests throughout your pregnancy help determine if you’re at higher risk.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These assessments are critical, as early identification of threats and close monitoring are the best way of managing high-risk pregnancies and optimizing your health and your baby’s.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Prenatal screenings: Screening tests such as ultrasound scans, blood tests, and genetic screenings can help identify potential risks and abnormalities in the fetus.</p>
+<p class="text-textsecondary leading-relaxed mb-4">High blood pressure monitoring: Throughout pregnancy, your doctor will regularly check if you have high blood pressure to detect hypertension, which can lead to complications such as preeclampsia.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Glucose tolerance testing: Screening for gestational diabetes is typically performed between 24 and 28 weeks of pregnancy, especially if you have a family history of diabetes or obesity.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Fetal monitoring: Nonstress tests (NSTs) and biophysical profiles (BPPs) may be used to assess the fetus’s well-being and detect signs of fetal distress.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Maternal serum marker tests: These blood tests measure specific substances in the mother’s blood to assess the risk of chromosomal abnormalities or neural tube defects in the fetus.</p>
+<p class="text-textsecondary leading-relaxed mb-4">After identifying a high-risk pregnancy, it’s time to explore why it’s so important to have the proper care. High-risk pregnancies can lead to severe complications and risks that pose significant challenges for both you and your baby.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Here are some of the main pregnancy complications:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Preeclampsia is a condition characterized by high blood pressure and signs of damage to other organ systems, such as liver and kidneys. If left untreated, preeclampsia can progress to eclampsia, which involves seizures. Both conditions can be life-threatening for both you and your baby.</p>
+<p class="text-textsecondary leading-relaxed mb-4">We call birth before 37 weeks of gestation “preterm birth.” It can lead to a range of complications for your baby, including respiratory distress syndrome, developmental delays, and long-term health issues.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Preterm birth is more common in high-risk pregnancies due to factors such as preeclampsia, placental abnormalities, and maternal health problems.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Gestational diabetes is a type of diabetes that develops in pregnant women, leading to high blood sugar levels during pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If not properly managed, it can lead to complications such as macrosomia (large birth weight), birth injuries, and neonatal hypoglycemia.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In addition, gestational diabetes also increases the risk of developing type 2 diabetes later in life for both you and your baby.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Placental abnormalities, such as placenta previa (where the placenta partially or completely covers the cervix) or placental abruption (where the placenta separates from the uterine wall) can lead to significant bleeding and severe risks to both of you.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Fetal growth restriction occurs when the baby does not grow at the expected rate in your womb. It can result from factors such as placental insufficiency, maternal health problems, or genetic factors.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Fetal growth restriction increases the risk of stillbirth, neonatal complications, and long-term health issues for your baby.</p>
+<p class="text-textsecondary leading-relaxed mb-4">High-risk pregnancies may increase the likelihood of needing a C-section due to complications such as fetal distress, placental abnormalities, or maternal health problems.</p>
+<p class="text-textsecondary leading-relaxed mb-4">High-risk pregnancies can also pose risks to the mother’s health, including complications such as postpartum bleeding, blood clots, and worsening of pre-existing medical conditions such as diabetes or hypertension.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These are just some of the severe complications and risks associated with high-risk pregnancies. So, if you’re at high risk, it’s essential to receive close monitoring to mitigate and manage risks for a healthy delivery.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Next, we’ll show you how to manage a pregnancy high risk and the main appointments you should have to get specialized care.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Despite all the potential complications, a high-risk pregnancy can be successful as long as there’s</p>
+<p class="text-textsecondary leading-relaxed mb-4">With the right care and support, you can achieve a successful outcome and welcome a healthy baby into the world. So, don’t fret. Just make sure you get the proper care with a perinatal specialist.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Here are some strategies and essential medical interventions for managing your high-risk pregnancy:</p>
+<p class="text-textsecondary leading-relaxed mb-4">It goes without saying that you should attend all scheduled prenatal appointments and follow your healthcare provider’s recommendations for monitoring and managing your pregnancy. Regular prenatal care allows for early detection and intervention for any potential complications.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Depending on your specific risk factors and medical history, your healthcare provider may refer you to a maternal-fetal medicine specialist, obstetricians, or other healthcare professionals with expertise in managing high-risk pregnancies.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you don’t get a reference from your healthcare provider, you should easily find a maternal-fetal medicine specialist by searching for a “high-risk pregnancy center” or “high-risk ObGyn near me.”</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you have conditions like hypertension or gestational diabetes, monitoring high blood pressure and blood sugar levels regularly is essential for reducing the risk of complications such as preeclampsia or macrosomia. So, don’t skip any appointments.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Eat a balanced diet rich in nutrients, exercise regularly (under the guidance of your healthcare provider), and avoid harmful substances such as tobacco, alcohol, and illicit drugs. Maintaining a healthy lifestyle can help reduce the risk of complications and promote your and your baby’s overall well-being.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Depending on your medical conditions, your healthcare provider may prescribe medications or treatments to manage them and reduce the risk of complications. This may include medications to control blood pressure, insulin therapy for gestational diabetes, or anticoagulants to prevent blood clots.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Let’s now talk about the appointments you must not miss if your pregnancy is considered high risk.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Here’s a general timeline for appointments and medical assessments you should do from the moment you decide to get pregnant until the last trimester of your high-risk pregnancy:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Expecting a high-risk pregnancy means you require specialized care and attention. At Stella Mattina, our experienced doctors dedicate themselves to providing comprehensive and compassionate care for high-risk pregnant women.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Don’t leave your health to chance – schedule a consultation with our high-risk pregnancy and maternal-fetal medicine specialists today and experience the difference of personalized care tailored to your unique needs.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you’re looking for a high-risk pregnancy doctor in Dallas, contact us today.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You and your baby deserve the best! Schedule your appointment.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Main image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Dr. Krum is currently in practice in Arlington, TX. He received his undergraduate degree at Texas A&M University, then attended UTMB Galveston for medical school, finishing in 1986, completing his residency there in 1990. Providing a full range of obstetrical and gynecological care, he specializes in the treatment of endometriosis and robotic surgery. He arranges his schedule so that same-day appointments are usually available.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    <div class="mt-8 pt-6 border-t border-border flex flex-wrap gap-2"><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">complications of high-risk pregnancies</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">high-risk pregnancy</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">high-risk pregnancy appointments timeline</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">identifying a high-risk pregnancy</span></div>
+  </div>
+</article>
+<section class="py-12 bg-creamsec border-y border-border">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-warmtext mb-3">Ready to Take the Next Step?</h2>
+    <p class="text-textsecondary mb-6">Speak with one of our expert providers — we're here to support your health journey.</p>
+    <a href="../schedule-appointment.html" class="inline-block bg-orange text-white font-semibold px-8 py-3.5 rounded-full hover:bg-orange/90 transition-colors">
+      Schedule Appointment
+    </a>
+  </div>
+</section>
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-warmtext mb-8">More Health Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 25, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent he…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 23, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 19, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over week…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-textprimary text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../index.html" class="text-white/70 hover:text-white text-sm">← Back to Home</a>
+    <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+    <a href="../schedule-appointment.html" class="bg-orange text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange/90">Schedule Now</a>
+  </div>
+</footer>
+</body>
+</html>

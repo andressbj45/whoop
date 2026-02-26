@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ginecólogo Dallas | Stella Mattina</title>
+  <meta name='description' content='Encuentra tu ginecólogo Dallas en Stella Mattina. Atención compasiva de un OBGYN Dallas con citas fáciles y cuidado de la mujer en cada etapa.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="index.html" class="flex-shrink-0">
+      <img src="../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-creamsec py-16 px-5">
+  <div class="max-w-4xl mx-auto">
+    <nav class="text-sm text-warmtext/60 mb-5 flex items-center flex-wrap gap-1">
+      <a href="index.html" class="hover:opacity-60">Home</a>
+      <span class="mx-2 opacity-40">/</span>
+      <a href="services.html" class="hover:opacity-60">Services</a><span class="mx-2 opacity-40">/</span>
+      <span class="text-warmtext/90">Ginecólogo Dallas</span>
+    </nav>
+    <h1 class="text-4xl sm:text-5xl font-bold text-warmtext mb-4">Ginecólogo Dallas</h1>
+    <p class='text-muted text-lg max-w-2xl'>Encuentra tu ginecólogo Dallas en Stella Mattina. Atención compasiva de un OBGYN Dallas con citas fáciles y cuidado de la mujer en cada etapa.</p>
+  </div>
+</section>
+<div class="wave" style="background:#f5e9db"><svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;color:#fdf6ef"><path d="M0 0L1280 0L1280 36C1280 36 960 72 640 72C320 72 0 36 0 36L0 0Z" fill="currentColor"/></svg></div>
+<section class="py-16 bg-cream">
+  <div class="max-w-4xl mx-auto px-5">
+    <div class="prose max-w-none">
+      <h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Encuentra a nuestro equipo de ginecólogos en Dallas</h2>
+<p class="text-textsecondary leading-relaxed mb-4">Women’s Specialty Center by Stella Mattina</p>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">6300 Samuell Blvd #154 Dallas, TX 75228</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">1135 N Bishop Ave, Dallas, TX 75208, United States</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Atención compasiva con Stella Mattina</h2>
+<p class="text-textsecondary leading-relaxed mb-4">Encontrar un ginecólogo de confianza en Dallas es un paso fundamental para cuidar tu salud y bienestar. En Stella Mattina, contamos con un equipo de ginecólogos que brindan atención compasiva y personalizada en un ambiente cálido y acogedor. Ya sea que necesites chequeos preventivos, respuestas sobre tu salud femenina o acompañamiento continuo, nuestros especialistas están aquí para ti.</p>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Sobre nuestros servicios de OBGYN Dallas</h2>
+<p class="text-textsecondary leading-relaxed mb-4">En Stella Mattina entendemos que la salud de cada mujer es única. Por eso, nuestros servicios de ginecología y obstetricia están diseñados para acompañarte en cada etapa de la vida: desde la adolescencia, el embarazo y la maternidad, hasta la menopausia y más allá. ¿Por qué elegir Stella Mattina? Médicos certificados y con experiencia Servicios completos de salud femenina Un enfoque cómodo y centrado en la paciente Ubicaciones convenientes en el área de Dallas</p>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Nuestros servicios</h2>
+<p class="text-textsecondary leading-relaxed mb-4">Ofrecemos una gama completa de cuidados de salud para la mujer, incluyendo:</p>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Exámenes anuales de bienestar femenino</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Atención prenatal y de maternidad</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Apoyo en fertilidad y planificación familiar</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Cuidado durante la menopausia y terapia hormonal</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Chequeos preventivos y diagnósticos</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">¿Cuándo ir al ginecólogo?</h2>
+<p class="text-textsecondary leading-relaxed mb-4">Muchas mujeres se preguntan: ¿cuándo ir al ginecólogo? Nuestra respuesta: nunca es demasiado pronto para priorizar tu salud. Razones comunes para programar una cita incluyen: Exámenes anuales y cuidado preventivo Períodos irregulares o dolor menstrual Dudas sobre planificación familiar o fertilidad Embarazo y chequeos prenatales Síntomas de la menopausia y preguntas sobre hormonas Y más</p>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Preguntas frecuentes</h2>
+<p class="text-textsecondary leading-relaxed mb-4">Aquí respondemos a las dudas más comunes sobre tu cuidado de salud femenina.</p>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Opiniones de nuestras pacientes en Dallas</h2>
+<h2 class="text-2xl font-bold text-warmtext mt-8 mb-3">Agenda tu cita hoy mismo</h2>
+<p class="text-textsecondary leading-relaxed mb-4">Tu salud es demasiado importante como para esperar. Ya sea que busques ginecólogos en Dallas para cuidado preventivo o apoyo continuo de un OBGYN Dallas de confianza, en Stella Mattina estamos listos para darte la atención que mereces.</p>
+
+    </div>
+  </div>
+</section>
+<div class="wave" style="background:#fdf6ef"><svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;color:#1c348c"><path d="M0 72L1280 72L1280 36C1280 36 960 0 640 0C320 0 0 36 0 36L0 72Z" fill="currentColor"/></svg></div>
+<section class="py-16 bg-navy">
+  <div class="max-w-4xl mx-auto px-5 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to get started?</h2>
+    <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto">Our experienced providers are here to support your health journey. Schedule your appointment today.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="schedule-appointment.html" class="btn-primary">Schedule Now</a>
+      <a href="tel:2149423100" class="btn-outline" style="border-color:rgba(255,255,255,0.4);color:white;">Call 214-942-3100</a>
+    </div>
+  </div>
+</section>
+<div class="wave" style="background:#1c348c"><svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;color:#fdf6ef"><path d="M0 0L1280 0L1280 36C1280 36 960 72 640 72C320 72 0 36 0 36L0 0Z" fill="currentColor"/></svg></div>
+<footer class="bg-warmtext text-white">
+  <div class="max-w-6xl mx-auto px-5 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="block mb-4">
+          <img src="../../stellamattina/stellamattina.com/wp-content/uploads/2024/01/footer-logo.png" alt="Stella Mattina" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span style="display:none" class="font-display text-xl font-bold text-white">Stella Mattina</span>
+        </a>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">Personalized women's health and family medicine across the Dallas-Fort Worth metroplex.</p>
+        <p class="text-sm"><a href="tel:2149423100" class="text-white/70 hover:text-white transition-opacity">214-942-3100</a></p>
+        <p class="text-sm mt-1"><a href="mailto:info@stellamattina.com" class="text-white/70 hover:text-white transition-opacity">info@stellamattina.com</a></p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Services</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="womens-health.html" class="text-white/70 hover:text-white transition-opacity">Women's Health</a></li>
+          <li><a href="gynecology.html" class="text-white/70 hover:text-white transition-opacity">Gynecology</a></li>
+          <li><a href="prenatal-care.html" class="text-white/70 hover:text-white transition-opacity">Prenatal Care</a></li>
+          <li><a href="maternal-fetal-medicine.html" class="text-white/70 hover:text-white transition-opacity">Maternal-Fetal Medicine</a></li>
+          <li><a href="biote-hormone-therapy.html" class="text-white/70 hover:text-white transition-opacity">Hormone Therapy</a></li>
+          <li><a href="primary-care.html" class="text-white/70 hover:text-white transition-opacity">Primary Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Practice</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="providers.html" class="text-white/70 hover:text-white transition-opacity">Our Providers</a></li>
+          <li><a href="find-our-locations.html" class="text-white/70 hover:text-white transition-opacity">Find a Location</a></li>
+          <li><a href="about-us.html" class="text-white/70 hover:text-white transition-opacity">About Us</a></li>
+          <li><a href="patient-information.html" class="text-white/70 hover:text-white transition-opacity">Patient Information</a></li>
+          <li><a href="blog/index.html" class="text-white/70 hover:text-white transition-opacity">Health Blog</a></li>
+          <li><a href="contact-us.html" class="text-white/70 hover:text-white transition-opacity">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Schedule</h4>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">Ready to get started? Book with one of our expert providers today.</p>
+        <a href="schedule-appointment.html" class="btn-primary text-sm block text-center">Schedule Appointment</a>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <p class="text-white/30 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

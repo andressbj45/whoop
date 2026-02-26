@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding Your Menstrual Cycle | Stella Mattina Health Blog</title>
+  <meta name='description' content='Understand the phases of your menstrual cycle, irregularities, how to cope with hormonal changes, and when you&#39;re most likely to conceive.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-white/60 mb-5">
+      <a href="../index.html" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-white">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-white/90">Understanding Your Menstrual Cycle</span>
+    </nav>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Hormones</span><span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Women's Health</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white leading-snug mb-4">Understanding Your Menstrual Cycle</h1>
+    <div class="flex items-center gap-3 text-white/60 text-sm">
+      <span>May 23, 2024</span>
+      <span>·</span><span>By Dr. Theodore J. T. Krum</span>
+    </div>
+  </div>
+</section>
+<article class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <p class="text-lg text-muted leading-relaxed mb-6">Understanding your menstrual cycle is not just about tracking when your period arrives. It involves recognizing the complex biological processes your body undergoes each month. This awareness can</p>
+<p class="text-textsecondary leading-relaxed mb-4">Let’s start with the phases of a menstrual cycle.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You can divide your menstrual cycle into four primary phases, each characterized by hormonal changes and physiological processes.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The menstrual phase marks the start of the cycle, beginning on the first day of menstruation and lasting 3 to 7 days.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The uterus sheds its lining during this time, resulting in menstrual bleeding. This phase occurs because the egg released during the previous cycle was not fertilized, which prompts a drop in estrogen and progesterone levels and stimulates the shedding of your uterine lining. In other words, you are not pregnant!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Following menstruation, the follicular phase begins and overlaps with the tail end of the menstrual phase.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This phase is characterized by your hypothalamus signaling the pituitary gland to release follicle-stimulating hormone (FSH), which stimulates your ovaries to produce several follicles. Each follicle contains an egg. Typically, only one follicle will mature into an egg, while the rest will recede. This phase ends with the start of ovulation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Ovulation is a pivotal part of the menstrual cycle.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Triggered by a surge in luteinizing hormone (LH), ovulation involves the release of a mature egg from your ovary into your fallopian tube, where it can potentially meet sperm for fertilization. Ovulation usually occurs around the middle of the cycle.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The luteal phase begins after ovulation and lasts until menstruation starts.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The ruptured follicle transforms into the corpus luteum, which secretes progesterone to thicken the uterine lining in preparation for a possible pregnancy. If fertilization does not occur, the corpus luteum degenerates, leading to a decrease in progesterone and eventually the onset of menstruation (phase 1).</p>
+<p class="text-textsecondary leading-relaxed mb-4">During menstruation, you can feel tired and lethargic. This improves as estrogen levels rise in the follicular phase. Energy might peak around ovulation, then taper off in the luteal phase as progesterone increases – often leading to premenstrual fatigue.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Here are tips to help manage these changes:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Period pain – dysmenorrhea – can stem from various causes, primarily the production of prostaglandins. These are compounds involved in pain and inflammation, which trigger muscle contractions in the uterus, causing pain and discomfort.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Secondary causes include conditions like endometriosis or fibroids, which can exacerbate pain during menstruation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">To manage period pain effectively, you can try the following:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Calculating your cycle length is fundamental in tracking your menstrual health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Begin by marking the first day of your period on a calendar. The cycle continues until the day before your next period starts. Counting these days gives you the cycle length, which can vary from month to month.</p>
+<p class="text-textsecondary leading-relaxed mb-4">There are many digital tools and apps out there that can simplify tracking your menstrual cycle. However, most apps are not based on significant evidence, according to recent research of apps in the Apple Store and Google Play Store.</p>
+<p class="text-textsecondary leading-relaxed mb-4">However, these apps often allow you to record symptoms, mood changes, and other health data, providing you with a helpful overview.</p>
+<p class="text-textsecondary leading-relaxed mb-4">At Stella Mattina, we’re happy to discuss your family planning and birth control needs. For fertility planning it’s important to understand when ovulation occurs.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Methods to track ovulation include:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Signs Ovulation Is Over</p>
+<p class="text-textsecondary leading-relaxed mb-4">Recognizing the end of ovulation can help you understand your fertility window. Common changes concern:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Is It Possible to Ovulate Early?</p>
+<p class="text-textsecondary leading-relaxed mb-4">Ovulating early can happen, especially if you’re under stress, you are ill, or have irregular sleep patterns.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Finally, let’s look at some of the most commonly asked questions we get at Stella Mattina so we can put your mind at rest. As we always say, knowledge is power!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Irregularities, such as a period that starts and stops, can be frustrating and confusing. This can be caused by:</p>
+<p class="text-textsecondary leading-relaxed mb-4">As you age, especially approaching menopause, you can experience shorter cycles. Other factors like stress and lifestyle changes can also influence cycle length. If you’re noticing a significant change, such as a cycle that consistently falls short of 21 days, consult a healthcare professional.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Yes, this can happen when you have very irregular cycles or a condition like PCOS. When ovulation doesn’t happen consistently, it can be challenging to predict fertility without additional tracking methods.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Understanding your menstrual cycle goes beyond just knowing when your period starts. It’s about recognizing the intricate balance of hormones and physiological changes that your body experiences.</p>
+<p class="text-textsecondary leading-relaxed mb-4">At Stella Mattina, we’re completely dedicated to helping women with everything to do with their health and wellness. If you’re at all worried about your menstrual cycle or have more questions, please make an appointment. You won’t have to wait long and we accept most insurances. Let’s talk.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Dr. Krum is currently in practice in Arlington, TX. He received his undergraduate degree at Texas A&M University, then attended UTMB Galveston for medical school, finishing in 1986, completing his residency there in 1990. Providing a full range of obstetrical and gynecological care, he specializes in the treatment of endometriosis and robotic surgery. He arranges his schedule so that same-day appointments are usually available.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    <div class="mt-8 pt-6 border-t border-border flex flex-wrap gap-2"><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">fertility</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">menstrual cycle</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">menstruation</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">period pain</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">periods</span></div>
+  </div>
+</article>
+<section class="py-12 bg-creamsec border-y border-border">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-warmtext mb-3">Ready to Take the Next Step?</h2>
+    <p class="text-textsecondary mb-6">Speak with one of our expert providers — we're here to support your health journey.</p>
+    <a href="../schedule-appointment.html" class="inline-block bg-orange text-white font-semibold px-8 py-3.5 rounded-full hover:bg-orange/90 transition-colors">
+      Schedule Appointment
+    </a>
+  </div>
+</section>
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-warmtext mb-8">More Health Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 25, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent he…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 23, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 19, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over week…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-textprimary text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../index.html" class="text-white/70 hover:text-white text-sm">← Back to Home</a>
+    <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+    <a href="../schedule-appointment.html" class="bg-orange text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange/90">Schedule Now</a>
+  </div>
+</footer>
+</body>
+</html>

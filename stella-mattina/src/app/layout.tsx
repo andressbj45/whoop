@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Roboto, Dynalight } from 'next/font/google'
+import { Roboto, Outfit } from 'next/font/google'
 import PlausibleProvider from 'next-plausible'
 import './globals.css'
 
@@ -10,10 +10,10 @@ const roboto = Roboto({
   display: 'swap',
 })
 
-const dynalight = Dynalight({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-dynalight',
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-outfit',
   display: 'swap',
 })
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${roboto.variable} ${dynalight.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${outfit.variable}`}>
       <head>
         <PlausibleProvider domain="stellamattina.com" />
       </head>

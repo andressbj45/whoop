@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primary Care Physician vs. ObGyn – What’s Best for Women’s Health? | Stella Mattina</title>
+  <meta name='description' content='Learn the difference between primary care doctor vs. ObGyn to help you make informed medical decisions – and why you should have both!' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="index.html" class="flex-shrink-0">
+      <img src="../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-creamsec py-16 px-5">
+  <div class="max-w-4xl mx-auto">
+    <nav class="text-sm text-warmtext/60 mb-5 flex items-center flex-wrap gap-1">
+      <a href="index.html" class="hover:opacity-60">Home</a>
+      <span class="mx-2 opacity-40">/</span>
+      <a href="services.html" class="hover:opacity-60">Services</a><span class="mx-2 opacity-40">/</span>
+      <span class="text-warmtext/90">Primary Care Physician vs. ObGyn – What’s Best for Women’s Health?</span>
+    </nav>
+    <h1 class="text-4xl sm:text-5xl font-bold text-warmtext mb-4">Primary Care Physician vs. ObGyn – What’s Best for Women’s Health?</h1>
+    <p class='text-muted text-lg max-w-2xl'>Learn the difference between primary care doctor vs. ObGyn to help you make informed medical decisions – and why you should have both!</p>
+  </div>
+</section>
+<div class="wave" style="background:#f5e9db"><svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;color:#fdf6ef"><path d="M0 0L1280 0L1280 36C1280 36 960 72 640 72C320 72 0 36 0 36L0 0Z" fill="currentColor"/></svg></div>
+<section class="py-16 bg-cream">
+  <div class="max-w-4xl mx-auto px-5">
+    <div class="prose max-w-none">
+      <p class="text-textsecondary leading-relaxed mb-4">When it comes to managing your health, knowing which type of doctor to see can sometimes be confusing. You likely wonder how to choose between a primary care physician vs. ObGyn (a specialist in obstetrics and gynecology).</p>
+<p class="text-textsecondary leading-relaxed mb-4">A primary care physician and an ObGyn focus on different aspects of caring for your health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So – understanding the difference between these two types of physicians – primary care doctor and ObGyn – can help you make informed medical decisions. And with both on board, you’ll build a healthcare team that meets all your needs – from general checkups to specialized women’s health!</p>
+<p class="text-textsecondary leading-relaxed mb-4">In this article, we’ll break down the roles of both primary care doctor/primary care physician and ObGyns – and highlight when to see each.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Table of contents: What is a Primary Care Provider? What’s the Difference Between an Internist and a Primary Care Physician? What is an ObGyn? What Happens at the First ObGyn Visit? Internal Medicine vs. Gynecology: What’s the Difference? ObGyn vs Primary Care Provider: Should I Have Both? PCP vs ObGyn Checklist</p>
+<p class="text-textsecondary leading-relaxed mb-4">A Primary Care Provider (PCP) is a healthcare professional who serves as your first point of contact for most medical needs. They’re not ObGyns. Instead, they focus on your overall health. They’re trained to diagnose, treat, and manage a wide range of health concerns and long-term conditions.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Primary care doctors, including those in internal medicine and family medicine, complete medical school and then a residency in their area of focus.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This broad training allows primary care physicians to manage a wide range of health conditions in primary care clinics and coordinate your healthcare across specialties.</p>
+<p class="text-textsecondary leading-relaxed mb-4">From everyday illnesses to chronic disease management, from infections and flu to annual physicals, a PCP helps keeps track of all your health issues and needs over time.</p>
+<p class="text-textsecondary leading-relaxed mb-4">However, there are different types of primary care providers, including the following:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Family doctors are trained to care for patients of all ages, from infants to seniors. After completing medical school, they undergo a family medicine residency. Here they receive broad training in pediatrics, adult medicine, geriatrics, and even some aspects of women’s health. This makes family physicians perfectly equipped to provide lifelong care for your whole family.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These specialize in adult medicine and complex health conditions.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These are healthcare providers who focus on the health of children and adolescents.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These are licensed clinicians who can provide primary care services for family medicine, often working alongside doctors.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In short, your primary care physician is your partner in long-term health. They help you stay well and navigate the healthcare system for you when issues arise. They play a vital role in:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Preventive care, including vaccines, health screenings, weight management, and lifestyle counseling.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Chronic disease management, such as high blood pressure, asthma, arthritis, or depression.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Initial diagnosis and treatment for common acute illnesses and symptoms, as well as guidance on when to see a specialist.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Basic women’s health screenings like Pap smears and breast exams.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Yes. Many primary care providers (PCPs) can help with the early stages of pregnancy. They can confirm your pregnancy with a test, provide initial prenatal guidance, and discuss lifestyle changes like nutrition and supplements (such as folic acid). They also help address any early questions or concerns.</p>
+<p class="text-textsecondary leading-relaxed mb-4">However, once your pregnancy is confirmed, you’ll typically be referred to obstetrics and gynecology for specialized prenatal care, monitoring, and delivery. That’s because ObGyns have the training and experience to manage all aspects of pregnancy, including potential complications, labor, and postpartum recovery.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your primary care doctor may continue to support your general health during pregnancy, but the ObGyn takes the lead in managing the pregnancy itself.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In some cases, family doctors who offer obstetric care or a certified nurse midwife may also manage pregnancy and delivery, especially for low-risk pregnancies.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your care path may vary depending on your health, your preferences, and what’s available in your area.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Internal medicine doctors (also called internists) are a specific type of primary care doctor who focus exclusively on adult patients.</p>
+<p class="text-textsecondary leading-relaxed mb-4">They have trained in the diagnosis and management of a wide range of adult health conditions, especially complex or chronic diseases such as high blood pressure and heart disease.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But internal medicine practitioners typically do not provide care for children or perform surgeries.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So, all internists are primary care physicians, but not all primary care providers are internists or family doctors.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your choice depends on your age, health needs, and personal preference. If you’re an adult looking for a doctor to manage your overall health, an internal medicine doctor is a strong option.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Let’s move on to ObGyns…</p>
+<p class="text-textsecondary leading-relaxed mb-4">An ObGyn (short for obstetrician-gynecologist) is a medical doctor who specializes in women’s health, pregnancy, and childbirth. But is ObGyn primary care or specialist? Can an ObGyn be a PCP?</p>
+<p class="text-textsecondary leading-relaxed mb-4">While some ObGyns may provide general wellness services, they’re specialists, not primary care doctors.</p>
+<p class="text-textsecondary leading-relaxed mb-4">ObGyns attend medical school and then complete a four-year residency specifically in obstetrics and gynecology.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This specialized training prepares them to handle everything from routine reproductive care to complex surgical procedures and childbirth.</p>
+<p class="text-textsecondary leading-relaxed mb-4">They’re trained to care for women through all stages of life, from the teenage years to menopause and beyond. They focus on diagnosing and treating conditions related to your reproductive system and are also experts in managing your pregnancy, labor, and delivery.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You might see an ObGyn for:</p>
+<p class="text-textsecondary leading-relaxed mb-4">As mentioned, while some ObGyns may offer routine screenings and exams, their primary focus is on reproductive health and related procedures. For broader health concerns, like managing high blood pressure or respiratory infections, you’ll still need to see a primary care doctor.</p>
+<p class="text-textsecondary leading-relaxed mb-4">At what age should a woman start going to an ObGyn?</p>
+<p class="text-textsecondary leading-relaxed mb-4">According to the American College of Obstetricians and Gynecologists (ACOG), girls should have their first obstetrics and gynecology visit between the ages of 13 and 15. This early visit is often more educational than medical and helps build a trusting relationship with the doctor.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The first obstetrics and gynecology visit is usually focused on education, conversation, and building rapport. It typically includes a general health check, a discussion about periods, body changes, sexual health, and any concerns or questions you may have.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A pelvic exam or Pap smear is usually not required unless you’re experiencing symptoms or are over the age of 21, but your doctor may perform a basic physical exam.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This first contact is also a great opportunity to start developing a relationship with your ObGyn. You’ll then feel much more comfortable asking questions as your body and health needs change.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You shouldn’t. It’s still important to see your ObGyn after menopause! While your reproductive years may be over, ObGyns continue to provide care for postmenopausal concerns. These include vaginal dryness (or other sexual health concern), hormone management, osteoporosis risk, and pelvic health. Regular exams also help detect conditions like ovarian or uterine cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You now know the main differences between a primary care doctor and an ObGyn. Let’s have a quick look at internal medicine doctors and how they differ from gynecologists.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Understanding the difference between internal medicine and gynecology is key when deciding which doctor to see.</p>
+<p class="text-textsecondary leading-relaxed mb-4">While both internal medicine doctors and gynecologists care for adults, their areas of focus and training are very different.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Internal medicine doctors are trained to diagnose and manage a wide range of adult health issues, including chronic conditions like heart disease and thyroid disorders.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Obstetricianss and gynecologists, on the other hand, focus on diseases specific to the female reproductive system. For example, endometriosis, ovarian cysts, and cervical cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Here is the main difference between both:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Internal medicine doctors specialize in adult general health, managing a wide range of non-surgical medical conditions such as high blood pressure, diabetes, thyroid disorders, and respiratory infections. They’re experts in preventive care, chronic disease management, and diagnosing complex health issues unrelated to the reproductive system.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Obstetrics and gynecology, on the other hand, specialize in women’s reproductive health. They focus on the uterus, ovaries, fallopian tubes, cervix, and vagina. Obstetrics and gynecologists also perform surgical procedures, such as hysterectomies, laparoscopies, childbirth, and treatments for endometriosis or fibroids.</p>
+<p class="text-textsecondary leading-relaxed mb-4">When should you see each?</p>
+<p class="text-textsecondary leading-relaxed mb-4">See an internal medicine doctor for:</p>
+<p class="text-textsecondary leading-relaxed mb-4">General check-ups, chronic illness management, infections, fatigue, digestive issues, or any non-reproductive health concerns.</p>
+<p class="text-textsecondary leading-relaxed mb-4">See an obstetrics gynecologist in Dallas for:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menstrual problems, contraception, fertility concerns, pelvic pain, Pap smears, menopause symptoms, or any condition involving your reproductive organs.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In most cases, yes. Having both a PCP and an ObGyn ensures you receive well-rounded care that addresses both your overall health and your reproductive health. Each plays a distinct role depending on your age, health status, and specific concerns.</p>
+<p class="text-textsecondary leading-relaxed mb-4">For many women, family physicians can serve as a first point of contact for both general health and some basic women’s health needs. They’re also a great choice if you’re looking for a single provider for all your family members, regardless of age and gender.</p>
+<p class="text-textsecondary leading-relaxed mb-4">However, for more specialized reproductive care, it’s still important to maintain a relationship with an ObGyn. Here’s how to decide who to see, and when:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Routine health and prevention: See your primary care doctor for annual physicals, vaccinations, blood work, and managing general health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Fertility and pregnancy planning: Consult an ObGyn for preconception counseling, fertility evaluations, and pregnancy care.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menstrual concerns or abnormal Pap smears: Your ObGyn is the go-to for heavy periods, irregular cycles, pelvic pain, and follow-up after abnormal test results.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Chronic conditions and birth control: A PCP can manage long-term conditions like high blood pressure or diabetes and may prescribe birth control. But they may refer you to an ObGyn for more specialized reproductive care.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Healthy women under 40 with no reproductive concerns: A PCP can often cover your basic health needs. An obstetrics and gynecology annual visit is still recommended for preventive screenings like Pap smears and breast exams.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Postmenopausal women: Even after menopause, it’s important to see your ObGyn for continued pelvic exams, hormone-related care, and screening for conditions like uterine or ovarian cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">And finally, here’s a checklist to help you decide between PCP or gynecology according to your health needs.</p>
+<p class="text-textsecondary leading-relaxed mb-4">While we’ve inevitably shown some overlap in who cares mainly for what – like in initial pregnancy care, sexual health, and some initial aspects of women’s health – here’s a checklist to see at a glance our best recommendations for who to contact first between primary care doctor and ObGyn.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Choosing the best ObGyn and primary care physician in Dallas for women’s health is one of the most important decisions you can make. As mentioned, you really need both a primary care doctor and a specialist in obstetrics and gynecology.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Whether you’re seeking routine checkups, managing chronic conditions, or wanting help with your reproductive health, we make it easy for you to access both primary care family medicine and women’s health services at our many locations across Dallas-Fort Worth.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Our experienced primary care doctors/family medicine doctors are here to support your overall wellness with preventive care, chronic disease management, and everyday health concerns.</p>
+<p class="text-textsecondary leading-relaxed mb-4">And our equally experienced ObGyn specialists offer expert guidance on everything connected with women’s reproductive health – from annual exams and birth control to pregnancy and menopause care.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Looking for same day appointments, convenient locations, and care that fits your lifestyle? Stella Mattina offers accessible, high quality healthcare with locations nearby and acceptance of most insurance plans.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Hablamos español para mujeres que buscan un ginecólogo Dallas y atención médica de confianza.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Schedule your appointment today and see the difference we make.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Main image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Gonzalo Venegas, MD is the Medical Director of Stella Mattina Health and a respected obstetrician-gynecologist with over four decades of service in the Dallas medical community. He has led the Department of Obstetrics and Gynecology at Methodist Dallas Medical Center and contributed to community health through his role on the Parkland Health & Hospital System Board. A dedicated mentor at UT Southwestern, Dr. Venegas is known for his leadership, compassion, and commitment to advancing women’s health and medical education.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    </div>
+  </div>
+</section>
+<div class="wave" style="background:#fdf6ef"><svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;color:#1c348c"><path d="M0 72L1280 72L1280 36C1280 36 960 0 640 0C320 0 0 36 0 36L0 72Z" fill="currentColor"/></svg></div>
+<section class="py-16 bg-navy">
+  <div class="max-w-4xl mx-auto px-5 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to get started?</h2>
+    <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto">Our experienced providers are here to support your health journey. Schedule your appointment today.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="schedule-appointment.html" class="btn-primary">Schedule Now</a>
+      <a href="tel:2149423100" class="btn-outline" style="border-color:rgba(255,255,255,0.4);color:white;">Call 214-942-3100</a>
+    </div>
+  </div>
+</section>
+<div class="wave" style="background:#1c348c"><svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;color:#fdf6ef"><path d="M0 0L1280 0L1280 36C1280 36 960 72 640 72C320 72 0 36 0 36L0 0Z" fill="currentColor"/></svg></div>
+<footer class="bg-warmtext text-white">
+  <div class="max-w-6xl mx-auto px-5 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="block mb-4">
+          <img src="../../stellamattina/stellamattina.com/wp-content/uploads/2024/01/footer-logo.png" alt="Stella Mattina" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span style="display:none" class="font-display text-xl font-bold text-white">Stella Mattina</span>
+        </a>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">Personalized women's health and family medicine across the Dallas-Fort Worth metroplex.</p>
+        <p class="text-sm"><a href="tel:2149423100" class="text-white/70 hover:text-white transition-opacity">214-942-3100</a></p>
+        <p class="text-sm mt-1"><a href="mailto:info@stellamattina.com" class="text-white/70 hover:text-white transition-opacity">info@stellamattina.com</a></p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Services</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="womens-health.html" class="text-white/70 hover:text-white transition-opacity">Women's Health</a></li>
+          <li><a href="gynecology.html" class="text-white/70 hover:text-white transition-opacity">Gynecology</a></li>
+          <li><a href="prenatal-care.html" class="text-white/70 hover:text-white transition-opacity">Prenatal Care</a></li>
+          <li><a href="maternal-fetal-medicine.html" class="text-white/70 hover:text-white transition-opacity">Maternal-Fetal Medicine</a></li>
+          <li><a href="biote-hormone-therapy.html" class="text-white/70 hover:text-white transition-opacity">Hormone Therapy</a></li>
+          <li><a href="primary-care.html" class="text-white/70 hover:text-white transition-opacity">Primary Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Practice</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="providers.html" class="text-white/70 hover:text-white transition-opacity">Our Providers</a></li>
+          <li><a href="find-our-locations.html" class="text-white/70 hover:text-white transition-opacity">Find a Location</a></li>
+          <li><a href="about-us.html" class="text-white/70 hover:text-white transition-opacity">About Us</a></li>
+          <li><a href="patient-information.html" class="text-white/70 hover:text-white transition-opacity">Patient Information</a></li>
+          <li><a href="blog/index.html" class="text-white/70 hover:text-white transition-opacity">Health Blog</a></li>
+          <li><a href="contact-us.html" class="text-white/70 hover:text-white transition-opacity">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Schedule</h4>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">Ready to get started? Book with one of our expert providers today.</p>
+        <a href="schedule-appointment.html" class="btn-primary text-sm block text-center">Schedule Appointment</a>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <p class="text-white/30 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

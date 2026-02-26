@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postpartum Assessment – What You Need to Know | Stella Mattina Health Blog</title>
+  <meta name='description' content='Postpartum assessment evaluates your physical, emotional, and psychological well-being after childbirth. Learn what&#39;s involved and why.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-white/60 mb-5">
+      <a href="../index.html" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-white">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-white/90">Postpartum Assessment – What You Need to Know</span>
+    </nav>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">ObGyn</span><span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Women's Health</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white leading-snug mb-4">Postpartum Assessment – What You Need to Know</h1>
+    <div class="flex items-center gap-3 text-white/60 text-sm">
+      <span>June 20, 2024</span>
+      <span>·</span><span>By Dr. Theodore J. T. Krum</span>
+    </div>
+  </div>
+</section>
+<article class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <p class="text-lg text-muted leading-relaxed mb-6">After the joy and exhaustion of childbirth, the postpartum period brings a new set of challenges and experiences for you as a new mother. Understanding the importance of having a postpartum assessment with your healthcare provider is crucial – not only for your health and recovery but also for your ability to care for your newborn effectively.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In this article, we’ll focus on what constitutes a thorough postpartum assessment.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Postpartum assessment involves evaluating your physical, emotional, and psychological well-being following the birth of your child. These regular assessments are crucial for identifying and addressing common postpartum issues to ensure you are</p>
+<p class="text-textsecondary leading-relaxed mb-4">This broadly encompasses everything from physical recovery and mental health to addressing any complications that may have arisen during your pregnancy, labor, or delivery.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you’ve had very high blood pressure while in the hospital, the doctor will need to see you three to four days after discharge to check your blood pressure to ensure it’s within the safe and normal range. But otherwise…</p>
+<p class="text-textsecondary leading-relaxed mb-4">The two weeks postpartum appointment is typically scheduled within the first 14 days after delivery and focuses on immediate post-delivery concerns. This makes sense.</p>
+<p class="text-textsecondary leading-relaxed mb-4">There’s no vaginal exam at two weeks unless you have some problems or concerns. So you’ll have the following:</p>
+<p class="text-textsecondary leading-relaxed mb-4">When you reach six weeks postpartum, a comprehensive follow-up appointment with your healthcare provider is crucial. This checkup serves as a fundamental step in ensuring that both your physical and emotional recovery are progressing well.</p>
+<p class="text-textsecondary leading-relaxed mb-4">It’s vital to discuss any feelings of anxiety, depression, or general emotional distress you might be experiencing. If you’ve had mental health issues in the past, your provider might assess your risk for postnatal depression and anxiety more closely.</p>
+<p class="text-textsecondary leading-relaxed mb-4">They may also ask about your lifestyle, including your support system at home and quality of sleep, to better understand your overall situation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your provider will check on your physical recovery from childbirth. This includes asking about vaginal bleeding and whether you’ve had a menstrual period since giving birth. If you experienced an episiotomy, the healing of your stitches will be assessed. Additionally, your doctor will address any discomfort around your perineum to ensure proper healing.</p>
+<p class="text-textsecondary leading-relaxed mb-4">They will examine your abdomen to confirm that your uterus is returning to its pre-pregnancy position. If you had a cesarean section, your doctor will check how the incision is healing and may offer to examine the scar.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Although it might be the last thing on your mind, this appointment is an opportunity to discuss your plans for contraception and any questions you might have regarding resuming sexual activity.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Questions about urinary incontinence, such as leaking urine when coughing or laughing, are common. Your doctor will likely suggest pelvic floor exercises if you’re experiencing these issues.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Additionally, if you find yourself having accidental bowel movements or passing gas involuntarily, it’s important to bring this up during the checkup, as these can also be common postpartum concerns. Don’t be afraid to mention these things: Doctors who specialize in women’s health have heard it all before and will be empathic and sensitive.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your healthcare provider should ask you about how breastfeeding is going – if you’re taking that route – and check for any issues such as pain or symptoms of mastitis. They will have access to resources for additional support if needed.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Postpartum labs are an integral part of the postpartum assessment. These might include blood tests to check hemoglobin levels, thyroid function tests, and screenings for postpartum depression.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you notice any signs of varicose veins, leg swelling, or symptoms suggesting a blood clot, you should report them. Your healthcare provider may examine your legs to rule out any complications.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This is an opportunity to ensure vaccinations are up to date and schedule any necessary routine tests postponed due to pregnancy, such as smear tests.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Preparing for your postpartum assessment can help you make the most of your visit and ensure you address all of your concerns with your healthcare provider:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Preparing for the postpartum period involves more than just mental preparation; it also requires practical items that can aid in recovery and comfort. Items such as high-absorbency pads, comfortable clothing, and pain relief medications are essential. Additionally, resources for breastfeeding, like nursing pads and creams, can help make the transition smoother.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Selecting a postpartum care service that aligns with your needs and preferences is critical. These services can range from in-home nurse visits to outpatient counseling sessions. They provide tailored support that can make a significant difference in your recovery and adaptation to life with your new baby.</p>
+<p class="text-textsecondary leading-relaxed mb-4">We hope we’ve helped you to understand how important postpartum assessment is. At Stella Mattina, we offer exceptional care tailored to your unique needs. And to make things easier for you with your new baby, you may like to know we can offer same-day appointments and that we also accept most insurances as well as Medicare and Medicaid.</p>
+<p class="text-textsecondary leading-relaxed mb-4">To make sure all is going well for you in these postpartum weeks and months, schedule your checkup today.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Dr. Krum is currently in practice in Arlington, TX. He received his undergraduate degree at Texas A&M University, then attended UTMB Galveston for medical school, finishing in 1986, completing his residency there in 1990. Providing a full range of obstetrical and gynecological care, he specializes in the treatment of endometriosis and robotic surgery. He arranges his schedule so that same-day appointments are usually available.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    <div class="mt-8 pt-6 border-t border-border flex flex-wrap gap-2"><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">postpartum assessment</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">postpartum checkup at 6 weeks</span></div>
+  </div>
+</article>
+<section class="py-12 bg-creamsec border-y border-border">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-warmtext mb-3">Ready to Take the Next Step?</h2>
+    <p class="text-textsecondary mb-6">Speak with one of our expert providers — we're here to support your health journey.</p>
+    <a href="../schedule-appointment.html" class="inline-block bg-orange text-white font-semibold px-8 py-3.5 rounded-full hover:bg-orange/90 transition-colors">
+      Schedule Appointment
+    </a>
+  </div>
+</section>
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-warmtext mb-8">More Health Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 25, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent he…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 23, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 19, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over week…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-textprimary text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../index.html" class="text-white/70 hover:text-white text-sm">← Back to Home</a>
+    <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+    <a href="../schedule-appointment.html" class="bg-orange text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange/90">Schedule Now</a>
+  </div>
+</footer>
+</body>
+</html>

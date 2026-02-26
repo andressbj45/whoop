@@ -1,0 +1,1 @@
+console.log("Hello World! (from pix-block-pix-block block)");

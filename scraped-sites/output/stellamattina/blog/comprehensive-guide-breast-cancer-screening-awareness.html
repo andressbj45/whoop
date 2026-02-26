@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breast Cancer Screening and Awareness: A Comprehensive Guide | Stella Mattina Health Blog</title>
+  <meta name='description' content='Breast cancer is one of the most common women&#39;s cancers. But awareness and early detection can improve your outcome and save your life.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-white/60 mb-5">
+      <a href="../index.html" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-white">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-white/90">Breast Cancer Screening and Awareness: A Comprehen…</span>
+    </nav>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Women's Health</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white leading-snug mb-4">Breast Cancer Screening and Awareness: A Comprehensive Guide</h1>
+    <div class="flex items-center gap-3 text-white/60 text-sm">
+      <span>October 17, 2024</span>
+      <span>·</span><span>By Dr. Theodore J. T. Krum</span>
+    </div>
+  </div>
+</section>
+<article class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <p class="text-lg text-muted leading-relaxed mb-6">You’ve probably heard about October Breast Cancer Awareness every year. The aim is to increase awareness, promote education, and encourage early detection of breast cancer through regular screening mammograms.</p>
+<p class="text-textsecondary leading-relaxed mb-4">There’s a good reason: Breast cancer is one of the most common women’s cancers. But early detection through breast cancer screening, particularly mammograms, can play a crucial role in changing this, improving outcomes, and saving lives.</p>
+<p class="text-textsecondary leading-relaxed mb-4">As part of our commitment to promoting prevention and excellence in women’s care, we’ve gathered a complete guide to breast cancer screening. We want you to be able to make informed decisions about your health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Keep reading to learn about breast cancer screening tests, mammogram procedures, screening guidelines, the risks and benefits for your health, and the importance of early detection. Let’s start by understanding what a mammogram clinical breast exam is.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Table of contents</p>
+<p class="text-textsecondary leading-relaxed mb-4">The Mammogram Procedure What to Expect During a Mammogram Types of Mammograms: 2D vs. 3D When Should You Have a Mammogram? What Can Influence Breast Screening Results? Breast Cancer on Ultrasound or MRI Benefits and Risks of Breast Cancer Screening</p>
+<p class="text-textsecondary leading-relaxed mb-4">A mammogram is a specialized X-ray used to detect abnormalities in your breast tissue, such as lumps or tumors, that may indicate breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">When you go for a mammogram, the process typically lasts about 20 minutes. The nurse asks you to change into a gown, and you’ll need to remove any jewelry or clothing above the waist.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A radiologic technologist will then position your breast on a special X-ray machine with a flat surface and another plate that presses down on your breast from above.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This compression helps spread out the breast tissue for a clearer view and reduces radiation exposure. Compression is necessary to get the best image and may cause some discomfort or pressure, but it should only last a few seconds.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Each breast will be compressed from top to bottom and side to side to capture images from different angles. The entire process is quick and usually well-tolerated.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Results:</p>
+<p class="text-textsecondary leading-relaxed mb-4">After the procedure, the images will be sent to a radiologist, who will review them for any signs of abnormalities or breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You may get your results within a few days, depending on the facility. If the radiologist sees anything that may indicate breast cancer, you might be called back for additional tests or follow-up imaging.</p>
+<p class="text-textsecondary leading-relaxed mb-4">There are two main types of mammograms: 2D (traditional) mammograms and 3D mammograms (also known as digital breast tomosynthesis). Here’s how they differ:</p>
+<p class="text-textsecondary leading-relaxed mb-4">A standard mammogram that takes two images of each breast, one from the top and one from the side. The images are flat, meaning all layers of your breast tissue are compressed into a single image.</p>
+<p class="text-textsecondary leading-relaxed mb-4">An advanced mammogram that captures multiple images of your breast from different angles, creating a three-dimensional picture of the breast tissue.</p>
+<p class="text-textsecondary leading-relaxed mb-4">It’s especially useful for women with dense breast tissue, as it reduces the likelihood of false positives and offers greater accuracy in detecting small abnormalities that could evolve into breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">It depends on your risk factors for breast cancer, health history, age, and health organization guidelines. So, discuss your situation with your healthcare provider to determine the best age for you to begin screening.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But in general, for most women, the recommendation is to start annual or biennial mammograms between the ages of 40 and 50. However, if you’re at higher risk for breast cancer due to family history, genetic predisposition, or other factors, you may need to start earlier.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Various health organizations provide guidance on when and how often you should receive mammograms, but they don’t always agree with each other. In addition, the guidelines often evolve according to:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Today, most organizations aim to strike a balance between the benefits of early breast cancer detection and the risk of overdiagnosis (more on this below, when we discuss the risks and benefits).</p>
+<p class="text-textsecondary leading-relaxed mb-4">For reference, here are the current recommendations from the American Cancer Society (ACS):</p>
+<p class="text-textsecondary leading-relaxed mb-4">While many health organizations suggest stopping mammograms around age 75, this recommendation is influenced by your overall health and the benefits versus risks of continued screening to find breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The American Cancer Society does not set a specific age for stopping mammograms but recommends that women continue screening as long as they are in good health and have a life expectancy of 10 years or more.</p>
+<p class="text-textsecondary leading-relaxed mb-4">And – as we’ll mention in a moment – screening too early can lead to false positives.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Regular breast cancer screenings, particularly mammograms, are highly effective in detecting cancer in its early stages. They can identify tumors or abnormalities in the breast tissue that are often too small to be felt during clinical breast exams.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In fact, mammograms can find breast cancer up to two years before you can feel a lump. This significantly improves your chances of successful treatment and reduces your chances of dying from breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">While mammograms are generally reliable for detecting breast cancer early, several factors can influence the accuracy of screening results. One of the most common issues is breast density.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Breast density refers to the amount of fibrous or glandular tissue compared to fatty tissue in your breasts. Dense breasts have more glandular and connective tissue, which can make it harder for mammograms to find breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">On a screening mammogram, dense tissue appears white, and so do many tumors, making it difficult to distinguish between normal and abnormal areas.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Women with a high breast density are also at a slightly higher risk of developing the disease. This combination of a higher risk of breast cancer and reduced mammogram sensitivity means that women with dense breasts may need additional screening methods like ultrasounds or MRIs to ensure any abnormalities are caught early.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Shedding light on this factor, the American Food and Drug Administration (FDA) has recently required that all mammogram reports must include information about breast density, classifying them as dense and not dense.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you have high breast density or other factors that may affect screening mammography results, or if you notice anything different during breast self-exam, it’s important to discuss additional screening options with your healthcare provider.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Supplementing screening mammography with ultrasounds or MRIs can help detect abnormalities that might otherwise go unnoticed.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Both ultrasounds and MRIs are helpful tools in supplementing mammograms for finding breast cancers, particularly for women with high breast density or those at higher risk.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you receive a positive result for cancer after clinical breast exams and screening mammography, your doctor may ask you to have one of these alternative screening tests to confirm or discard your results. Here’s what to expect from each:</p>
+<p class="text-textsecondary leading-relaxed mb-4">An ultrasound uses sound waves to create images of the inside of your breast. It often follows after a mammogram if your results showed something unusual. Ultrasounds are non-invasive and painless, and they help distinguish between solid masses (which could evolve into cancer) and fluid-filled cysts (which are typically benign).</p>
+<p class="text-textsecondary leading-relaxed mb-4">A breast MRI (Magnetic Resonance Imaging) uses strong magnets and radio waves to create detailed images of the breast. Doctors use it with women at high risk of breast cancer, such as those with a strong family history or genetic predisposition (like the BRCA mutation).</p>
+<p class="text-textsecondary leading-relaxed mb-4">MRIs can detect small tumors that screening mammograms or ultrasounds might miss, but they’re usually used alongside other screening tests because they are more sensitive and can sometimes detect non-cancerous abnormalities, leading to false positives for breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">There’s no doubt screening mammograms play a critical role in the early detection of breast cancers, offering less invasive treatment options and decreasing your chances of dying from breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">However, like any medical procedure, screening comes with both benefits and risks. Understanding these can help you make informed decisions about your health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Let’s dive into the benefits and risks of breast cancer screening, so you can discuss them with your doctor and make the best decision to meet your individual needs.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Screening mammograms can find breast cancer early, often before symptoms like lumps or pain appear. Early detection significantly increases your chances of successful treatment and decreases breast cancer mortality.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Studies show that early-stage breast cancers have a 5-year survival rate of over 99%, compared to later stages, meaning the earlier you find the disease, the less your chances of dying from this cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Detecting breast cancer early can lead to less aggressive treatments. In the early stages, you may be able to avoid more invasive procedures like mastectomy and chemotherapy, opting instead for targeted therapies, lumpectomies, or radiation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Regular mammograms are directly linked to higher survival rates. Women who get regular screening mammograms are 30% less likely to dying from breast cancer than those who don’t.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This is, again, because screening mammography catches cancers when they’re smaller, less aggressive, and more treatable.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A false positive occurs when a mammogram detects something that looks like cancer but is not. These findings can lead to unnecessary stress, further tests (such as biopsies or additional imaging), and sometimes even unnecessary treatments.</p>
+<p class="text-textsecondary leading-relaxed mb-4">False positives are more common in younger women and those with dense breast tissue. Unfortunately, about 10% of women who undergo a mammogram will receive a false positive result, according to the American Cancer Society.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Overdiagnosis refers to the detection of cancers that are so slow-growing or non-aggressive that they would not have caused harm during your lifetime. Some of them would even disappear naturally.</p>
+<p class="text-textsecondary leading-relaxed mb-4">However, these cancers are often treated with surgery, radiation, or chemotherapy, even though they may not have required any intervention.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This may lead to unnecessary treatments, side effects, and long-term physical and emotional consequences. Research suggests that around 10% of breast cancers diagnosed through screening may be over-diagnosed.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Mammograms use low-dose radiation to capture images of breast tissue. While the radiation exposure from a single mammogram is minimal, repeated exposure over time could slightly increase breast cancer risk, particularly in younger women.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In some cases, mammograms may fail to detect cancer, resulting in a false negative, which can delay diagnosis and treatment, and lead to the cancer advancing to a more serious stage.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Discussing your personal risk factors with your healthcare provider can help determine the right screening schedule for you.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Women with higher risks, such as those with a family history of breast cancer, may benefit from starting screenings earlier or combining mammograms with additional tests like MRIs or ultrasounds. Women with lower risk or older age may opt for less frequent screenings.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Being informed about both the benefits and risks empowers you to make a decision that aligns with your health goals and personal preferences.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Regular cancer screening tests, particularly through mammograms, have a profound impact on public health, contributing significantly to the early detection and reduction of mortality rates associated with breast cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">By identifying cancer at earlier, more treatable stages, mammograms save lives and promote greater awareness of breast health, helping you to take proactive steps in managing breast cancer risks.</p>
+<p class="text-textsecondary leading-relaxed mb-4">At Stella Mattina, we’re dedicated to helping you stay proactive about your breast health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In addition to breast self-exam, you can count on our expert team to help you access cancer screening mammography for possible cancers.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Whether you’re due for your routine mammogram or need guidance on treatment options, take control of your breast health and schedule an appointment today at a time that suits.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Main image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Dr. Krum is currently in practice in Arlington, TX. He received his undergraduate degree at Texas A&M University, then attended UTMB Galveston for medical school, finishing in 1986, completing his residency there in 1990. Providing a full range of obstetrical and gynecological care, he specializes in the treatment of endometriosis and robotic surgery. He arranges his schedule so that same-day appointments are usually available.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    <div class="mt-8 pt-6 border-t border-border flex flex-wrap gap-2"><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">benefits and risks of breast cancer screening</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">breast cancer awareness</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">breast cancer screening</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">importance of mammograms</span></div>
+  </div>
+</article>
+<section class="py-12 bg-creamsec border-y border-border">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-warmtext mb-3">Ready to Take the Next Step?</h2>
+    <p class="text-textsecondary mb-6">Speak with one of our expert providers — we're here to support your health journey.</p>
+    <a href="../schedule-appointment.html" class="inline-block bg-orange text-white font-semibold px-8 py-3.5 rounded-full hover:bg-orange/90 transition-colors">
+      Schedule Appointment
+    </a>
+  </div>
+</section>
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-warmtext mb-8">More Health Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 25, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent he…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 23, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 19, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over week…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-textprimary text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../index.html" class="text-white/70 hover:text-white text-sm">← Back to Home</a>
+    <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+    <a href="../schedule-appointment.html" class="bg-orange text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange/90">Schedule Now</a>
+  </div>
+</footer>
+</body>
+</html>

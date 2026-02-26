@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Women’s Health and Menopause Guide – for Every Stage of the Transition | Stella Mattina Health Blog</title>
+  <meta name='description' content='Learn about women&#39;s health and the five pillars of menopause wellness to help you thrive through every stage of menopause transitions.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-white/60 mb-5">
+      <a href="../index.html" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-white">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-white/90">Women’s Health and Menopause Guide – for Every Sta…</span>
+    </nav>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Hormones</span><span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Women's Health</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white leading-snug mb-4">Women’s Health and Menopause Guide – for Every Stage of the Transition</h1>
+    <div class="flex items-center gap-3 text-white/60 text-sm">
+      <span>December 18, 2025</span>
+      <span>·</span><span>By Dr. Gonzalo Venegas</span>
+    </div>
+  </div>
+</section>
+<article class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <p class="text-lg text-muted leading-relaxed mb-6">Menopause is a natural shift. Yet it can affect your physical, emotional, and long-term health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The menopause transition isn’t one moment.</p>
+<p class="text-textsecondary leading-relaxed mb-4">It unfolds gradually as part of your “midlife women’s health experience!” Menstrual periods, sleep, and moods can all go awry.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Many women notice hot flashes, vaginal dryness, or new patterns in their weight or energy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Because this menopause transition influences so many areas at once, it’s an important time to think more intentionally about women’s health. Your heart, bones, brain, and metabolism all respond to shifting hormones. And when your life’s busy, it’s easy to ignore symptoms.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This guide explains how menopause works, how to recognize it, what the stages look like, which menopause symptoms tend to be most challenging, and how to care for your body through every stage.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Read on to learn about women’s health, menopause transitions, and how to manage and treat menopause effectively.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Table of contents What is Menopause and Why Does It Matter for Your Health? How to Know You’re Going Through Menopause The Stages of Menopause Common and Challenging Menopausal Symptoms The Five Pillars of Menopause Wellness How to Take Care of Your Body During Menopausal Transitions Which Doctors Help With Menopause?</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menopause is a natural biological process that marks the end of your reproductive years. It happens when your ovaries slow their hormone production, especially estrogen and progesterone, and your menstrual periods stop for good.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These hormonal shifts aren’t sudden. Your hormone levels fluctuate for years before your final period. Which is why so many physical and emotional changes appear gradually.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Most women reach natural menopause between ages 45 and 55, although genetics, health conditions, surgeries, and lifestyle factors can all influence timing.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But some women experience early menopause, while others notice changes later. Wherever you fall, this transition affects far more than your reproductive years!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menopause is a meaningful phase in women’s health because changing hormones influence long-term wellbeing. Bone strength, cardiovascular health, metabolic balance, sexual comfort, and mental wellness all respond to these shifts.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you don’t manage your symptoms, they can contribute to issues like osteoporosis or increased heart disease risk over time.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Understanding how the menopause transition works – and knowing what’s normal for each stage – helps you manage symptoms, stay active, and feel more in control of the changes ahead.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Most women don’t wake up one morning and think, “It’s starting.” You may only recognize the menopause transition when a few changes stack up over time.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Shifts in your menstrual periods are often the earliest clue. Cycles may become shorter, longer, lighter, or heavier – i.e. unpredictable.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But you might notice earlier symptoms like sleep disruption, mood swings, hot flashes, or new sensitivity to stress. Some women experience subtle cognitive shifts, like trouble concentrating. Or they begin to experience menopausal symptoms that don’t seem connected at first.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menopause becomes “official” when you’ve gone 12 straight months without a period. This marks the moment your ovaries have slowed their hormone output enough that hormonal changes stabilize into a new pattern.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But the years leading up to that point – called perimenopause – tend to be the most noticeable in terms of symptoms.</p>
+<p class="text-textsecondary leading-relaxed mb-4">As for timing, most women enter this phase in their mid-40s to early 50s, but there’s a wide normal range.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Genetics, surgeries, health conditions, and lifestyle factors all play a part. If you’re wondering “How early can menopause start?”, the answer is that some women notice changes in their late 30s.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Any shift that feels unusual or disruptive is worth discussing with a healthcare professional.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The menopause transition unfolds over years, so understanding the stages helps you make sense of it.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Each phase brings different hormonal shifts, timing of menstrual periods, and menopause symptoms. There’s no universal timeline, but the stages follow the same overall sequence for most women.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Pre-menopause is the stage when your hormones still follow their regular rhythm. No noticeable menopausal symptoms. Your periods arrive on time.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Perimenopause is where most women begin to feel change. Hormone levels rise and fall unevenly, so symptoms can be unpredictable. Hot flashes, sleep disruption, mood changes, and shifts in bleeding patterns show up. This stage can last several years, and symptoms tend to ebb and flow.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menopause is a single point in time: the day you reach 12 months without a period. You may still have symptoms, but hormonally, it marks your body settling into a more consistent pattern. It’s also the answer to a question many people ask: “What signals the end of menopause?” It’s this moment: no more periods.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Early postmenopause includes the first few years after menopause. Some symptoms may improve, but certain changes continue. Bone density, cardiovascular strength, and metabolic health are especially important to monitor during this stage. Why? Because hormonal changes can influence long-term outcomes like osteoporosis and heart disease.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Late postmenopause focuses on healthy longevity. Hormones have already settled. Your priority is staying active, protecting bone and heart health, and addressing ongoing symptoms if they persist. With good support and proactive care, these years can feel stable and strong.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You move through the menopause transition at your own pace. The stages don’t follow a strict schedule, yet research and clinical experience give us a general guide.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Pre-menopause lasts from your teens through your 30s and early 40s. Hormones stay fairly steady, your menstrual periods follow your usual rhythm, and menopause symptoms haven’t started yet.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Perimenopause is the most variable stage. It can last two or three years or closer to a decade. Fluctuating hormone levels cause symptoms to come and go. This is also the stage where questions like “How long does menopause last?” tend to come up, because the shifting cycles and menopausal symptoms can feel frustrating.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menopause itself is only a moment in time, as we said. But the symptoms surrounding it may continue for several years.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Early postmenopause generally lasts the first four to five years after menopause. Hot flashes, sleep changes, and other symptoms may ease or continue depending on how your body settles into its new hormonal pattern.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Late postmenopause includes everything after those early years. Long-term health planning matters for bone strength, heart protection, and overall metabolic health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If anything feels unusual, do talk to a menopause healthcare professional or healthcare providers familiar with menopause.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The menopause transition varies but many patterns show up again and again.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Hormone levels rise and fall unevenly during menopause and can cause mild shifts. But you may experience menopausal symptoms that disrupt daily life.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Hot flashes are the symptom most women talk about – often paired with night sweats that interrupt sleep, leaving you drained.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Vaginal dryness is also common. When estrogen declines, your vaginal tissue becomes less elastic or lubricated. Intercourse can be uncomfortable with the risk of irritation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Changes to your menstrual periods can be equally challenging. Maybe with heavy bleeding – or months without a period, then an unexpected one. This is perimenopause! Often paired with cramps, headaches, or mood shifts.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These mood swings, anxiety, irritability, or feeling less emotionally steady aren’t “in your head.” They’re tied to hormonal changes affecting neurotransmitters that regulate stress and emotional balance.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Sexual desire may change during the menopause transition, and the combination of low estrogen, dryness, and reduced sleep can make intimacy unwelcome.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Patients tell us these common menopause symptoms (hot flashes, disrupted sleep, vaginal discomfort, and unpredictable cycles) reduce their quality of life.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But healthcare providers who understand menopause – including a menopause specialist or a clinician familiar with midlife care – can help you manage symptoms. Treatment options range from lifestyle changes to evidence-based approaches like hormone therapy, depending on your goals and health background.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Even though the menopause transition can feel unpredictable, there are five core pillars or habits that improve daily life and long-term health. Whether your menopause symptoms are mild, moderate, or frustratingly persistent, give them a try!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Nutrition</p>
+<p class="text-textsecondary leading-relaxed mb-4">The right nutrition helps stabilize your energy and reduce menopausal symptoms like bloating, hot flashes, or shifts in weight or mood during menopause. A balanced approach with protein, fiber, healthy fats, and calcium-rich foods supports your bones, muscles, and overall wellbeing.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Movement</p>
+<p class="text-textsecondary leading-relaxed mb-4">Regular movement protects bone strength, supports a healthy heart, and improves sleep. Strength training becomes especially important in midlife because it helps counteract natural muscle loss and reduces osteoporosis risk. Even short bursts of activity can help you manage symptoms.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Rest and Recovery</p>
+<p class="text-textsecondary leading-relaxed mb-4">Sleep can become more difficult during perimenopause and post menopause. Build a wind-down routine, adjust your sleep environment, and keep consistent sleep times to reduce stress and help reduce hot flashes and mood swings.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Mental Health</p>
+<p class="text-textsecondary leading-relaxed mb-4">Shifts in hormones can influence emotional steadiness. Any stress-reduction practices can help make the transition more manageable. Good midlife women’s healthcare includes having someone to talk to during menopause transitions!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Connection Menopause is easier if you connect with friends, family, support groups, or your healthcare providers. Evidence-based group resources from the Menopause Society or local women’s health networks can help you stay informed, feel supported, and know which questions to bring to a menopause specialist.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Together, these pillars help you feel more in control of the transition.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your body’s needs shift during the menopause transition. With the right support, each stage is more manageable. Adopting small, steady habits often makes the biggest difference to midlife women’s health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Fitness and Mobility Support</p>
+<p class="text-textsecondary leading-relaxed mb-4">Movement becomes one of your most powerful tools in midlife, as we mentioned. Strength training helps maintain muscle mass, improves balance, and supports your bones so you’re less vulnerable to osteoporosis.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Cardiovascular exercise protects your heart during a life stage where heart disease risk slowly rises. Even light daily activity can improve sleep and help you manage symptoms like hot flashes or mood shifts.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Nutrition Strategies for Hormone Balance</p>
+<p class="text-textsecondary leading-relaxed mb-4">As your hormone levels settle, food choices play an important role in regulating blood sugar, energy, and inflammation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Many women find it helpful to focus on protein, fiber, calcium, and vitamin D, while limiting foods that trigger menopause symptoms. Hydration and regular meals also help you stay steady during the menopausal transition.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Long-Term Health Planning</p>
+<p class="text-textsecondary leading-relaxed mb-4">The years after menopause are an ideal time to focus on screenings, bone protection, heart health, and emotional wellbeing.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Make sure to work with healthcare providers who understand midlife women’s health. They can help you tailor a plan that fits your lifestyle.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Evidence-based options like hormone therapy may be appropriate for many women. But it depends on your health history and what symptoms you’re facing.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Talk openly with a healthcare professional or menopause specialist to ensure you get care that supports you now and long-term.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If your menopause symptoms interfere with daily life, it’s worth checking in with a healthcare professional who understands the menopause transition.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Many women start with their gynecologist, since they know your history and can guide you through changing menstrual periods, symptom patterns, and overall women’s health needs.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A menopause specialist – including gynecologists with extra training to treat menopause, endocrinologists, and some primary care clinicians – can help you explore options to manage symptoms of menopause such as hot flashes, sleep disruption, or vaginal dryness.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In cities like Dallas, searching for a Menopause specialist Dallas or a clinic focused on Women’s Health Dallas can point you to the right expertise.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your broader care team may include your primary care doctor, therapists, pelvic floor specialists, or the Menopause Society mentioned above.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Menopause is a natural phase, but support is now more available than ever. When you understand how the transition works – and have women’s health clinicians who take your symptoms seriously – daily life becomes manageable and your long-term health protected.</p>
+<p class="text-textsecondary leading-relaxed mb-4">At Stella Mattina, our healthcare professionals are here to guide you through every stage of your menopause transition. Whether you’re dealing with hot flashes, sleep changes, vaginal dryness, or questions about menopause treatment options, we give you clear, compassionate care that puts your menopause wellbeing first.</p>
+<p class="text-textsecondary leading-relaxed mb-4">We offer same-day appointments. Schedule your visit at one of our locations today.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Main image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Gonzalo Venegas, MD is the Medical Director of Stella Mattina Health and a respected obstetrician-gynecologist with over four decades of service in the Dallas medical community. He has led the Department of Obstetrics and Gynecology at Methodist Dallas Medical Center and contributed to community health through his role on the Parkland Health & Hospital System Board. A dedicated mentor at UT Southwestern, Dr. Venegas is known for his leadership, compassion, and commitment to advancing women’s health and medical education.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    <div class="mt-8 pt-6 border-t border-border flex flex-wrap gap-2"><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">health and menopause guide</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">stages of menopause</span></div>
+  </div>
+</article>
+<section class="py-12 bg-creamsec border-y border-border">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-warmtext mb-3">Ready to Take the Next Step?</h2>
+    <p class="text-textsecondary mb-6">Speak with one of our expert providers — we're here to support your health journey.</p>
+    <a href="../schedule-appointment.html" class="inline-block bg-orange text-white font-semibold px-8 py-3.5 rounded-full hover:bg-orange/90 transition-colors">
+      Schedule Appointment
+    </a>
+  </div>
+</section>
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-warmtext mb-8">More Health Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 25, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent he…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 23, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 19, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over week…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-textprimary text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../index.html" class="text-white/70 hover:text-white text-sm">← Back to Home</a>
+    <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+    <a href="../schedule-appointment.html" class="bg-orange text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange/90">Schedule Now</a>
+  </div>
+</footer>
+</body>
+</html>

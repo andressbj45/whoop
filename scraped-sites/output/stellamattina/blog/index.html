@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Blog | Stella Mattina</title>
+  <meta name='description' content='Expert women&#39;s health insights, pregnancy guides, and family medicine resources from Stella Mattina&#39;s providers.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-16 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">Health Resources &amp; Blog</h1>
+    <p class="text-white/70 text-lg max-w-2xl mx-auto">Expert insights on women's health, pregnancy, family medicine, and wellness — from Stella Mattina's providers.</p>
+  </div>
+</section>
+<section class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="text-textsecondary text-sm mb-8">61 articles</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">February 25, 2026</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent heart disease: basics,…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Asma Bhaidani, PA-C</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">February 23, 2026</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early monitoring to ensur…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Joshua Weiss</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">February 19, 2026</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over weeks and months – it's …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="what-causes-ovarian-cysts-and-how-birth-control-pills-can-affect-them.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">February 12, 2026</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">What Causes Ovarian Cysts and How Birth Control Pills Can Affect Them</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Clarify how ovarian cysts and birth control are related and find out what’s typical, what’s not, and when treatment is n…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="high-cholesterol-and-preventive-care-from-your-primary-care-doctor.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">January 29, 2026</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">High Cholesterol and Preventive Care From Your Primary Care Doctor</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Preventive care for high cholesterol means you catch heart and vascular problems earlier and help avoid serious complica…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="irregular-periods-and-pregnancy-a-guide.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">January 22, 2026</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Irregular Periods and Pregnancy – A Guide</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">If you’re trying to plan for pregnancy and your cycle feels unpredictable, we can help you deal with irregular periods a…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="irregular-period-after-birth-what-you-need-to-know.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">{'0': 'Hormones', '1': 'Pregnancy', '3': "Women's Health"}</span>
+          <span class="text-xs text-textsecondary">January 15, 2026</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Irregular Period After Birth: What You Need to Know</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Irregular period timing after giving birth is natural, with common experiences being heavy, painful, absent, or delayed …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="womens-health-and-menopause-guide.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">December 18, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Women’s Health and Menopause Guide – for Every Stage of the Transition</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn about women's health and the five pillars of menopause wellness to help you thrive through every stage of menopaus…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="what-is-the-difference-between-acute-and-chronic-conditions.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">December 11, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">What is the Difference Between Acute and Chronic Conditions?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn how acute and chronic conditions affect your health in different ways so you understand the kind of care you need …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Asma Bhaidani, PA-C</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="breast-cancer-check-up-guide-do-obgyns-check-breasts-and-what-happens-next.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">December 04, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Breast Cancer Check-Up Guide: Do OBGYNs Check Breasts and What Happens Next?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Your OBGYN will check your breasts during your annual Well Woman exam. Learn about the clinical breast exam and what hap…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="the-hormone-connection-to-weight-loss.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">November 20, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">The Hormone Connection to Weight Loss</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Find out how key hormones interact with your weight loss efforts – and how to restore balance to achieve your sustainabl…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="screening-for-diabetes-the-importance-of-regular-blood-sugar-checks.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">November 13, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Screening for Diabetes: The Importance of Regular Blood Sugar Checks</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Screening for diabetes detects high blood sugar levels before prediabetes or Type 2 diabetes can damage your body. Learn…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="can-hormones-cause-weight-gain.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">November 06, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Can Hormones Cause Weight Gain?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">When unbalanced hormones send mixed signals, various hormones cause weight gain. Here's how to work out what's happening…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="screening-tests-for-breast-cancer.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">October 30, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Screening Tests for Breast Cancer: What Every Woman Needs to Know</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Screening tests for breast cancer are the most successful way to maintain your health. Learn about the tests and when to…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="iron-deficiency-and-anemia-whats-the-difference.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">October 23, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Iron Deficiency and Anemia: What’s the Difference?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Iron deficiency and anemia are linked but not the same. You can have iron deficiency without anemia – but not the revers…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="your-mammogram-screening-checklist-what-you-need-to-know.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">October 16, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Your Mammogram Screening Checklist: What You Need to Know in 2025</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Use our mammogram screening checklist to help you feel confident you're proactively looking after your breast health.</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="when-to-consider-fertility-testing-in-your-20s-and-30s.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">September 25, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">When to Consider Fertility Testing in Your 20s and 30s</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Fertility testing gives you a clearer picture of where you stand today – and what to expect tomorrow. Learn everything y…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="advantages-of-hormone-replacement-therapy-for-women-and-men.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">September 18, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Advantages of Hormone Replacement Therapy for Women and Men</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Both men and women can benefit from hormone replacement therapy. Learn why, then call our Dallas HRT experts to discuss …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="vaccines-in-pregnancy-which-should-you-get.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">September 11, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Vaccines in Pregnancy: Which Should You Get?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Vaccines in pregnancy help protect both you and your baby. Learn which you should get – including flu, tdap, and RSV – a…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="gut-health-and-weight-loss-how-primary-care-helps.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">August 28, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Gut Health and Weight Loss: How Primary Care Can Help</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Gut health and weight loss are linked. Learn how to solve inflammation in your gut and hormone imbalances that can sabot…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="the-ultimate-guide-to-breastfeeding-benefits-for-mothers-and-babies.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">August 21, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">The Ultimate Guide to Breastfeeding Benefits for Mothers and Babies</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn about proven breastfeeding benefits immediately after birth for you and your baby, and the long-term benefits for …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="benefits-of-breastfeeding-for-mom-and-baby.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">August 14, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Benefits of Breastfeeding for Mom and Baby – for New Parents</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">All new parents need to know the benefits of breastfeeding for mom and baby vs. formula feeding – to help you make the b…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="what-is-hepatitis-b.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">July 31, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">What is Hepatitis B?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Hepatitis B is a preventable and potentially serious infection. If you think you've been exposed, take a hep B test and …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="primary-care-doctors-in-dallas.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">July 17, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Why Do I Need a Primary Healthcare Provider?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn the benefits of having a primary healthcare provider to help maintain the long-term health and well-being of your …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Gonzalo Venegas</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="hiv-diagnosis-does-hiv-show-up-in-routine-blood-tests.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Women's Health</span>
+          <span class="text-xs text-textsecondary">June 26, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">HIV Diagnosis: Does HIV Show Up in Routine Blood Tests?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">How is an HIV diagnosis arrived at? Will HIV show up in routine blood tests? Learn about blood tests for HIV – and early…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="a-complete-guide-to-hiv-testing-during-pregnancy.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">June 19, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">A Complete Guide to HIV Testing During Pregnancy</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">HIV testing during pregnancy ensures the health of you and your baby – there can be serious consequences of an untreated…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="hiv-testing-day-why-it-matters.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">June 12, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">HIV Testing Day – Why It Matters</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Regular HIV testing is a preventive measure to keep you safe. Learn about the test and why HIV Testing Day is important …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="how-we-support-expecting-mothers-from-day-one.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">{'0': 'ObGyn', '1': 'Pregnancy', '3': "Women's Health"}</span>
+          <span class="text-xs text-textsecondary">May 29, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How We Support Expecting Mothers from Day One</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Our OBGYNs in Dallas are here for all expecting mothers, offering you expert help from fertility support through to post…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="preeclampsia-first-symptoms-essential-signs-you-should-recognize.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">May 15, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Preeclampsia First Symptoms – Essential Signs You Should Recognize</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Take a moment to discover what preeclampsia first symptoms look like so you can get help if necessary and enjoy your pre…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="infertility-signs-and-symptoms-in-women-how-to-know-if-youre-infertile.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">April 17, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Infertility Signs and Symptoms in Women – How to Know if You’re Infertile</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Conversations tend to avoid discussing symptoms and signs of infertility. Here's everything you need to know to help you…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="what-is-allergy-season-key-facts-and-best-medicines.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">March 27, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">What is Allergy Season? Key Facts and Best Medicines</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">You don't have to suffer allergy season every year! Learn what it is and discover five ways you can effectively avoid or…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="pcos-vs-endometriosis-key-differences-and-impact-on-fertility.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">March 13, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">PCOS vs. Endometriosis – Key Differences and Impact on Fertility</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">PCOS vs. endometriosis can be confusing before you have a diagnosis. Learn the symptoms, differences, and possible effec…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="how-to-lose-weight-with-a-thyroid-disease.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">January 23, 2025</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How to Lose Weight with a Thyroid Disease</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn how to stay on track with weight loss goals and confidently manage both your thyroid disease and maintaining a sus…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="how-to-prevent-stds-best-practices-and-strategies.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">December 05, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How to Prevent STDs – Best Practices and Strategies</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn how to prevent STDs in our step-by-step guide – and why early detection via regular testing is the best route to s…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="iud-vs-birth-control-pill-what-is-the-best-option.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">November 21, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">IUD vs. Birth Control Pill: What Is the Best Option?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Deciding between IUD vs. birth control pill depends on your health, lifestyle, and long-term goals. Here is information …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="can-you-reverse-type-2-diabetes.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">November 07, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Can You Reverse Type 2 Diabetes?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Reverse type 2 diabetes and put it into remission by monitoring blood sugar and making lifestyle changes to support insu…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="comprehensive-guide-breast-cancer-screening-awareness.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Women's Health</span>
+          <span class="text-xs text-textsecondary">October 17, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Breast Cancer Screening and Awareness: A Comprehensive Guide</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Breast cancer is one of the most common women's cancers. But awareness and early detection can improve your outcome and …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="when-should-you-get-your-first-mammogram.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Women's Health</span>
+          <span class="text-xs text-textsecondary">October 10, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">When Should You Get Your First Mammogram?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn when to schedule your first mammogram so you benefit from detecting early breast cancer symptoms, which are then t…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="hormone-therapy-for-osteoporosis.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">September 26, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Hormone Therapy for Osteoporosis</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Starting hormone therapy for osteoporosis early offers hope if you're perimenopausal and looking to maintain your bone h…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="postmenopausal-osteoporosis-what-you-need-to-know.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">September 12, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Postmenopausal Osteoporosis – What You Need to Know</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Don't risk letting postmenopausal osteoporosis dictate your future. Early detection of bone loss can lead to successful …</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="what-is-an-annual-exam-for-women.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">September 05, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">What is an Annual Exam for Women?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Don’t put off booking your annual exam for women – early detection and preventive care are key to your long-term health.…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="when-is-the-best-time-to-test-for-hormone-imbalance.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">July 25, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">When is the Best Time to Test for Hormone Imbalance?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Your health depends on hormones working effecively. Empower yourself by learning when and why to test for hormone imbala…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="postpartum-assessment-what-you-need-to-know.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">June 20, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Postpartum Assessment – What You Need to Know</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Postpartum assessment evaluates your physical, emotional, and psychological well-being after childbirth. Learn what's in…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="what-are-the-pros-and-cons-of-hormone-pellets.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">June 06, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">What Are the Pros and Cons of Hormone Pellets?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">A close look at pros and cons of hormone pellets, especially focusing on bioidentical pellets, to help you make the righ…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="understanding-your-menstrual-cycle.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">May 23, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Understanding Your Menstrual Cycle</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Understand the phases of your menstrual cycle, irregularities, how to cope with hormonal changes, and when you're most l…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="a-complete-guide-to-blood-tests-for-stds.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">May 16, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">A Complete Guide to Blood Tests for STDs</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Blood tests for STDs show some but not all. Learn which ones can or can't and why you should get tested regularly if you…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="how-do-i-get-on-birth-control.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">May 09, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How Do I Get on Birth Control</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Want to take charge of your family planning? Read our 101 on birth control to discover your choices and make the right d…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="how-to-balance-hormones-after-pregnancy.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Hormones</span>
+          <span class="text-xs text-textsecondary">March 28, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How to Balance Hormones After Pregnancy</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Wanting to balance hormones after pregnancy to stabilize your mood? Learn how diet and perhaps natural hormone therapy c…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="gestational-diabetes-diet-in-pregnancy-a-complete-guide.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">March 21, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Gestational Diabetes Diet in Pregnancy – A Complete Guide</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Our women's healthcare specialists can support you to manage your gestational diabetes diet effectively with routine mon…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="is-gestational-diabetes-genetic.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">March 14, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Is Gestational Diabetes Genetic?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Don't be afraid of developing gestational diabetes! Learn what it is and how to manage it with the help of a women's hea…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="first-obgyn-appointment-everything-you-need-to-know.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">February 29, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">First ObGyn Appointment – Everything You Need to Know</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Feel confident at your first ObGyn appointment after reading our detailed guide giving you the answers to everything tha…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="high-risk-pregnancy-what-you-need-to-know.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">February 22, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">High-Risk Pregnancy – What You Need to Know</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn how to manage a high-risk pregnancy with expert care. Discover causes, symptoms, and how to protect your health an…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="do-normal-blood-tests-show-sexually-transmitted-diseases-stds.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">February 15, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Do Normal Blood Tests Show Sexually Transmitted Diseases (STDs)?</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Become fully informed and proactive about your sexual health, so you can protect yourself and your partner from the spre…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="how-to-manage-common-pregnancy-concerns.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">January 30, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">How to Manage Common Pregnancy Concerns</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn the answers to all your common pregnancy concerns and put your mind at rest so you can enjoy the full nine months!</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="womens-preventive-care-take-charge-of-your-health.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">January 22, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Women’s Preventive Care – Take Charge of Your Health</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn all about women's preventive care and avoid health problems via screenings, vaccinations, and lifestyle choices to…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="what-to-expect-from-a-womens-healthcare-specialist.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">ObGyn</span>
+          <span class="text-xs text-textsecondary">January 15, 2024</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">What to Expect from a Women’s Healthcare Specialist</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Learn how a women's healthcare specialist such as a gynecologist or obstetrician can meet your needs with a comprehensiv…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="primary-care-in-womens-health-why-its-important-for-you.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Primary Care</span>
+          <span class="text-xs text-textsecondary">December 24, 2023</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Primary Care in Women’s Health: Why It’s Important for You</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Is your primary care physician a women's health specialist? Learn what to expect from a women's focus on health – and th…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="understanding-prenatal-tests-what-to-expect-during-your-first-visit.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Pregnancy</span>
+          <span class="text-xs text-textsecondary">December 10, 2023</span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Understanding Prenatal Tests – What to Expect During Your First Visit</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">You and your baby deserve the best care and health! Learn about prenatal tests and why they're so important in your firs…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="immigration-physical.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Women's Health</span>
+          <span class="text-xs text-textsecondary"></span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Immigration Physical</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1"></p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="obstetrics.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Women's Health</span>
+          <span class="text-xs text-textsecondary"></span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Obstetrics</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Expert obstetrics and gynecology Dallas, TX services with personalized pregnancy care. New patients welcome. Book an app…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+    <a href="primary-care.html" class="card-hover bg-cream rounded-2xl style="box-shadow:0 2px 16px rgba(100,60,20,0.08)" border border-border overflow-hidden flex flex-col">
+      <div class="aspect-[16/9] bg-creamsec flex items-center justify-center">
+        <svg class="w-10 h-10 text-periwinkle/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="p-5 flex flex-col flex-1 gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-navy bg-creamsec px-2.5 py-1 rounded-full">Women's Health</span>
+          <span class="text-xs text-textsecondary"></span>
+        </div>
+        <h3 class="font-semibold text-warmtext leading-snug">Primary Care</h3>
+        <p class="text-textsecondary text-sm leading-relaxed flex-1">Looking for a primary care physician Dallas women trust? Stella Mattina provides comprehensive, personalized care. Sched…</p>
+        <div class="mt-auto flex items-center justify-between pt-3 border-t border-border">
+          <span class="text-xs text-textsecondary">Dr. Theodore J. T. Krum</span>
+          <span class="text-navy text-xs font-medium inline-flex items-center gap-1">
+            Read <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+</div>
+</div>
+</section>
+<footer class="bg-textprimary text-white">
+  <div class="max-w-7xl mx-auto px-5 py-12">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="../index.html">
+        <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/01/footer-logo.png" alt="Stella Mattina" class="h-8 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"/>
+        <span style="display:none" class="text-lg font-bold text-white">Stella Mattina</span>
+      </a>
+      <div class="flex gap-6 text-sm text-white/60">
+        <a href="../index.html" class="hover:text-white">Home</a>
+        <a href="../services.html" class="hover:text-white">Services</a>
+        <a href="../providers.html" class="hover:text-white">Providers</a>
+        <a href="../contact-us.html" class="hover:text-white">Contact</a>
+      </div>
+      <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

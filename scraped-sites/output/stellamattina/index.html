@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stella Mattina — Personalized Women's Health &amp; Family Medicine in Dallas</title>
+  <meta name="description" content="Comprehensive women's health and family medicine in Dallas. 29+ providers across 7 DFW locations. OBGYN, prenatal care, hormone therapy, and primary care." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: {
+            pill: '26px',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans', sans-serif; font-weight: 600; border-radius: 26px; padding: 0.85rem 2rem; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family: 'DM Sans', sans-serif; font-weight: 600; border-radius: 26px; padding: 0.85rem 2rem; transition: all 0.2s; display: inline-block; }
+    .btn-outline:hover { background: #1c348c; color: #fdf6ef; }
+    .btn-navy { background: #1c348c; color: #fdf6ef; font-family: 'DM Sans', sans-serif; font-weight: 600; border-radius: 26px; padding: 0.85rem 2rem; transition: opacity 0.2s; display: inline-block; }
+    .btn-navy:hover { opacity: 0.85; }
+    .check-mark { width: 20px; height: 20px; border-radius: 50%; background: #fb8e28; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-link { transition: opacity 0.2s; }
+    .nav-link:hover { opacity: 0.5; }
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: block; }
+    .wave { display: block; width: 100%; overflow: hidden; line-height: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow: 0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="index.html" class="flex-shrink-0">
+      <img src="../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png"
+           alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="services.html"            class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="providers.html"           class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="find-our-locations.html"  class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="about-us.html"            class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="blog/index.html"          class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')"
+              class="md:hidden p-2 rounded-lg hover:bg-creamsec transition-colors" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="bg-cream py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Text side -->
+      <div class="order-2 md:order-1">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-warmtext leading-tight mb-6">
+          High-quality, compassionate care for women
+        </h1>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-base text-warmtext" style="font-size:17px; line-height:1.5">
+            <span class="check-mark">
+              <svg width="11" height="9" viewBox="0 0 16 13" fill="none"><path d="M1.46094 7.06602L6.01805 11.4921L14.5379 1.03052" stroke="white" stroke-width="2"/></svg>
+            </span>
+            Whole-person healthcare, in one place
+          </li>
+          <li class="flex items-center gap-3 text-base text-warmtext" style="font-size:17px; line-height:1.5">
+            <span class="check-mark">
+              <svg width="11" height="9" viewBox="0 0 16 13" fill="none"><path d="M1.46094 7.06602L6.01805 11.4921L14.5379 1.03052" stroke="white" stroke-width="2"/></svg>
+            </span>
+            29+ expert providers across 7 DFW locations
+          </li>
+          <li class="flex items-center gap-3 text-base text-warmtext" style="font-size:17px; line-height:1.5">
+            <span class="check-mark">
+              <svg width="11" height="9" viewBox="0 0 16 13" fill="none"><path d="M1.46094 7.06602L6.01805 11.4921L14.5379 1.03052" stroke="white" stroke-width="2"/></svg>
+            </span>
+            OBGYN, prenatal care, hormone therapy &amp; primary care
+          </li>
+          <li class="flex items-center gap-3 text-base text-warmtext" style="font-size:17px; line-height:1.5">
+            <span class="check-mark">
+              <svg width="11" height="9" viewBox="0 0 16 13" fill="none"><path d="M1.46094 7.06602L6.01805 11.4921L14.5379 1.03052" stroke="white" stroke-width="2"/></svg>
+            </span>
+            Personalized care from first period to menopause
+          </li>
+        </ul>
+        <div class="flex flex-wrap gap-4">
+          <a href="schedule-appointment.html" class="btn-primary text-base">Schedule Now</a>
+          <a href="services.html" class="btn-outline text-base">Our Services</a>
+        </div>
+      </div>
+      <!-- Image side -->
+      <div class="order-1 md:order-2">
+        <div class="rounded-2xl overflow-hidden bg-creamsec aspect-[4/5] flex items-center justify-center relative" style="box-shadow: 0 8px 48px rgba(100,60,20,0.15);">
+          <img src="../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png"
+               alt="Stella Mattina Women's Health" class="absolute inset-0 w-full h-full object-cover opacity-0" />
+          <!-- Decorative placeholder -->
+          <div class="text-center px-10">
+            <div class="w-24 h-24 rounded-full bg-orange/20 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-12 h-12 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <p class="font-display text-2xl font-semibold text-warmtext leading-snug">Dallas Women's Health &amp; Family Medicine</p>
+            <p class="text-muted mt-3 text-sm">Serving the DFW Metroplex</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider -->
+<div class="wave bg-cream">
+  <svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; color: #f5e9db;">
+    <path d="M0 0L1280 0L1280 36C1280 36 960 72 640 72C320 72 0 36 0 36L0 0Z" fill="currentColor"/>
+  </svg>
+</div>
+
+<!-- ===================== SERVICES STRIP ===================== -->
+<section class="bg-creamsec py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-bold text-warmtext mb-4">Care for every stage of your life</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto">From first periods to prenatal care to menopause — expert, personalized support for every chapter.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <a href="womens-health.html" class="card-hover group bg-cream rounded-2xl p-7 flex flex-col gap-4" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="w-12 h-12 rounded-full bg-orange/15 flex items-center justify-center">
+          <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-warmtext">Women's Health</h3>
+        <p class="text-muted text-sm leading-relaxed">Annual exams, birth control, fertility consultations, and comprehensive OBGYN care for every stage.</p>
+        <span class="text-navy text-sm font-semibold group-hover:underline">Learn more →</span>
+      </a>
+
+      <a href="gynecology.html" class="card-hover group bg-cream rounded-2xl p-7 flex flex-col gap-4" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center">
+          <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-warmtext">Gynecology</h3>
+        <p class="text-muted text-sm leading-relaxed">Preventive screenings, pap smears, pelvic exams, and minimally invasive gynecological surgery.</p>
+        <span class="text-navy text-sm font-semibold group-hover:underline">Learn more →</span>
+      </a>
+
+      <a href="biote-hormone-therapy.html" class="card-hover group bg-cream rounded-2xl p-7 flex flex-col gap-4" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="w-12 h-12 rounded-full bg-orange/15 flex items-center justify-center">
+          <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-warmtext">Hormone Therapy</h3>
+        <p class="text-muted text-sm leading-relaxed">BioTE hormone pellet therapy to restore balance and vitality — evidence-based solutions for lasting wellness.</p>
+        <span class="text-navy text-sm font-semibold group-hover:underline">Learn more →</span>
+      </a>
+
+      <a href="prenatal-care.html" class="card-hover group bg-cream rounded-2xl p-7 flex flex-col gap-4" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center">
+          <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-warmtext">Prenatal Care</h3>
+        <p class="text-muted text-sm leading-relaxed">Expert obstetric care from first trimester through delivery and postpartum recovery — compassionate support.</p>
+        <span class="text-navy text-sm font-semibold group-hover:underline">Learn more →</span>
+      </a>
+
+      <a href="primary-care.html" class="card-hover group bg-cream rounded-2xl p-7 flex flex-col gap-4" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="w-12 h-12 rounded-full bg-orange/15 flex items-center justify-center">
+          <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-warmtext">Primary Care</h3>
+        <p class="text-muted text-sm leading-relaxed">Comprehensive family medicine for all ages — preventive care, chronic disease management, and wellness.</p>
+        <span class="text-navy text-sm font-semibold group-hover:underline">Learn more →</span>
+      </a>
+
+      <a href="maternal-fetal-medicine.html" class="card-hover group bg-cream rounded-2xl p-7 flex flex-col gap-4" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center">
+          <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-warmtext">Maternal-Fetal Medicine</h3>
+        <p class="text-muted text-sm leading-relaxed">Specialized high-risk pregnancy care with advanced monitoring and dedicated MFM specialists.</p>
+        <span class="text-navy text-sm font-semibold group-hover:underline">Learn more →</span>
+      </a>
+
+    </div>
+    <div class="text-center mt-10">
+      <a href="services.html" class="btn-navy text-sm">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider -->
+<div class="wave bg-creamsec">
+  <svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; color: #fdf6ef;">
+    <path d="M0 72L1280 72L1280 36C1280 36 960 0 640 0C320 0 0 36 0 36L0 72Z" fill="currentColor"/>
+  </svg>
+</div>
+
+<!-- ===================== PROVIDERS PREVIEW ===================== -->
+<section class="bg-cream py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-14">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-warmtext mb-3">Meet Our Providers</h2>
+        <p class="text-muted text-lg max-w-lg">Experienced, compassionate physicians and advanced practice providers dedicated to your care.</p>
+      </div>
+      <a href="providers.html" class="flex-shrink-0 btn-outline text-sm">View All 29 Providers</a>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <a href="practitioners/akshay-goswami-md.html" class="card-hover group bg-creamsec rounded-2xl overflow-hidden" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="aspect-[3/4] bg-cream overflow-hidden flex items-center justify-center">
+          <img src="https://stellamattina.com/wp-content/uploads/2024/09/AKSHAY-GOSWAMI-1.png"
+               alt="Akshay Goswami, MD" class="w-full h-full object-cover object-top"
+               onerror="this.style.display='none'" />
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-warmtext text-sm leading-snug">Akshay Goswami, MD</h3>
+          <p class="text-orange text-xs font-semibold mt-1">OBGYN</p>
+          <p class="text-muted text-xs mt-1">Samuell (White Rock Lake)</p>
+        </div>
+      </a>
+
+      <a href="practitioners/alfredo-a-antonetti-md.html" class="card-hover group bg-creamsec rounded-2xl overflow-hidden" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="aspect-[3/4] bg-cream overflow-hidden flex items-center justify-center">
+          <img src="https://stellamattina.com/wp-content/uploads/2024/03/bio_aa.jpg"
+               alt="Alfredo A. Antonetti, MD" class="w-full h-full object-cover object-top"
+               onerror="this.style.display='none'" />
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-warmtext text-sm leading-snug">Alfredo A. Antonetti, MD</h3>
+          <p class="text-orange text-xs font-semibold mt-1">OBGYN</p>
+          <p class="text-muted text-xs mt-1">Mesquite</p>
+        </div>
+      </a>
+
+      <a href="practitioners/ann-l-roc-md.html" class="card-hover group bg-creamsec rounded-2xl overflow-hidden" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="aspect-[3/4] bg-cream overflow-hidden flex items-center justify-center">
+          <img src="https://stellamattina.com/wp-content/uploads/2024/03/bio_ar.jpg"
+               alt="Ann L. Roc, MD" class="w-full h-full object-cover object-top"
+               onerror="this.style.display='none'" />
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-warmtext text-sm leading-snug">Ann L. Roc, MD</h3>
+          <p class="text-orange text-xs font-semibold mt-1">OBGYN</p>
+          <p class="text-muted text-xs mt-1">Mesquite</p>
+        </div>
+      </a>
+
+      <a href="practitioners/ashley-hamilton-pa.html" class="card-hover group bg-creamsec rounded-2xl overflow-hidden" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="aspect-[3/4] bg-cream overflow-hidden flex items-center justify-center">
+          <img src="https://stellamattina.com/wp-content/uploads/2024/03/bio_ah.jpg"
+               alt="Ashley Hamilton, PA" class="w-full h-full object-cover object-top"
+               onerror="this.style.display='none'" />
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-warmtext text-sm leading-snug">Ashley Hamilton, PA</h3>
+          <p class="text-orange text-xs font-semibold mt-1">OBGYN</p>
+          <p class="text-muted text-xs mt-1">Mesquite</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider -->
+<div class="wave bg-cream">
+  <svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; color: #f5e9db;">
+    <path d="M0 0L1280 0L1280 36C1280 36 960 72 640 72C320 72 0 36 0 36L0 0Z" fill="currentColor"/>
+  </svg>
+</div>
+
+<!-- ===================== LOCATIONS ===================== -->
+<section class="bg-creamsec py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-bold text-warmtext mb-4">Find a location near you</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto">7 convenient locations across the Dallas-Fort Worth metroplex.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      <a href="find-our-locations.html#gynecologist-dallas-bishop-arts" class="card-hover bg-cream rounded-2xl p-5 flex flex-col gap-2" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <span class="text-xs font-semibold text-orange uppercase tracking-wider">Women's Health</span>
+        <h3 class="font-bold text-warmtext">Bishop Arts District</h3>
+        <p class="text-muted text-sm">Dallas, TX</p>
+        <p class="text-sm font-medium text-navy mt-1">214-942-3100</p>
+      </a>
+
+      <a href="find-our-locations.html#gynecologist-dallas-tx-samuell" class="card-hover bg-cream rounded-2xl p-5 flex flex-col gap-2" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <span class="text-xs font-semibold text-orange uppercase tracking-wider">Women's Health</span>
+        <h3 class="font-bold text-warmtext">Dallas — Samuell</h3>
+        <p class="text-muted text-sm">Dallas, TX</p>
+        <p class="text-sm font-medium text-navy mt-1">214-942-3100</p>
+      </a>
+
+      <a href="find-our-locations.html#obgyn-arlington-tx" class="card-hover bg-cream rounded-2xl p-5 flex flex-col gap-2" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <span class="text-xs font-semibold text-orange uppercase tracking-wider">Women's Health</span>
+        <h3 class="font-bold text-warmtext">Arlington</h3>
+        <p class="text-muted text-sm">Arlington, TX</p>
+        <p class="text-sm font-medium text-navy mt-1">214-942-3100</p>
+      </a>
+
+      <a href="find-our-locations.html#obgyn-in-mesquite" class="card-hover bg-cream rounded-2xl p-5 flex flex-col gap-2" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <span class="text-xs font-semibold text-orange uppercase tracking-wider">Women's Health</span>
+        <h3 class="font-bold text-warmtext">Mesquite</h3>
+        <p class="text-muted text-sm">Mesquite, TX</p>
+        <p class="text-sm font-medium text-navy mt-1">214-942-3100</p>
+      </a>
+
+      <a href="find-our-locations.html#primary-care-doctor-for-men" class="card-hover bg-cream rounded-2xl p-5 flex flex-col gap-2" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <span class="text-xs font-semibold text-periwinkle uppercase tracking-wider">Family Medicine</span>
+        <h3 class="font-bold text-warmtext">Dallas — Buckner</h3>
+        <p class="text-muted text-sm">Dallas, TX</p>
+        <p class="text-sm font-medium text-navy mt-1">214-942-3100</p>
+      </a>
+
+      <a href="find-our-locations.html#primary-care-doctor-north-dallas" class="card-hover bg-cream rounded-2xl p-5 flex flex-col gap-2" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <span class="text-xs font-semibold text-periwinkle uppercase tracking-wider">Family Medicine</span>
+        <h3 class="font-bold text-warmtext">Dallas — North</h3>
+        <p class="text-muted text-sm">Dallas, TX</p>
+        <p class="text-sm font-medium text-navy mt-1">214-942-3100</p>
+      </a>
+
+      <a href="find-our-locations.html#primary-care-physician-carrollton-tx" class="card-hover bg-cream rounded-2xl p-5 flex flex-col gap-2" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <span class="text-xs font-semibold text-periwinkle uppercase tracking-wider">Family Medicine</span>
+        <h3 class="font-bold text-warmtext">Carrollton</h3>
+        <p class="text-muted text-sm">Carrollton, TX</p>
+        <p class="text-sm font-medium text-navy mt-1">214-942-3100</p>
+      </a>
+
+      <a href="find-our-locations.html" class="card-hover bg-navy rounded-2xl p-5 flex flex-col items-center justify-center gap-3 text-center" style="min-height:120px;">
+        <svg class="w-8 h-8 text-white/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+        </svg>
+        <span class="font-bold text-white text-sm">All Locations &amp; Directions</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider -->
+<div class="wave bg-creamsec">
+  <svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; color: #1c348c;">
+    <path d="M0 72L1280 72L1280 36C1280 36 960 0 640 0C320 0 0 36 0 36L0 72Z" fill="currentColor"/>
+  </svg>
+</div>
+
+<!-- ===================== TRUST STRIP ===================== -->
+<section class="bg-navy py-16">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
+      <div>
+        <div class="font-display text-6xl font-bold text-orange mb-2">29+</div>
+        <div class="text-white/90 font-semibold text-lg mb-1">Expert Providers</div>
+        <div class="text-white/50 text-sm">OBGYNs, MFMs, PAs &amp; family medicine specialists</div>
+      </div>
+      <div>
+        <div class="font-display text-6xl font-bold text-orange mb-2">7</div>
+        <div class="text-white/90 font-semibold text-lg mb-1">DFW Locations</div>
+        <div class="text-white/50 text-sm">Convenient access across the metroplex</div>
+      </div>
+      <div>
+        <div class="font-display text-6xl font-bold text-orange mb-2">∞</div>
+        <div class="text-white/90 font-semibold text-lg mb-1">Whole-Person Care</div>
+        <div class="text-white/50 text-sm">From first period to menopause and beyond</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider -->
+<div class="wave bg-navy">
+  <svg viewBox="0 0 1280 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; color: #fdf6ef;">
+    <path d="M0 0L1280 0L1280 36C1280 36 960 72 640 72C320 72 0 36 0 36L0 0Z" fill="currentColor"/>
+  </svg>
+</div>
+
+<!-- ===================== BLOG PREVIEW ===================== -->
+<section class="bg-cream py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-14">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-warmtext mb-3">Latest health resources</h2>
+        <p class="text-muted text-lg max-w-lg">Expert insights from our providers on women's health, family medicine, and wellness.</p>
+      </div>
+      <a href="blog/index.html" class="flex-shrink-0 btn-outline text-sm">View All Articles</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <a href="blog/how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl overflow-hidden flex flex-col" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="aspect-[16/9] bg-cream flex items-center justify-center">
+          <svg class="w-10 h-10 text-orange/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <div class="p-6 flex flex-col flex-1 gap-3">
+          <p class="text-muted text-xs">Feb 25, 2026 · Asma Bhaidani, PA-C</p>
+          <h3 class="font-bold text-warmtext text-lg leading-snug">How Do We Prevent Heart Disease?</h3>
+          <p class="text-muted text-sm leading-relaxed flex-1">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent it.</p>
+          <span class="text-navy text-sm font-semibold">Read more →</span>
+        </div>
+      </a>
+
+      <a href="blog/high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl overflow-hidden flex flex-col" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="aspect-[16/9] bg-cream flex items-center justify-center">
+          <svg class="w-10 h-10 text-navy/20" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </div>
+        <div class="p-6 flex flex-col flex-1 gap-3">
+          <p class="text-muted text-xs">Feb 23, 2026 · Dr. Joshua Weiss</p>
+          <h3 class="font-bold text-warmtext text-lg leading-snug">High-Risk Pregnancy Care — How the Right OBGYN Team Supports You</h3>
+          <p class="text-muted text-sm leading-relaxed flex-1">Everything you need to know about high-risk pregnancy care and early monitoring.</p>
+          <span class="text-navy text-sm font-semibold">Read more →</span>
+        </div>
+      </a>
+
+      <a href="blog/how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl overflow-hidden flex flex-col" style="box-shadow: 0 2px 16px rgba(100,60,20,0.08);">
+        <div class="aspect-[16/9] bg-cream flex items-center justify-center">
+          <svg class="w-10 h-10 text-orange/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <div class="p-6 flex flex-col flex-1 gap-3">
+          <p class="text-muted text-xs">Feb 19, 2026 · Dr. Gonzalo Venegas</p>
+          <h3 class="font-bold text-warmtext text-lg leading-snug">How to Lose Weight With PCOS</h3>
+          <p class="text-muted text-sm leading-relaxed flex-1">Steady, sustainable progress — no fad diets. Learn the right approach to PCOS weight management.</p>
+          <span class="text-navy text-sm font-semibold">Read more →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-warmtext text-white">
+  <div class="max-w-6xl mx-auto px-5 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="block mb-4">
+          <img src="../../stellamattina/stellamattina.com/wp-content/uploads/2024/01/footer-logo.png"
+               alt="Stella Mattina" class="h-10 w-auto"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span style="display:none" class="font-display text-xl font-bold text-white">Stella Mattina</span>
+        </a>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">Personalized women's health and family medicine across the Dallas-Fort Worth metroplex.</p>
+        <p class="text-sm"><a href="tel:2149423100" class="text-white/70 hover:text-white transition-opacity">214-942-3100</a></p>
+        <p class="text-sm mt-1"><a href="mailto:info@stellamattina.com" class="text-white/70 hover:text-white transition-opacity">info@stellamattina.com</a></p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Services</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="womens-health.html" class="text-white/70 hover:text-white transition-opacity">Women's Health</a></li>
+          <li><a href="gynecology.html" class="text-white/70 hover:text-white transition-opacity">Gynecology</a></li>
+          <li><a href="prenatal-care.html" class="text-white/70 hover:text-white transition-opacity">Prenatal Care</a></li>
+          <li><a href="maternal-fetal-medicine.html" class="text-white/70 hover:text-white transition-opacity">Maternal-Fetal Medicine</a></li>
+          <li><a href="biote-hormone-therapy.html" class="text-white/70 hover:text-white transition-opacity">Hormone Therapy</a></li>
+          <li><a href="primary-care.html" class="text-white/70 hover:text-white transition-opacity">Primary Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Practice</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="providers.html" class="text-white/70 hover:text-white transition-opacity">Our Providers</a></li>
+          <li><a href="find-our-locations.html" class="text-white/70 hover:text-white transition-opacity">Find a Location</a></li>
+          <li><a href="about-us.html" class="text-white/70 hover:text-white transition-opacity">About Us</a></li>
+          <li><a href="patient-information.html" class="text-white/70 hover:text-white transition-opacity">Patient Information</a></li>
+          <li><a href="blog/index.html" class="text-white/70 hover:text-white transition-opacity">Health Blog</a></li>
+          <li><a href="contact-us.html" class="text-white/70 hover:text-white transition-opacity">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white/50 text-xs uppercase tracking-widest mb-5">Schedule</h4>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">Ready to get started? Book with one of our expert providers today.</p>
+        <a href="schedule-appointment.html" class="btn-primary text-sm block text-center">Schedule Appointment</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
+      <p>&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white/60">Privacy Policy</a>
+        <a href="#" class="hover:text-white/60">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

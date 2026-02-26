@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PCOS vs. Endometriosis – Key Differences and Impact on Fertility | Stella Mattina Health Blog</title>
+  <meta name='description' content='PCOS vs. endometriosis can be confusing before you have a diagnosis. Learn the symptoms, differences, and possible effects on your fertility.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-white/60 mb-5">
+      <a href="../index.html" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-white">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-white/90">PCOS vs. Endometriosis – Key Differences and Impac…</span>
+    </nav>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Pregnancy</span><span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Women's Health</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white leading-snug mb-4">PCOS vs. Endometriosis – Key Differences and Impact on Fertility</h1>
+    <div class="flex items-center gap-3 text-white/60 text-sm">
+      <span>March 13, 2025</span>
+      <span>·</span><span>By Dr. Theodore J. T. Krum</span>
+    </div>
+  </div>
+</section>
+<article class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <p class="text-lg text-muted leading-relaxed mb-6">Long, heavy, and painful periods? Or no periods at all? Might you have PCOS, you wonder? Or is it endometriosis? The idea of PCOS vs. endometriosis can be confusing before you have a diagnosis.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Polycystic ovary syndrome (PCOS) and endometriosis are two of the most common yet often misunderstood conditions affecting women’s reproductive health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Both endometriosis and PCOS share overlapping symptoms – such as irregular periods and potential fertility challenges. But they’re fundamentally different in their root causes, risk factors, and treatments.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So, how to find out if you have endometriosis or polycystic ovary syndrome? How to differentiate and diagnose both conditions? And, above all, how to treat them? Is it possible to conceive and have a healthy pregnancy if you have either one of them?</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you suffer from PCOS or endometriosis, it’s only normal to have all those doubts, especially if children are in your plans.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Thinking of that, we gathered all the information you need in this ultimate guide about PCOS and endometriosis.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Table of contents Understanding PCOS and Endometriosis What is PCOS? How PCOS Affects Your Fertility and Health What is Endometriosis? What are the Stages of Endometriosis? How Endometriosis Affects Your Fertility and Health How Do You Know Which Condition You Have – PCOS vs. Endometriosis? How to Get Tested for PCOS and Endometriosis Treatment for PCOS vs. Endometriosis</p>
+<p class="text-textsecondary leading-relaxed mb-4">As mentioned, both PCOS and endometriosis are common gynecological conditions that can significantly impact your health and fertility. But they do so in different ways.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Polycystic ovarian syndrome is a hormonal disorder that affects ovulation and metabolism. Endometriosis is a condition where tissue similar to your uterine lining grows outside your uterus, leading to pain and potential structural complications.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Understanding how both endometriosis and PCOS affect your body is essential for:</p>
+<p class="text-textsecondary leading-relaxed mb-4">To help you out, here’s an overview of each condition and the key differences between them.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Polycystic ovary syndrome (PCOS) is a common hormonal disorder that affects ovaries, typically during a person’s reproductive years. It’s a condition that disrupts normal ovarian function and can lead to a variety of health complications, including infertility.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Despite the name, having PCOS doesn’t necessarily mean you have polycystic ovaries or ovarian cysts! Instead, the term “polycystic” refers to the ultrasound appearance of the ovaries rather than actual cyst formation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So – the “cysts” in polycystic ovaries are actually underdeveloped follicles caused by disrupted ovulation, whereas true ovarian cysts are separate structures that can form for various reasons, including endometriosis.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Though the exact cause of PCOS isn’t fully understood, several factors contribute to its development, including:</p>
+<p class="text-textsecondary leading-relaxed mb-4">PCOS symptoms present differently in each person, but the most common ones include:</p>
+<p class="text-textsecondary leading-relaxed mb-4">One of the biggest challenges for people with PCOS is difficulty conceiving. This is mainly due to irregular or absent ovulation (anovulation). This can make it harder to predict or achieve pregnancy. But the effects of PCOS can be long-lasting and extend beyond reproductive health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This is why PCOS requires ongoing management to reduce the risks of developing other long-term health conditions like diabetes, heart disease, high cholesterol, mood disorders, and endometrial cancer.</p>
+<p class="text-textsecondary leading-relaxed mb-4">PCOS Impact on Fertility</p>
+<p class="text-textsecondary leading-relaxed mb-4">But don’t fret. While PCOS can make conception more challenging, you can still successfully become pregnant. Lifestyle changes, hormonal treatments, and in some cases, ovulation-inducing medications or assisted reproductive technologies (e.g., IVF, IUI) can all help you conceive.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Now, let’s understand endometriosis.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Endometriosis is a chronic condition where tissue similar to the lining of your endometrium grows outside the uterus. This misplaced tissue can grow on your ovaries, fallopian tubes, pelvic lining, and even in areas beyond your reproductive organs, such as the bladder or intestines.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Unlike the normal endometrial lining, which sheds during menstruation, endometriosis tissue has no way to exit your body. This can lead to inflammation, scarring, and chronic pelvic pain.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The exact root cause of endometriosis is still unclear, but here are some possibilities:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Endometriosis symptoms vary widely from person to person, but most people experience severe pain, especially during menstruation. Some common signs include:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Endometriosis is classified into four stages based on the location, amount, depth, and spread of endometrial-like tissue – as well as the presence of scar tissue (adhesions) and ovarian cysts (endometriomas).</p>
+<p class="text-textsecondary leading-relaxed mb-4">The staging system is based on the Revised American Society for Reproductive Medicine (rASRM) classification. But it doesn’t always correlate with symptom severity. This means even mild cases can cause severe pain, while advanced cases may be asymptomatic.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Here’s an overview of endometriosis stages:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Both endometriosis and PCOS are leading causes of infertility, affecting most women who are struggling to conceive. Endometriosis, specifically, can interfere with fertility in several ways:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Beyond fertility, endometriosis can also affect your overall health, increasing the risk of chronic pain and fatigue, gastrointestinal issues, and depression and anxiety due to the chronic pain.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Since both endometriosis and PCOS can cause pelvic pain and irregular periods, it can be confusing to distinguish between them. But the key symptoms below can help identify which one you might have.</p>
+<p class="text-textsecondary leading-relaxed mb-4">1 Irregular periods.</p>
+<p class="text-textsecondary leading-relaxed mb-4">2 Pelvic pain.</p>
+<p class="text-textsecondary leading-relaxed mb-4">3 Hormonal imbalances (both conditions may be due to hormonal disorder, but PCOS involves androgen dominance, while endometriosis involves estrogen dominance).</p>
+<p class="text-textsecondary leading-relaxed mb-4">4 Difficulty getting pregnant.</p>
+<p class="text-textsecondary leading-relaxed mb-4">5 Physical body changes. Some women experience bloating and notice fat concentration in the abdominal area, known as PCOS belly and Endo’s belly. (However, PCOS belly is related to weight gain and insulin resistance, while Endo’s belly is due to inflammation, pain, and fluid buildup in the pelvic area).</p>
+<p class="text-textsecondary leading-relaxed mb-4">Below are the key differences between endometriosis and PCOS to help you identify which condition you may have:</p>
+<p class="text-textsecondary leading-relaxed mb-4">You must know by now that both PCOS and endometriosis can make it harder to conceive, affecting fertility in different ways. The impact depends on the severity of your condition, hormone levels, and how your reproductive system is affected.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So, the best way to avoid infertility is early diagnosis and management of endometriosis and PCOS – which brings us to the next topic: diagnosis!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Testing is essential to get the right diagnosis. However, endometriosis and PCOS require different types of evaluations, as follows…</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your doctors will use a combination of medical history, physical exams, blood tests, and imaging to diagnose PCOS. The main tests include:</p>
+<p class="text-textsecondary leading-relaxed mb-4">A diagnosis of PCOS is only possible when at least two of the following three Rotterdam criteria are met:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Endometriosis is harder to diagnose than PCOS because it doesn’t always show up on ultrasounds or blood tests.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your doctor will start with a symptom assessment and pelvic exam to check if you experience pelvic pain, painful periods, digestion issues, and infertility struggles. A pelvic exam may also reveal tenderness, nodules, or cysts.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Then, they may opt to do a pelvic ultrasound and an MRI to check for endometriomas – but these are not 100% accurate in detecting all endometriosis tissue, as they don’t usually detect smaller lesions or adhesions.</p>
+<p class="text-textsecondary leading-relaxed mb-4">For this reason, a laparoscopy is the ONLY definitive way to diagnose endometriosis.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A laparoscopy is a minimally invasive surgery where a small camera is inserted into your abdomen to look for endometrial tissue growing outside your uterus.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If endometriosis is found, doctors can remove or biopsy the tissue during the procedure.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Both PCOS and endometriosis require different treatment approaches based on your symptoms, fertility goals, and overall health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Neither condition has a cure, but managing symptoms effectively can improve your quality of life and reproductive health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Since PCOS is hormonally driven, treatment focuses on balancing hormones, regulating periods, and addressing metabolic issues, including:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Endometriosis treatment focuses on pain relief, hormone suppression, and surgical intervention if needed. Treatment may include:</p>
+<p class="text-textsecondary leading-relaxed mb-4">Looking for a PCOS or endometriosis specialist near you? Look no further than Stella Mattina.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Living with endometriosis and PCOS can be challenging, but you don’t have to face it alone. At Stella Mattina, our gynecologists provide personalized diagnosis and treatment plans to help you manage symptoms – and (along with our obstetric specialists) help you conceive and have a healthy pregnancy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Choose your nearest location and schedule an appointment today.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Main image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Dr. Krum is currently in practice in Arlington, TX. He received his undergraduate degree at Texas A&M University, then attended UTMB Galveston for medical school, finishing in 1986, completing his residency there in 1990. Providing a full range of obstetrical and gynecological care, he specializes in the treatment of endometriosis and robotic surgery. He arranges his schedule so that same-day appointments are usually available.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    <div class="mt-8 pt-6 border-t border-border flex flex-wrap gap-2"><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">PCOS and endometriosis treatment</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">PCOS vs. endometriosis</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">Tests for PCOS and endometriosis</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">What is endometriosis?</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">What is PCOS?</span></div>
+  </div>
+</article>
+<section class="py-12 bg-creamsec border-y border-border">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-warmtext mb-3">Ready to Take the Next Step?</h2>
+    <p class="text-textsecondary mb-6">Speak with one of our expert providers — we're here to support your health journey.</p>
+    <a href="../schedule-appointment.html" class="inline-block bg-orange text-white font-semibold px-8 py-3.5 rounded-full hover:bg-orange/90 transition-colors">
+      Schedule Appointment
+    </a>
+  </div>
+</section>
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-warmtext mb-8">More Health Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 25, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent he…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 23, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 19, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over week…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-textprimary text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../index.html" class="text-white/70 hover:text-white text-sm">← Back to Home</a>
+    <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+    <a href="../schedule-appointment.html" class="bg-orange text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange/90">Schedule Now</a>
+  </div>
+</footer>
+</body>
+</html>

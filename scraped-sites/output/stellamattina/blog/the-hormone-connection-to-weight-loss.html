@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Hormone Connection to Weight Loss | Stella Mattina Health Blog</title>
+  <meta name='description' content='Find out how key hormones interact with your weight loss efforts – and how to restore balance to achieve your sustainable weight.' />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:      '#fdf6ef',
+            creambg:    '#fdf6ef',
+            creamsec:   '#f5e9db',
+            navy:       '#1c348c',
+            periwinkle: '#617CDF',
+            orange:     '#fb8e28',
+            warmtext:   '#2b1f17',
+            muted:      '#7a6759',
+            border:     '#e8d8c8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            warm:     '0 2px 16px rgba(100,60,20,0.08)',
+            warmhov:  '0 8px 32px rgba(100,60,20,0.16)',
+            header:   '0 0 24px 0 rgba(100,60,20,0.12)',
+          },
+          borderRadius: { pill: '26px' },
+        },
+      },
+    }
+</script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #2b1f17; background: #fdf6ef; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(100,60,20,0.16); }
+    .btn-primary  { background: #fb8e28; color: #2b1f17; font-family: 'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-primary:hover { opacity:.85; }
+    .btn-outline  { border: 2px solid #1c348c; color: #1c348c; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:all .2s; display:inline-block; }
+    .btn-outline:hover { background:#1c348c; color:#fdf6ef; }
+    .btn-navy { background:#1c348c; color:#fdf6ef; font-family:'DM Sans',sans-serif; font-weight:600; border-radius:26px; padding:.85rem 2rem; transition:opacity .2s; display:inline-block; }
+    .btn-navy:hover { opacity:.85; }
+    .check-mark { width:20px; height:20px; border-radius:50%; background:#fb8e28; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-link { transition:opacity .2s; }
+    .nav-link:hover { opacity:.5; }
+    .mobile-menu { display:none; }
+    .mobile-menu.open { display:block; }
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+    .prose p { margin-bottom:1rem; line-height:1.75; color:#7a6759; }
+    .prose h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; margin-top:2rem; margin-bottom:1rem; color:#2b1f17; }
+    .prose h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.125rem; font-weight:600; margin-top:1.5rem; margin-bottom:.5rem; color:#2b1f17; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin-bottom:1rem; color:#7a6759; }
+    .prose li { margin-bottom:.375rem; }
+</style>
+</head>
+<body class="bg-cream">
+<header class="sticky top-0 z-50 bg-cream" style="box-shadow:0 0 24px 0 rgba(100,60,20,0.12);">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-6">
+    <a href="../index.html" class="flex-shrink-0">
+      <img src="../../../stellamattina/stellamattina.com/wp-content/uploads/2024/03/logo-new.png" alt="Stella Mattina" class="h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../services.html" class="nav-link text-sm font-medium text-warmtext">Services</a>
+      <a href="../providers.html" class="nav-link text-sm font-medium text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="nav-link text-sm font-medium text-warmtext">Locations</a>
+      <a href="../about-us.html" class="nav-link text-sm font-medium text-warmtext">About</a>
+      <a href="../blog/index.html" class="nav-link text-sm font-medium text-warmtext">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../schedule-appointment.html" class="btn-primary text-sm px-5 py-2.5 hidden sm:inline-block">Schedule Appointment</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 rounded-lg" aria-label="Menu">
+        <svg class="w-5 h-5 text-warmtext" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-cream px-5 pb-5">
+    <nav class="flex flex-col gap-1 pt-4">
+      <a href="../services.html" class="text-sm font-medium py-2 text-warmtext">Services</a>
+      <a href="../providers.html" class="text-sm font-medium py-2 text-warmtext">Providers</a>
+      <a href="../find-our-locations.html" class="text-sm font-medium py-2 text-warmtext">Locations</a>
+      <a href="../about-us.html" class="text-sm font-medium py-2 text-warmtext">About</a>
+      <a href="../blog/index.html" class="text-sm font-medium py-2 text-warmtext">Blog</a>
+      <a href="../schedule-appointment.html" class="btn-primary text-sm mt-3 text-center">Schedule Appointment</a>
+    </nav>
+  </div>
+</header>
+<section class="bg-navy py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-white/60 mb-5">
+      <a href="../index.html" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-white">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-white/90">The Hormone Connection to Weight Loss</span>
+    </nav>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Hormones</span><span class="bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">Primary Care</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white leading-snug mb-4">The Hormone Connection to Weight Loss</h1>
+    <div class="flex items-center gap-3 text-white/60 text-sm">
+      <span>November 20, 2025</span>
+      <span>·</span><span>By Dr. Gonzalo Venegas</span>
+    </div>
+  </div>
+</section>
+<article class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <p class="text-lg text-muted leading-relaxed mb-6">Does weight loss feel like a puzzle with missing pieces? You eat well, you stay active, but the results stall? The hidden puzzle piece is often something invisible: your hormones.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Think of these as your body’s chemical messengers – your built-in communication system. Hormones carry signals that control your metabolism, including hunger and mood, and also how efficiently your cells burn energy or store fat.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In other words, your hormones play a role in how you gain, lose, and maintain body weight.</p>
+<p class="text-textsecondary leading-relaxed mb-4">When their messages are clear and balanced, your metabolism runs smoothly. When signals are messy, your metabolism slows and your body starts protecting its energy stores instead of releasing them.</p>
+<p class="text-textsecondary leading-relaxed mb-4">That’s why you can keep the same routine, calories, and workouts as before and still see no progress. Hormonal imbalance can shift the entire equation – altering your appetite cues, slowing your energy burn, or encouraging fat storage.</p>
+<p class="text-textsecondary leading-relaxed mb-4">When you know that hormones regulate metabolism, you understand why “eat less, move more” isn’t always enough!</p>
+<p class="text-textsecondary leading-relaxed mb-4">In this article, we’ll look at how key hormones interact, what throws them off balance, and how restoring hormonal health can open the door to lasting weight loss.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Table of contents</p>
+<p class="text-textsecondary leading-relaxed mb-4">What Are Weight Loss Hormones? How Hormones Affect Fat Storage and Metabolism Common Hormones That Influence Weight Gain and Loss Signs You Have a Hormonal Imbalance How Does Fat Affect Hormones? How to Fix Hormonal Imbalance for Healthy Weight Loss</p>
+<p class="text-textsecondary leading-relaxed mb-4">As mentioned, hormones are your body’s chemical messengers – tiny molecules that move through your bloodstream, delivering instructions from one organ to another.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Within your endocrine system (a.k.a. your hormone system), dozens of these messengers shape how you feel, function, and respond to daily habits.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A hormone produced in one part of your body can influence tissues far away, adjusting energy use, appetite, and mood in milliseconds.</p>
+<p class="text-textsecondary leading-relaxed mb-4">When it comes to maintaining or changing your body composition (which is what you’re aiming to do), a handful of hormones carry particular influence.</p>
+<p class="text-textsecondary leading-relaxed mb-4">They include insulin, cortisol, estrogen, leptin, ghrelin, thyroid hormones, and testosterone. Together these coordinate hunger, fat storage, and how efficiently your cells turn food into usable energy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Why are these called weight loss hormones?</p>
+<p class="text-textsecondary leading-relaxed mb-4">Because if hormone levels drift too high or too low, the conversation between them becomes distorted! You might feel hungry when you’re actually full, or sluggish when you’ve slept well.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These are early signs of hormone imbalance – signals that your body’s internal communication may need looking at.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Balanced hormones support healthy weight management because they align your body’s natural metabolic rhythms.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Hormones determine how your body uses, stores, or releases energy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Inside this chemical network of hormones, certain messengers decide when to burn fuel and when to hold on to it as body fat.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Insulin, for example, helps move glucose from the bloodstream into your cells for energy. But when your cells stop responding properly – a state known as insulin resistance – your body compensates by releasing more insulin to try to regulate blood sugar levels. But lack of insulin sensitivity encourages fat storage rather than fat burning.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Cortisol, your body’s main stress signal, works in a similar way. Chronically high cortisol levels raise blood sugar and cravings, particularly for refined carbohydrates, which then feed the insulin cycle again.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Can it get worse? Yes!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Thyroid hormones regulate your metabolic “speed.” Even a subtle decline can reduce how much daily energy you actually use up, leaving you tired and prone to storing body fat.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Estrogen and testosterone influence where that fat sits – often shifting toward your abdomen when hormonal imbalance sets in.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Leptin and ghrelin work to regulate your appetite (leptin) or stimulate hunger (ghrelin – the hunger hormone!). You need them to work well. If your leptin levels get out of sync, leptin resistance sets in, making it hard to lose weight.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Of course, external factors (such as stress, poor sleep, nutrient-poor diets, and age-related changes) can increase the effects of hormone imbalance.</p>
+<p class="text-textsecondary leading-relaxed mb-4">When that happens, your metabolism becomes even less predictable and your appetite cues less reliable. It then becomes harder to lose weight even when your lifestyle habits seem sound!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Can hormones cause weight gain and fatigue? Yes, certain imbalances like thyroid dysfunction or insulin resistance can lead to both.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Recognizing how interconnected these hormone pathways are is the first step toward identifying which hormone might be holding your progress back.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Let’s look more closely at four of the common weight loss hormones.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Insulin’s job is simple but powerful: it helps your body move glucose into cells for energy. When your diet is balanced and your insulin sensitivity is good, you use energy efficiently and your body fat stays stable.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But frequent spikes in insulin – often from ultra-processed foods or constant snacking – can cause cells to stop responding. That’s insulin resistance, and it’s your body’s signal to store rather than burn fat. So, it converts extra glucose into body fat, especially around your abdomen.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This process links directly to weight gain and, over time, to metabolic syndrome and fatigue. However, restoring insulin balance through medical guidance and a nutrient-dense diet can help your body relearn how to lose weight effectively.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Cortisol is your built-in alarm system. The stress hormone rises when life feels dangerous. Short bursts of stress keep you alert. But when cortisol levels stay high, your body interprets stress as danger and clings to its energy reserves.</p>
+<p class="text-textsecondary leading-relaxed mb-4">That means more food cravings, slower metabolism, and central weight gain. Elevated cortisol also raises insulin, again increasing fat storage.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So, can your hormones stop you from losing weight? Yes – when cortisol and insulin remain high together, fat-burning signals get silenced.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You can help reopen the pathway to healthy weight loss by managing stress and restoring healthy cortisol patterns.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Estrogen helps regulate your mood, bone density, and how your body stores fat. When estrogen is balanced, it protects muscle tone and supports metabolic efficiency – which is what we’re looking for to help correct hormone imbalance.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Problems arise when estrogen levels swing too high or too low.</p>
+<p class="text-textsecondary leading-relaxed mb-4">“Estrogen dominance” is often a result of stress, environmental toxins, or excess body fat. It can lead to stubborn weight gain, fluid retention, and mood shifts.</p>
+<p class="text-textsecondary leading-relaxed mb-4">On the other hand, low estrogen (or estrogen deficiency) after menopause can make postmenopausal women more prone to belly fat and reduced energy use.</p>
+<p class="text-textsecondary leading-relaxed mb-4">In both cases, these hormonal shifts in your endocrine system reduce calorie burn and can make it harder to lose weight, even with good habits.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Your thyroid gland releases thyroid hormones that act like a thermostat for your metabolism. When levels fall, your metabolism slows, causing fatigue, dry skin, and weight gain that resists weight loss effort.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A mild decline in thyroid hormone output can reduce energy expenditure by hundreds of calories a day! That’s why even your healthy diet sometimes isn’t enough.</p>
+<p class="text-textsecondary leading-relaxed mb-4">As part of your medical weight-loss plan in Dallas, we suggest lab testing for thyroid function. If we find an imbalance, we can target your treatment and help re-ignite energy production so your body can lose weight sustainably.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Hormones affect every system in your body, so when they fall out of sync, and diet and exercise no longer work for weight loss, the signs can appear almost anywhere.</p>
+<p class="text-textsecondary leading-relaxed mb-4">A subtle hormonal imbalance can develop gradually, often after stress, pregnancy, or perimenopause. And many people overlook the hormone connection.</p>
+<p class="text-textsecondary leading-relaxed mb-4">So – if you’re thinking, “how do I know if hormones are affecting my weight?” typical symptoms include:</p>
+<p class="text-textsecondary leading-relaxed mb-4">If several of these sound familiar, your hormone levels could be sending mixed signals.</p>
+<p class="text-textsecondary leading-relaxed mb-4">One key clue: weight gain that resists diet and exercise. When you can’t seem to lose weight despite doing “everything right,” it’s often your hormones – especially, but not always, in postmenopausal women.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Recognizing these early patterns of persistent weight issues allows you to seek help before they spiral into long-term hormonal imbalance and metabolic fatigue.</p>
+<p class="text-textsecondary leading-relaxed mb-4">But what role does fat play in the hormone connection?</p>
+<p class="text-textsecondary leading-relaxed mb-4">This is a two-way process: Hormonal imbalance influences body fat, and body fat influences hormone imbalance.</p>
+<p class="text-textsecondary leading-relaxed mb-4">That’s because fat tissue is metabolically active. It releases signaling molecules that affect appetite, inflammation, and reproductive health.</p>
+<p class="text-textsecondary leading-relaxed mb-4">One key messenger is leptin. When leptin levels rise, your brain should register that you’re full. But with excess body fat, those signals get muffled – a state called “leptin resistance.” Your brain thinks you’re starving, even when energy stores are high – which drives more eating and slows your metabolism.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Excess fat also alters hormone levels by producing small amounts of estrogen and reducing growth hormone, both of which change how your body stores and burns calories.</p>
+<p class="text-textsecondary leading-relaxed mb-4">This is a vicious cycle! More fat means more hormonal disruption, and more disruption makes it harder to shed fat.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Breaking that fat loop through medical weight loss support will help your hormones find balance again.</p>
+<p class="text-textsecondary leading-relaxed mb-4">There’s no single shortcut to balancing hormones. But there are proven ways to help your body regulate its metabolism again.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Start small by managing your stress, prioritizing good sleep patterns, and following a healthy diet based on whole foods. Walking, strength work, and yoga can also encourage insulin sensitivity and steadier energy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">These steps won’t fix every hormonal imbalance, but they build a good foundation.</p>
+<p class="text-textsecondary leading-relaxed mb-4">After that, it’s time to look at targeted medical treatment – by which we mean hormone replacement therapy.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Which hormone therapy is best for weight loss? We recommend bioidentical hormone replacement therapy (BHRT), because it works naturally with your body to provide a steady, customized release of hormones.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Our clinician will assess the possibility of hormone imbalance (depending on your age, symptoms, and possible period changes. And maybe then recommend BioTE pellet therapies to restore natural metabolism.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Options can include thyroid support to lose weight, testosterone balancing, or BHRT for women approaching or past menopause.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Under professional supervision, these therapies can support weight loss by rebalancing your hormone levels so your metabolism works with you.</p>
+<p class="text-textsecondary leading-relaxed mb-4">How?</p>
+<p class="text-textsecondary leading-relaxed mb-4">By restoring clarity to your body’s messaging system! BHRT addresses your hormonal imbalance directly. And the goal isn’t so much to lose weight as to be able to maintain a healthy body weight for you. This usually sorts out your other symptoms.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If you have persistent hormonal imbalance symptoms (see above) and your body seems resistant to weight loss or maintaining a healthy weight, it’s probably wise to consult a hormone and weight loss expert in Dallas.</p>
+<p class="text-textsecondary leading-relaxed mb-4">They can develop a personalized plan with you that balances your body’s hormone imbalance and achieves lasting results when calorie counting fails.</p>
+<p class="text-textsecondary leading-relaxed mb-4">The medical weight loss program at our Stella Mattina clinics takes a full-body view: hormone testing, nutritional guidance, and metabolic analysis working together to restore equilibrium.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Call us today – we offer same-day appointments.</p>
+<p class="text-textsecondary leading-relaxed mb-4">You’ll have realized by now that sustainable weight loss is often about stabilizing any hormonal imbalance that’s preventing your healthy habits working!</p>
+<p class="text-textsecondary leading-relaxed mb-4">When your hormone levels are in sync, your body naturally finds its rhythm for appetite, sleep, and energy. But when they’re out of sync, it’s really hard to reach your target weight.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Not only that, but chronic hormonal imbalance can raise your risk of heart disease, fatigue, and emotional burnout. That’s why understanding the role of insulin, cortisol, estrogen, thyroid, and leptin matters so much.</p>
+<p class="text-textsecondary leading-relaxed mb-4">If hormonal changes have made weight loss feel discouraging, medical weight loss in Dallas gives you a clear and encouraging path forward so you can finally see the progress you’ve been aiming for.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Take the first step toward feeling like yourself again.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Connect with a primary care doctor Dallas and choose the location that supports your next success.</p>
+<p class="text-textsecondary leading-relaxed mb-4">Schedule an appointment!</p>
+<p class="text-textsecondary leading-relaxed mb-4">Main image attribution</p>
+<p class="text-textsecondary leading-relaxed mb-4">Gonzalo Venegas, MD is the Medical Director of Stella Mattina Health and a respected obstetrician-gynecologist with over four decades of service in the Dallas medical community. He has led the Department of Obstetrics and Gynecology at Methodist Dallas Medical Center and contributed to community health through his role on the Parkland Health & Hospital System Board. A dedicated mentor at UT Southwestern, Dr. Venegas is known for his leadership, compassion, and commitment to advancing women’s health and medical education.</p>
+<p class="text-textsecondary leading-relaxed mb-4">anemia and gestational diabetes balance hormones after pregnancy BioTe hormone therapy breast cancer awareness Can STDs be detected with blood tests? challenging symptoms during pregnancy common pregnancy concerns complications of high-risk pregnancies concerns about weight gain during pregnancy contraception dietary guidelines for gestational diabetes diet during pregnancy gestational diabetes gestational diabetes diet gestational diabetes diet plan Gynecological care gynecologist high-risk pregnancy high-risk pregnancy appointments timeline how to prepare for your ObGyn visit how to prevent osteoporosis identifying a high-risk pregnancy importance of mammograms insulin use in gestational diabetes is gestational diabetes genetic? obstetrician prenatal care prenatal testing schedule prenatal tests Preventive healthcare primary care in women's health sample gestational diabetes meal ideas Sexually Transmitted Diseases STDs twins and gestational diabetes Typical pelvic exam what are STDs? what happens during your first ObGyn appointment What is a full STD panel? when to attend your first ObGyn appointment when to start prenatal care why is prenatal care important women's healthcare specialist women's healthcare specialists Women's preventive care</p>
+
+    <div class="mt-8 pt-6 border-t border-border flex flex-wrap gap-2"><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">common hormones influencing weight</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">how hormones affect fat storage</span><span class="bg-lightfill text-muted text-xs px-3 py-1 rounded-full">what are weight loss hormones</span></div>
+  </div>
+</article>
+<section class="py-12 bg-creamsec border-y border-border">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-warmtext mb-3">Ready to Take the Next Step?</h2>
+    <p class="text-textsecondary mb-6">Speak with one of our expert providers — we're here to support your health journey.</p>
+    <a href="../schedule-appointment.html" class="inline-block bg-orange text-white font-semibold px-8 py-3.5 rounded-full hover:bg-orange/90 transition-colors">
+      Schedule Appointment
+    </a>
+  </div>
+</section>
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-warmtext mb-8">More Health Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <a href="how-do-we-prevent-heart-disease.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 25, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How Do We Prevent Heart Disease?</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Heart disease is one of the leading causes of illness for adults in the U.S. Learn how to prevent he…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="high-risk-pregnancy-care-how-the-right-obgyn-and-mfm-team-support-you-and-your-baby.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 23, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">High-Risk Pregnancy Care – How the Right OBGYN and MFM Team Support You and Your Baby</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Risk is on a spectrum, but read everything you need to know about high-risk pregnancy care and early…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+      <a href="how-to-lose-weight-with-pcos.html" class="card-hover bg-creamsec rounded-2xl border border-border p-5 flex flex-col gap-2">
+        <span class="text-xs text-textsecondary">February 19, 2026</span>
+        <h3 class="font-semibold text-warmtext text-sm leading-snug">How to Lose Weight With PCOS</h3>
+        <p class="text-textsecondary text-xs leading-relaxed">Understanding how to lose weight with PCOS means no fad dieting but making steady progress over week…</p>
+        <span class="text-navy text-xs font-medium mt-auto">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-textprimary text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../index.html" class="text-white/70 hover:text-white text-sm">← Back to Home</a>
+    <p class="text-white/40 text-xs">&copy; 2026 Stella Mattina LLC. All rights reserved.</p>
+    <a href="../schedule-appointment.html" class="bg-orange text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange/90">Schedule Now</a>
+  </div>
+</footer>
+</body>
+</html>

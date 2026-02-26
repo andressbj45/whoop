@@ -61,7 +61,7 @@
 
   /* Typography — fonts loaded via next/font/google in layout.tsx */
   --font-sans: var(--font-roboto), system-ui, sans-serif;
-  --font-display: var(--font-dynalight), Georgia, serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
 
   /* Spacing (Ask Tia aesthetic: generous whitespace) */
   --spacing-section: 5rem;
