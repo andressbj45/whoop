@@ -85,5 +85,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-04-PLAN.md — blog post detail pages built with Article JSON-LD. Next: 02-05
+Stopped at: Completed 02-05-PLAN.md — location detail pages with MedicalClinic JSON-LD, 7 SSG routes. Next: 02-06
 Resume file: None

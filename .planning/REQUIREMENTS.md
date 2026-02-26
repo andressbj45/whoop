@@ -59,7 +59,7 @@
 ### Locations
 
 - [ ] **LOC-01**: Locations listing page with all clinic locations from locations.json
-- [ ] **LOC-02**: Individual location detail pages with address, phone, and directions CTA
+- [x] **LOC-02**: Individual location detail pages with address, phone, and directions CTA
 - [x] **LOC-03**: MedicalClinic schema.org JSON-LD on each location page
 
 ### Careers
@@ -134,7 +134,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BLOG-02 | Phase 2 | Complete |
 | BLOG-03 | Phase 2 | Complete |
 | LOC-01 | Phase 2 | Pending |
-| LOC-02 | Phase 2 | Pending |
+| LOC-02 | Phase 2 | Complete |
 | LOC-03 | Phase 2 | Complete |
 | CAR-01 | Phase 2 | Pending |
 | SEO-01 | Phase 4 | Pending |
