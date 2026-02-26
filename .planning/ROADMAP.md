@@ -88,6 +88,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-02-26 |
-| 2. Content Pages | 5/8 | In Progress|  |
+| 2. Content Pages | 7/8 | In Progress|  |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. SEO Hardening | 0/TBD | Not started | - |

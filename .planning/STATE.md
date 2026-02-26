@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 2 of 4 (Content Pages)
-Plan: 5 of 8 in current phase
-Status: Executing — plan 02-05 complete
-Last activity: 2026-02-26 — 02-05 complete: location detail pages with MedicalClinic JSON-LD, 7 SSG routes
+Plan: 6 of 8 in current phase
+Status: Executing — plan 02-06 complete
+Last activity: 2026-02-26 — 02-06 complete: doctor directory listing + blog index with BlogFilter client island
 
-Progress: [█████░░░░░] 44%
+Progress: [██████░░░░] 50%
 
 ## Performance Metrics
 
@@ -43,6 +43,7 @@ Progress: [█████░░░░░] 44%
 | Phase 02-content-pages P04 | 3 | 1 tasks | 9 files |
 | Phase 02-content-pages P05 | 2min | 1 tasks | 1 files |
 | Phase 02-content-pages P03 | 2min | 2 tasks | 12 files |
+| Phase 02-content-pages P06 | 2min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,7 @@ Recent decisions affecting current work:
 - [Phase 02-content-pages]: Module-level const service = getServiceBySlug(SLUG)! allows export const metadata to reference service data at build time
 - [Phase 02-content-pages]: patient-information page uses FAQPage schema with empty mainEntity — ServiceFaqSection renders null when faqs.length === 0
 - [02-05]: MedicalClinic JSON-LD uses Record<string,unknown> — schema-dts MedicalClinic union type (MedicalClinicLeaf | CovidTestingFacility | string) is incompatible with WithContext<T extends Thing>
+- [Phase 02-content-pages]: BlogFilter receives all posts from Server Component parent and filters client-side — no API round-trips needed since full post list is small enough to serialize as props
 
 ### Pending Todos
 
@@ -85,5 +87,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-05-PLAN.md — location detail pages with MedicalClinic JSON-LD, 7 SSG routes. Next: 02-06
+Stopped at: Completed 02-06-PLAN.md — doctor directory listing + blog index with BlogFilter client island. Next: 02-07
 Resume file: None
