@@ -130,3 +130,23 @@ None - no external service configuration required.
 ---
 *Phase: 01-foundation*
 *Completed: 2026-02-26*
+
+## Self-Check: PASSED
+
+All files verified present on disk:
+- stella-mattina/package.json - FOUND
+- stella-mattina/tsconfig.json - FOUND
+- stella-mattina/next.config.ts - FOUND
+- stella-mattina/components.json - FOUND
+- stella-mattina/src/app/globals.css - FOUND
+- stella-mattina/src/app/layout.tsx - FOUND
+- stella-mattina/src/app/page.tsx - FOUND
+- stella-mattina/src/lib/utils.ts - FOUND
+- stella-mattina/src/components/ui/button.tsx - FOUND
+- stella-mattina/src/components/ui/navigation-menu.tsx - FOUND
+- stella-mattina/src/components/ui/sheet.tsx - FOUND
+- .planning/phases/01-foundation/01-01-SUMMARY.md - FOUND
+
+Commits verified:
+- 2c3bd9e feat(01-01): scaffold Next.js 16 project with all dependencies - FOUND
+- 32d1897 docs(01-01): complete plan documentation - FOUND

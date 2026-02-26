@@ -15,7 +15,7 @@
 ### Design System
 
 - [x] **DESIGN-01**: Ask Tia-inspired global layout applied (clean minimal, warm personal feel, generous whitespace)
-- [ ] **DESIGN-02**: Site is fully mobile-responsive across all page types
+- [x] **DESIGN-02**: Site is fully mobile-responsive across all page types
 - [x] **DESIGN-03**: SM logo displayed in header and footer
 - [x] **DESIGN-04**: "Book Now" CTA button present on every page, linking to patient portal
 
@@ -114,7 +114,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-03 | Phase 1 | Pending |
 | FOUND-04 | Phase 1 | Complete |
 | DESIGN-01 | Phase 1 | Complete |
-| DESIGN-02 | Phase 1 | Pending |
+| DESIGN-02 | Phase 1 | Complete |
 | DESIGN-03 | Phase 1 | Complete |
 | DESIGN-04 | Phase 1 | Complete |
 | HOME-01 | Phase 3 | Pending |

@@ -12,7 +12,7 @@ A four-phase rebuild of stellamattina.com from WordPress to Next.js. Phase 1 lay
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Scaffold Next.js project with typed content layer, design tokens, and HIPAA-safe analytics
+- [x] **Phase 1: Foundation** - Scaffold Next.js project with typed content layer, design tokens, and HIPAA-safe analytics (completed 2026-02-26)
 - [ ] **Phase 2: Content Pages** - Build all detail, listing, and static pages (doctors, services, blog, locations, contact, careers)
 - [ ] **Phase 3: Homepage** - Assemble homepage by composing Phase 2 component types into the primary patient acquisition surface
 - [ ] **Phase 4: SEO Hardening** - Generate sitemap, robots.txt, canonical URLs, and Open Graph coverage across all routes
@@ -77,7 +77,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 4/5 | In Progress|  |
+| 1. Foundation | 5/5 | Complete   | 2026-02-26 |
 | 2. Content Pages | 0/TBD | Not started | - |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. SEO Hardening | 0/TBD | Not started | - |
