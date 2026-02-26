@@ -87,7 +87,7 @@ export default function HomePage() {
                 Women&apos;s Health &amp; Family Care · Dallas–Fort Worth
               </p>
               <h1 className="font-display text-5xl sm:text-6xl font-bold text-sm-navy leading-tight">
-                Expert Women&apos;s Care,{' '}
+                Expert Women&apos;s &amp; Family Care,{' '}
                 <span className="text-sm-blue">Same Day</span>
               </h1>
               <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-lg">
