@@ -1,4 +1,4 @@
-import blogData from '../../../../scraped-sites/stellamattina/extracted/blog_posts.json'
+import blogData from '../../data/blog_posts.json'
 import type { BlogPost } from './types'
 
 const posts = blogData as BlogPost[]

@@ -1,4 +1,4 @@
-import practitionersData from '../../../../scraped-sites/stellamattina/extracted/practitioners.json'
+import practitionersData from '../../data/practitioners.json'
 import type { Practitioner } from './types'
 
 const practitioners = practitionersData as Practitioner[]

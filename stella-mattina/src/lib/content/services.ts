@@ -1,4 +1,4 @@
-import servicesData from '../../../../scraped-sites/stellamattina/extracted/services.json'
+import servicesData from '../../data/services.json'
 import type { Service } from './types'
 
 const services = servicesData as Service[]

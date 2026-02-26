@@ -1,4 +1,4 @@
-import contactData from '../../../../scraped-sites/stellamattina/extracted/contact_info.json'
+import contactData from '../../data/contact_info.json'
 import type { ContactInfo } from './types'
 
 const raw = contactData as ContactInfo

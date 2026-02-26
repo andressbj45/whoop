@@ -1,4 +1,4 @@
-import locationsData from '../../../../scraped-sites/stellamattina/extracted/locations.json'
+import locationsData from '../../data/locations.json'
 import { getPractitioners } from './practitioners'
 import type { Location, LocationWithProviders } from './types'
 
