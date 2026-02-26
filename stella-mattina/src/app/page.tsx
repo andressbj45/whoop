@@ -75,27 +75,27 @@ export default function HomePage() {
     <PageWrapper>
 
       {/* ══════════════════════════════════════════════
-          1. HERO — split, full-bleed image right
+          1. HERO — split, defined placed photo
       ══════════════════════════════════════════════ */}
-      <section className="bg-white overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[580px]">
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Text side */}
-          <div className="flex items-center px-6 sm:px-10 xl:px-20 py-16 lg:py-24 lg:ml-auto lg:max-w-2xl w-full">
+            {/* Text side */}
             <div>
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-sm-blue mb-5">
-                Women&apos;s Health · Dallas–Fort Worth
+                Women&apos;s Health &amp; Family Care · Dallas–Fort Worth
               </p>
               <h1 className="font-display text-5xl sm:text-6xl font-bold text-sm-navy leading-tight">
                 Expert Women&apos;s Care,{' '}
                 <span className="text-sm-blue">Same Day</span>
               </h1>
               <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-lg">
-                Board-certified OBGYNs and primary care providers accepting
-                most major insurance — across 15+ DFW locations.
+                Board-certified OBGYNs, family care physicians, and primary care
+                providers accepting most major insurance — across 15+ DFW locations.
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 items-start">
+              <div className="mt-8">
                 <BookingButton
                   size="lg"
                   label="Book Your Appointment"
@@ -121,18 +121,24 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* Full-bleed image right */}
-          <div className="relative min-h-[360px] lg:min-h-0 bg-sm-gray">
-            <Image
-              src="/images/hero-doctor-consultation.jpg"
-              alt="Stella Mattina doctor consulting with patient"
-              fill
-              priority
-              className="object-cover object-center"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+            {/* Defined placed photo */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                {/* Offset decorative block behind the photo */}
+                <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl bg-sm-blue-card" aria-hidden="true" />
+                <Image
+                  src="/images/hero-doctor-consultation.jpg"
+                  alt="Stella Mattina doctor consulting with patient"
+                  width={500}
+                  height={580}
+                  priority
+                  className="relative rounded-2xl shadow-lg object-cover"
+                  style={{ width: '100%', maxWidth: 500, height: 'auto' }}
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
