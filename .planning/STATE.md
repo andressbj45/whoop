@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 2 of 4 (Content Pages)
-Plan: 2 of 8 in current phase
-Status: Executing — plan 02-02 complete
-Last activity: 2026-02-26 — 02-02 complete: doctor bio detail pages with Physician JSON-LD, 29 SSG routes
+Plan: 4 of 8 in current phase
+Status: Executing — plan 02-04 complete
+Last activity: 2026-02-26 — 02-04 complete: blog post detail pages with Article JSON-LD, 61 SSG routes
 
-Progress: [████░░░░░░] 30%
+Progress: [█████░░░░░] 38%
 
 ## Performance Metrics
 
@@ -40,6 +40,7 @@ Progress: [████░░░░░░] 30%
 | Phase 01-foundation P05 | 3min | 1 tasks | 0 files |
 | Phase 02-content-pages P01 | 6min | 2 tasks | 4 files |
 | Phase 02-content-pages P02 | 8min | 1 tasks | 1 files |
+| Phase 02-content-pages P04 | 3 | 1 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -62,6 +63,8 @@ Recent decisions affecting current work:
 - [02-01]: location-addresses.ts structured as a standalone lookup table so page components need no changes when addresses are verified against live site
 - [Phase 02-content-pages]: schema-dts MedicalSpecialty is strict enum — use Record<string,unknown> for jsonLd when custom specialty strings conflict with type
 - [Phase 02-content-pages]: Next.js 15 async params: type as Promise<{ slug: string }> and await in both generateMetadata and page component
+- [Phase 02-content-pages]: WithContext<FAQPage> and WithContext<Article> required for schema-dts types when @context is present — bare FAQPage/Article types reject @context field
+- [Phase 02-content-pages]: renderBlogContent strips tag cloud using word-count heuristic (>4 words per line = real content) rather than keyword matching
 
 ### Pending Todos
 
@@ -76,5 +79,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-02-PLAN.md — doctor bio detail pages built. Next: 02-03
+Stopped at: Completed 02-04-PLAN.md — blog post detail pages built with Article JSON-LD. Next: 02-05
 Resume file: None

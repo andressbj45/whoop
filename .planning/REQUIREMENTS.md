@@ -53,8 +53,8 @@
 ### Blog
 
 - [x] **BLOG-01**: Blog index page with all posts listed and category filtering
-- [ ] **BLOG-02**: All existing SM blog posts migrated as individual pages with original content
-- [ ] **BLOG-03**: Article schema.org JSON-LD on every blog post
+- [x] **BLOG-02**: All existing SM blog posts migrated as individual pages with original content
+- [x] **BLOG-03**: Article schema.org JSON-LD on every blog post
 
 ### Locations
 
@@ -131,8 +131,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEOLP-01 | Phase 2 | Pending |
 | SEOLP-02 | Phase 2 | Pending |
 | BLOG-01 | Phase 2 | Complete |
-| BLOG-02 | Phase 2 | Pending |
-| BLOG-03 | Phase 2 | Pending |
+| BLOG-02 | Phase 2 | Complete |
+| BLOG-03 | Phase 2 | Complete |
 | LOC-01 | Phase 2 | Pending |
 | LOC-02 | Phase 2 | Pending |
 | LOC-03 | Phase 2 | Complete |
