@@ -26,12 +26,12 @@
 
 ### About Page
 
-- [ ] **ABOUT-01**: About Us page with clinic story, mission, and SM brand photography
+- [x] **ABOUT-01**: About Us page with clinic story, mission, and SM brand photography
 
 ### Contact Page
 
-- [ ] **CONT-01**: Contact page with clinic phone numbers, addresses, and inquiry form
-- [ ] **CONT-02**: Contact form collects only non-PHI fields (name, email, general inquiry) — HIPAA-safe
+- [x] **CONT-01**: Contact page with clinic phone numbers, addresses, and inquiry form
+- [x] **CONT-02**: Contact form collects only non-PHI fields (name, email, general inquiry) — HIPAA-safe
 
 ### Doctor Directory
 
@@ -58,13 +58,13 @@
 
 ### Locations
 
-- [ ] **LOC-01**: Locations listing page with all clinic locations from locations.json
+- [x] **LOC-01**: Locations listing page with all clinic locations from locations.json
 - [x] **LOC-02**: Individual location detail pages with address, phone, and directions CTA
 - [x] **LOC-03**: MedicalClinic schema.org JSON-LD on each location page
 
 ### Careers
 
-- [ ] **CAR-01**: Careers page with clinic culture info and application contact
+- [x] **CAR-01**: Careers page with clinic culture info and application contact
 
 ### Site-wide SEO & AIO
 
@@ -119,9 +119,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DESIGN-04 | Phase 1 | Complete |
 | HOME-01 | Phase 3 | Pending |
 | HOME-02 | Phase 3 | Pending |
-| ABOUT-01 | Phase 2 | Pending |
-| CONT-01 | Phase 2 | Pending |
-| CONT-02 | Phase 2 | Pending |
+| ABOUT-01 | Phase 2 | Complete |
+| CONT-01 | Phase 2 | Complete |
+| CONT-02 | Phase 2 | Complete |
 | DOC-01 | Phase 2 | Complete |
 | DOC-02 | Phase 2 | Complete |
 | DOC-03 | Phase 2 | Complete |
@@ -133,10 +133,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BLOG-01 | Phase 2 | Complete |
 | BLOG-02 | Phase 2 | Complete |
 | BLOG-03 | Phase 2 | Complete |
-| LOC-01 | Phase 2 | Pending |
+| LOC-01 | Phase 2 | Complete |
 | LOC-02 | Phase 2 | Complete |
 | LOC-03 | Phase 2 | Complete |
-| CAR-01 | Phase 2 | Pending |
+| CAR-01 | Phase 2 | Complete |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |
 | SEO-03 | Phase 4 | Pending |

@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 2 of 4 (Content Pages)
-Plan: 6 of 8 in current phase
-Status: Executing — plan 02-06 complete
-Last activity: 2026-02-26 — 02-06 complete: doctor directory listing + blog index with BlogFilter client island
+Plan: 7 of 8 in current phase
+Status: Executing — plan 02-07 complete
+Last activity: 2026-02-26 — 02-07 complete: locations listing, About Us, Contact (HIPAA-safe 3-field form), Careers pages
 
-Progress: [██████░░░░] 50%
+Progress: [███████░░░] 69%
 
 ## Performance Metrics
 
@@ -44,6 +44,7 @@ Progress: [██████░░░░] 50%
 | Phase 02-content-pages P05 | 2min | 1 tasks | 1 files |
 | Phase 02-content-pages P03 | 2min | 2 tasks | 12 files |
 | Phase 02-content-pages P06 | 2min | 2 tasks | 3 files |
+| Phase 02-content-pages P07 | 2min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,8 @@ Recent decisions affecting current work:
 - [Phase 02-content-pages]: patient-information page uses FAQPage schema with empty mainEntity — ServiceFaqSection renders null when faqs.length === 0
 - [02-05]: MedicalClinic JSON-LD uses Record<string,unknown> — schema-dts MedicalClinic union type (MedicalClinicLeaf | CovidTestingFacility | string) is incompatible with WithContext<T extends Thing>
 - [Phase 02-content-pages]: BlogFilter receives all posts from Server Component parent and filters client-side — no API round-trips needed since full post list is small enough to serialize as props
+- [02-07]: ContactForm uses mailto: action with window.location.href — no backend endpoint, no data stored, HIPAA-safe by design
+- [02-07]: Contact form strictly limited to 3 fields: name, email, message — no phone, DOB, symptoms, insurance, or any health-related field
 
 ### Pending Todos
 
@@ -87,5 +90,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-06-PLAN.md — doctor directory listing + blog index with BlogFilter client island. Next: 02-07
+Stopped at: Completed 02-07-PLAN.md — locations listing, About Us, Contact (HIPAA-safe 3-field mailto form), Careers pages. Next: 02-08
 Resume file: None
