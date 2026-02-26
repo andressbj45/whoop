@@ -48,7 +48,17 @@ Plans:
   3. The blog index lists all migrated posts with category filter; each individual post page loads with original content, author byline, and Article JSON-LD
   4. Every location page shows address, phone number, and a directions link — MedicalClinic JSON-LD is present in page source
   5. The contact page contact form accepts name, email, and message only (no PHI fields) and the careers page is reachable
-**Plans**: TBD
+**Plans**: 8 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Data foundations: next.config.ts remotePatterns, faqs.ts, location-addresses.ts, blog category normalization (SERV-02, SERV-03, LOC-03, BLOG-01)
+- [ ] 02-02-PLAN.md — Doctor bio detail pages: /doctor-directory/[slug] with Physician JSON-LD (DOC-02, DOC-03)
+- [ ] 02-03-PLAN.md — Service pages: 10 top-level routes with FAQPage JSON-LD + providers-bio redirect (SERV-01, SERV-02, SERV-03, SEOLP-01, SEOLP-02)
+- [ ] 02-04-PLAN.md — Blog post detail pages: /blog/[slug] with Article JSON-LD and plain-text rendering (BLOG-02, BLOG-03)
+- [ ] 02-05-PLAN.md — Location detail pages: /find-our-locations/[slug] with MedicalClinic JSON-LD (LOC-02, LOC-03)
+- [ ] 02-06-PLAN.md — Doctor directory listing + blog index with client-side category filter (DOC-01, BLOG-01)
+- [ ] 02-07-PLAN.md — Locations listing, About Us, HIPAA-safe contact form, and Careers pages (LOC-01, ABOUT-01, CONT-01, CONT-02, CAR-01)
+- [ ] 02-08-PLAN.md — Human verification of all Phase 2 content pages
 
 ### Phase 3: Homepage
 **Goal**: Patients arriving at the root URL immediately understand what Stella Mattina offers and can book or navigate to any service
@@ -78,6 +88,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-02-26 |
-| 2. Content Pages | 0/TBD | Not started | - |
+| 2. Content Pages | 0/8 | Not started | - |
 | 3. Homepage | 0/TBD | Not started | - |
 | 4. SEO Hardening | 0/TBD | Not started | - |
