@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 
 ## Current Position
 
-Phase: 2 of 4 (Content Pages) — COMPLETE ✓
-Plan: 8 of 8 — Phase 2 fully verified and complete
-Status: Phase 2 done — transitioning to Phase 3
-Last activity: 2026-02-26 — 02-08 complete: all 119 pages human-verified, Phase 2 approved
+Phase: 3 of 4 (Homepage) — IN PROGRESS
+Plan: 1 of 1 — Plan 03-01 complete
+Status: Phase 3 plan 03-01 complete — homepage wired to real data with JSON-LD
+Last activity: 2026-02-27 — 03-01 complete: homepage data wiring + MedicalOrganization JSON-LD
 
-Progress: [██████████] 75%
+Progress: [██████████] 85%
 
 ## Performance Metrics
 
@@ -45,6 +45,7 @@ Progress: [██████████] 75%
 | Phase 02-content-pages P03 | 2min | 2 tasks | 12 files |
 | Phase 02-content-pages P06 | 2min | 2 tasks | 3 files |
 | Phase 02-content-pages P07 | 2min | 2 tasks | 5 files |
+| Phase 03-homepage P01 | 2min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,9 @@ Recent decisions affecting current work:
 - [02-07]: Contact form strictly limited to 3 fields: name, email, message — no phone, DOB, symptoms, insurance, or any health-related field
 - [02-08]: ServicePageContent component renders sections array as intro + cards + benefits + CTA; falls back to full_text when sections absent
 - [02-08]: /services index page excludes providers-bio slug (that route redirects to /doctor-directory)
+- [03-01]: Homepage remains a pure Server Component — getPractitioners()/getLocations() are synchronous, no async/await needed
+- [03-01]: JSON-LD uses Record<string,unknown> consistent with Phase 2 decisions (avoids schema-dts union type conflicts)
+- [03-01]: Location cards use loc.name as heading with static "Dallas-Fort Worth, TX" subtitle — Location type has no separate city field
 
 ### Pending Todos
 
@@ -91,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26
-Stopped at: Phase 2 complete — all 119 pages human-verified and approved. Ready to plan Phase 3 (Homepage).
+Last session: 2026-02-27
+Stopped at: Completed 03-homepage 03-01-PLAN.md — homepage data wiring and JSON-LD complete
 Resume file: None

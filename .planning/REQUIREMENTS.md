@@ -21,8 +21,8 @@
 
 ### Home Page
 
-- [ ] **HOME-01**: Homepage built with hero section, services overview, doctor highlights, and location CTA
-- [ ] **HOME-02**: MedicalOrganization + LocalBusiness schema.org JSON-LD on homepage
+- [x] **HOME-01**: Homepage built with hero section, services overview, doctor highlights, and location CTA
+- [x] **HOME-02**: MedicalOrganization + LocalBusiness schema.org JSON-LD on homepage
 
 ### About Page
 
@@ -117,8 +117,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DESIGN-02 | Phase 1 | Complete |
 | DESIGN-03 | Phase 1 | Complete |
 | DESIGN-04 | Phase 1 | Complete |
-| HOME-01 | Phase 3 | Pending |
-| HOME-02 | Phase 3 | Pending |
+| HOME-01 | Phase 3 | Complete |
+| HOME-02 | Phase 3 | Complete |
 | ABOUT-01 | Phase 2 | Complete |
 | CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Complete |
