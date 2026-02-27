@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
@@ -55,6 +56,60 @@ const INSURERS = [
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
+export const metadata: Metadata = {
+  title: "Stella Mattina | Women's Health & OBGYN in Dallas-Fort Worth",
+  description: "Board-certified OBGYNs and primary care physicians serving 7 DFW locations. Same-day appointments, most major insurance accepted. Call 214-942-3100.",
+}
+
+const jsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': ['MedicalOrganization', 'LocalBusiness'],
+  name: 'Stella Mattina',
+  url: 'https://stellamattina.com',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://stellamattina.com/images/logo.png',
+  },
+  telephone: '214-942-3100',
+  email: 'info@stellamattina.com',
+  description: "Expert women's health, OBGYN, and primary care across 7 Dallas-Fort Worth locations.",
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1300 W. Davis St. Suite 200',
+    addressLocality: 'Dallas',
+    addressRegion: 'TX',
+    postalCode: '75208',
+    addressCountry: 'US',
+  },
+  areaServed: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: 32.7767,
+      longitude: -96.7970,
+    },
+    geoRadius: '80000',
+  },
+  numberOfEmployees: {
+    '@type': 'QuantitativeValue',
+    value: 25,
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: "Women's Health & Primary Care Services",
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'MedicalTherapy', name: 'Gynecology' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'MedicalTherapy', name: 'Obstetrics' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'MedicalTherapy', name: 'Hormone Therapy' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'MedicalTherapy', name: 'Primary Care' } },
+    ],
+  },
+  sameAs: [
+    'https://www.facebook.com/StellaMattinaWomensHealth',
+  ],
+}
+
 export default function HomePage() {
   const practitioners = getPractitioners()
   const featuredPractitioners = practitioners.slice(0, 6)
@@ -63,6 +118,10 @@ export default function HomePage() {
 
   return (
     <PageWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* ══════════════════════════════════════════════
           1. HERO — split, defined placed photo
