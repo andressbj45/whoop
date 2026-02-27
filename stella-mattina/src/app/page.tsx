@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
 import { FaqAccordion } from '@/components/home/FaqAccordion'
+import { getPractitioners } from '@/lib/content/practitioners'
+import { getLocations } from '@/lib/content/locations'
 
 // ─── Reusable wave dividers ──────────────────────────────────────────────────
 
@@ -25,15 +27,6 @@ function AccentLine() {
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
-const PROVIDERS = [
-  { name: 'Akshay Goswami, MD',      specialty: 'OBGYN',          location: 'Dallas – Samuell',        photo: '/images/doctors/akshay-goswami.png' },
-  { name: 'Alfredo A. Antonetti, MD', specialty: 'OBGYN',          location: 'Mesquite',                photo: '/images/doctors/alfredo-antonetti.jpg' },
-  { name: 'Jared Eaves, MD',          specialty: 'OBGYN',          location: 'Bishop Arts District',    photo: '/images/doctors/jared-eaves.jpg' },
-  { name: 'Ann L. Roc, MD',           specialty: 'OBGYN',          location: 'Mesquite',                photo: '/images/doctors/ann-roc.jpg' },
-  { name: 'Pilar M. Bescos, MD',      specialty: 'Family Medicine', location: 'Carrollton',              photo: '/images/doctors/pilar-bescos.jpg' },
-  { name: 'Sami E. Constantine, MD',  specialty: 'OBGYN',          location: 'Bishop Arts District',    photo: '/images/doctors/sami-constantine.jpg' },
-]
-
 const TESTIMONIALS = [
   {
     quote: "I've been a patient at Stella Mattina for three years and I've never felt more heard or cared for. Dr. Goswami took the time to walk me through every option.",
@@ -55,14 +48,6 @@ const TESTIMONIALS = [
   },
 ]
 
-const LOCATIONS = [
-  { name: 'Bishop Arts District',  city: 'Dallas',      phone: '214-942-3100', href: '/our-locations/gynecologist-dallas-bishop-arts' },
-  { name: 'Samuell (White Rock)',  city: 'Dallas',      phone: '214-942-3100', href: '/our-locations/gynecologist-dallas-tx-samuell' },
-  { name: 'Arlington',             city: 'Arlington',   phone: '214-942-3100', href: '/our-locations/obgyn-arlington-tx' },
-  { name: 'Mesquite',              city: 'Mesquite',    phone: '214-942-3100', href: '/our-locations/obgyn-in-mesquite' },
-  { name: 'Carrollton',            city: 'Carrollton',  phone: '214-942-3100', href: '/our-locations/primary-care-physician-carrollton-tx' },
-]
-
 const INSURERS = [
   'Blue Cross Blue Shield', 'Aetna', 'Cigna', 'UnitedHealthcare',
   'Humana', 'Medicare', 'Medicaid', 'TriCare',
@@ -71,6 +56,11 @@ const INSURERS = [
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function HomePage() {
+  const practitioners = getPractitioners()
+  const featuredPractitioners = practitioners.slice(0, 6)
+  const locations = getLocations()
+  const featuredLocations = locations.slice(0, 5)
+
   return (
     <PageWrapper>
 
@@ -291,24 +281,24 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
-            {PROVIDERS.map((doc) => (
+            {featuredPractitioners.map((p) => (
               <a
-                key={doc.name}
+                key={p.slug}
                 href="/doctor-directory"
                 className="group flex flex-col items-center text-center"
               >
                 <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-sm-gray mb-3 shadow-sm">
                   <Image
-                    src={doc.photo}
-                    alt={doc.name}
+                    src={p.photo_url}
+                    alt={p.name}
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                   />
                 </div>
-                <p className="font-semibold text-sm text-sm-navy leading-snug group-hover:text-sm-blue transition-colors">{doc.name}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{doc.specialty}</p>
-                <p className="text-xs text-gray-400">{doc.location}</p>
+                <p className="font-semibold text-sm text-sm-navy leading-snug group-hover:text-sm-blue transition-colors">{p.name}</p>
+                <p className="text-xs text-gray-400 mt-0.5">{p.specialty}</p>
+                <p className="text-xs text-gray-400">{p.locations[0] ?? ''}</p>
               </a>
             ))}
           </div>
@@ -374,10 +364,10 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {LOCATIONS.map((loc) => (
+            {featuredLocations.map((loc) => (
               <a
-                key={loc.name}
-                href={loc.href}
+                key={loc.slug}
+                href={`/find-our-locations/${loc.slug}`}
                 className="group rounded-xl border border-sm-gray p-6 hover:border-sm-blue-light hover:shadow-md transition-all flex flex-col gap-3"
               >
                 <div className="flex items-start gap-3">
@@ -389,7 +379,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm-navy text-sm group-hover:text-sm-blue transition-colors">{loc.name}</h3>
-                    <p className="text-xs text-gray-400">{loc.city}, TX</p>
+                    <p className="text-xs text-gray-400">Dallas–Fort Worth, TX</p>
                   </div>
                 </div>
                 <span className="text-sm text-gray-500">{loc.phone}</span>
