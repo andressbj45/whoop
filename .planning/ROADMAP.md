@@ -68,7 +68,10 @@ Plans:
   1. The homepage hero shows SM brand photography, a headline, and a working "Book Now" CTA linking to the patient portal
   2. The homepage surfaces service cards, doctor highlights, and a location CTA — all linking to their respective Phase 2 pages
   3. MedicalOrganization and LocalBusiness JSON-LD are present in the homepage source
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 03-01-PLAN.md — Wire real content layer data into homepage + add MedicalOrganization/LocalBusiness JSON-LD and metadata (HOME-01, HOME-02)
 
 ### Phase 4: SEO Hardening
 **Goal**: Every page is discoverable by search engines and AI crawlers with correct metadata, canonical URLs, and structured sitemaps
@@ -89,5 +92,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete   | 2026-02-26 |
 | 2. Content Pages | 7/8 | In Progress|  |
-| 3. Homepage | 0/TBD | Not started | - |
+| 3. Homepage | 0/1 | Not started | - |
 | 4. SEO Hardening | 0/TBD | Not started | - |
