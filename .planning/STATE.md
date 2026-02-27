@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** A warm, trustworthy online presence that makes patients feel confident booking with Stella Mattina — whether they find it through Google, ChatGPT, or a recommendation.
-**Current focus:** Phase 2 — Content Pages
+**Current focus:** Phase 3 — Homepage
 
 ## Current Position
 
-Phase: 2 of 4 (Content Pages)
-Plan: 7 of 8 in current phase
-Status: Executing — plan 02-07 complete
-Last activity: 2026-02-26 — 02-07 complete: locations listing, About Us, Contact (HIPAA-safe 3-field form), Careers pages
+Phase: 2 of 4 (Content Pages) — COMPLETE ✓
+Plan: 8 of 8 — Phase 2 fully verified and complete
+Status: Phase 2 done — transitioning to Phase 3
+Last activity: 2026-02-26 — 02-08 complete: all 119 pages human-verified, Phase 2 approved
 
-Progress: [███████░░░] 69%
+Progress: [██████████] 75%
 
 ## Performance Metrics
 
@@ -76,6 +76,8 @@ Recent decisions affecting current work:
 - [Phase 02-content-pages]: BlogFilter receives all posts from Server Component parent and filters client-side — no API round-trips needed since full post list is small enough to serialize as props
 - [02-07]: ContactForm uses mailto: action with window.location.href — no backend endpoint, no data stored, HIPAA-safe by design
 - [02-07]: Contact form strictly limited to 3 fields: name, email, message — no phone, DOB, symptoms, insurance, or any health-related field
+- [02-08]: ServicePageContent component renders sections array as intro + cards + benefits + CTA; falls back to full_text when sections absent
+- [02-08]: /services index page excludes providers-bio slug (that route redirects to /doctor-directory)
 
 ### Pending Todos
 
@@ -90,5 +92,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-07-PLAN.md — locations listing, About Us, Contact (HIPAA-safe 3-field mailto form), Careers pages. Next: 02-08
+Stopped at: Phase 2 complete — all 119 pages human-verified and approved. Ready to plan Phase 3 (Homepage).
 Resume file: None
