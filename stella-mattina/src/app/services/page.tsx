@@ -29,7 +29,7 @@ export default function ServicesPage() {
               <Link
                 key={service.slug}
                 href={`/${service.slug}`}
-                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-sm-blue transition-all"
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-sm-blue transition-all cursor-pointer"
               >
                 <h2 className="font-display text-lg text-sm-navy mb-3 group-hover:text-sm-blue transition-colors">
                   {service.title}
