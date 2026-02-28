@@ -82,6 +82,13 @@ Plans:
   2. `robots.txt` is reachable at `/robots.txt` and explicitly allows ChatGPT-User, PerplexityBot, and Googlebot
   3. Every page has a unique `<title>`, `<meta name="description">`, and Open Graph image tag visible in page source
   4. Every non-home page has a BreadcrumbList JSON-LD block and a `<link rel="canonical">` tag pointing to its own URL
+**Plans**: 4 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — sitemap.ts, robots.ts, metadataBase in root layout, shared OG constant (SEO-01, SEO-02)
+- [ ] 04-02-PLAN.md — BreadcrumbJsonLd component + canonical/OG on all 19 static pages (SEO-03, SEO-04, SEO-05)
+- [ ] 04-03-PLAN.md — Canonical/OG/breadcrumb on 3 dynamic route pages (doctor, blog, location) (SEO-03, SEO-04, SEO-05)
+- [ ] 04-04-PLAN.md — Human verification: sitemap, robots, canonical, OG, BreadcrumbList in browser (SEO-01, SEO-02, SEO-03, SEO-04, SEO-05)
 
 ## Progress
 
@@ -93,4 +100,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 5/5 | Complete   | 2026-02-26 |
 | 2. Content Pages | 7/8 | In Progress|  |
 | 3. Homepage | 1/1 | Complete    | 2026-02-27 |
-| 4. SEO Hardening | 0/TBD | Not started | - |
+| 4. SEO Hardening | 0/4 | Not started | - |
