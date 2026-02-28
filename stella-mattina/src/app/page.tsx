@@ -5,6 +5,7 @@ import { BookingButton } from '@/components/common/BookingButton'
 import { FaqAccordion } from '@/components/home/FaqAccordion'
 import { getPractitioners } from '@/lib/content/practitioners'
 import { getLocations } from '@/lib/content/locations'
+import { defaultOgImage } from '@/lib/seo/og'
 
 // ─── Reusable wave dividers ──────────────────────────────────────────────────
 
@@ -59,6 +60,14 @@ const INSURERS = [
 export const metadata: Metadata = {
   title: "Stella Mattina | Women's Health & OBGYN in Dallas-Fort Worth",
   description: "Board-certified OBGYNs and primary care physicians serving 7 DFW locations. Same-day appointments, most major insurance accepted. Call 214-942-3100.",
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: "Stella Mattina | Women's Health & OBGYN in Dallas-Fort Worth",
+    description: "Board-certified OBGYNs and primary care physicians serving 7 DFW locations. Same-day appointments, most major insurance accepted. Call 214-942-3100.",
+    url: '/',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 const jsonLd: Record<string, unknown> = {

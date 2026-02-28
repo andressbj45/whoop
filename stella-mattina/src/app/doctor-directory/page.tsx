@@ -3,10 +3,20 @@ import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 export const metadata: Metadata = {
   title: 'Our Doctors & Providers | Stella Mattina',
   description: 'Meet the Stella Mattina team — experienced OB-GYNs, maternal-fetal medicine specialists, and primary care physicians serving Dallas and the DFW area.',
+  alternates: { canonical: '/doctor-directory' },
+  openGraph: {
+    title: 'Our Doctors & Providers | Stella Mattina',
+    description: 'Meet the Stella Mattina team — experienced OB-GYNs, maternal-fetal medicine specialists, and primary care physicians serving Dallas and the DFW area.',
+    url: '/doctor-directory',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 export default function DoctorDirectoryPage() {
@@ -14,6 +24,10 @@ export default function DoctorDirectoryPage() {
 
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://stellamattina.com' },
+        { name: 'Doctor Directory', url: 'https://stellamattina.com/doctor-directory' },
+      ]} />
       <div className="mx-auto max-w-6xl px-4 py-16">
         <h1 className="font-display text-4xl text-sm-navy mb-4">Meet Our Providers</h1>
         <p className="text-gray-600 mb-12 max-w-2xl">

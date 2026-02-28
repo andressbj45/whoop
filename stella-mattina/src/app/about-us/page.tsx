@@ -1,15 +1,29 @@
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
 import type { Metadata } from 'next'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 export const metadata: Metadata = {
   title: "About Us | Stella Mattina Women's Health",
   description: "Stella Mattina is a women's health practice serving the Dallas-Fort Worth area with expert OB-GYN, obstetrics, and primary care services.",
+  alternates: { canonical: '/about-us' },
+  openGraph: {
+    title: "About Us | Stella Mattina Women's Health",
+    description: "Stella Mattina is a women's health practice serving the Dallas-Fort Worth area with expert OB-GYN, obstetrics, and primary care services.",
+    url: '/about-us',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 export default function AboutPage() {
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://stellamattina.com' },
+        { name: 'About Us', url: 'https://stellamattina.com/about-us' },
+      ]} />
       <div className="mx-auto max-w-3xl px-4 py-16">
         <h1 className="font-display text-4xl text-sm-navy mb-6">About Stella Mattina</h1>
         <div className="prose prose-lg max-w-none text-gray-700 prose-headings:font-display prose-headings:text-sm-navy">

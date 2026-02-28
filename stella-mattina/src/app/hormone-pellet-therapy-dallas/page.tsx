@@ -4,6 +4,8 @@ import { PageWrapper } from '@/components/layout/PageWrapper'
 import { ServicePageContent } from '@/components/services/ServicePageContent'
 import type { Metadata } from 'next'
 import type { WithContext, FAQPage, Question, Answer } from 'schema-dts'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 const SLUG = 'hormone-pellet-therapy-dallas'
 const service = getServiceBySlug(SLUG)!
@@ -11,6 +13,14 @@ const service = getServiceBySlug(SLUG)!
 export const metadata: Metadata = {
   title: `${service.title} | Stella Mattina`,
   description: service.meta_description ?? service.full_text.substring(0, 155),
+  alternates: { canonical: '/hormone-pellet-therapy-dallas' },
+  openGraph: {
+    title: `${service.title} | Stella Mattina`,
+    description: service.meta_description ?? service.full_text.substring(0, 155),
+    url: '/hormone-pellet-therapy-dallas',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 export default function HormonePelletTherapyPage() {
@@ -31,6 +41,10 @@ export default function HormonePelletTherapyPage() {
 
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://stellamattina.com' },
+        { name: 'Hormone Pellet Therapy Dallas', url: 'https://stellamattina.com/hormone-pellet-therapy-dallas' },
+      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

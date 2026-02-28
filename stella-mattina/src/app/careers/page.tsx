@@ -1,14 +1,28 @@
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import type { Metadata } from 'next'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 export const metadata: Metadata = {
   title: "Careers | Stella Mattina Women's Health",
   description: "Join the Stella Mattina team. We are looking for compassionate healthcare professionals dedicated to women's health in the Dallas-Fort Worth area.",
+  alternates: { canonical: '/careers' },
+  openGraph: {
+    title: "Careers | Stella Mattina Women's Health",
+    description: "Join the Stella Mattina team. We are looking for compassionate healthcare professionals dedicated to women's health in the Dallas-Fort Worth area.",
+    url: '/careers',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 export default function CareersPage() {
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://stellamattina.com' },
+        { name: 'Careers', url: 'https://stellamattina.com/careers' },
+      ]} />
       <div className="mx-auto max-w-3xl px-4 py-16">
         <h1 className="font-display text-4xl text-sm-navy mb-6">Join Our Team</h1>
         <div className="prose prose-lg max-w-none text-gray-700 prose-headings:font-display prose-headings:text-sm-navy">

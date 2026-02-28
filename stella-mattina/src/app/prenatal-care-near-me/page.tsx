@@ -4,6 +4,8 @@ import { PageWrapper } from '@/components/layout/PageWrapper'
 import { ServicePageContent } from '@/components/services/ServicePageContent'
 import type { Metadata } from 'next'
 import type { WithContext, FAQPage, Question, Answer } from 'schema-dts'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 const SLUG = 'prenatal-care-near-me'
 const service = getServiceBySlug(SLUG)!
@@ -11,6 +13,14 @@ const service = getServiceBySlug(SLUG)!
 export const metadata: Metadata = {
   title: `${service.title} | Stella Mattina`,
   description: service.meta_description ?? service.full_text.substring(0, 155),
+  alternates: { canonical: '/prenatal-care-near-me' },
+  openGraph: {
+    title: `${service.title} | Stella Mattina`,
+    description: service.meta_description ?? service.full_text.substring(0, 155),
+    url: '/prenatal-care-near-me',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 export default function PrenatalCarePage() {
@@ -31,6 +41,10 @@ export default function PrenatalCarePage() {
 
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://stellamattina.com' },
+        { name: 'Prenatal Care', url: 'https://stellamattina.com/prenatal-care-near-me' },
+      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -3,10 +3,20 @@ import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 export const metadata: Metadata = {
   title: 'Our Services | Stella Mattina',
   description: "Comprehensive women's health services including gynecology, obstetrics, hormone therapy, and primary care across 7 DFW locations.",
+  alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Our Services | Stella Mattina',
+    description: "Comprehensive women's health services including gynecology, obstetrics, hormone therapy, and primary care across 7 DFW locations.",
+    url: '/services',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 const EXCLUDED_SLUGS = ['providers-bio']
@@ -16,6 +26,10 @@ export default function ServicesPage() {
 
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://stellamattina.com' },
+        { name: 'Services', url: 'https://stellamattina.com/services' },
+      ]} />
       <div className="mx-auto max-w-5xl px-4 py-16">
         <h1 className="font-display text-4xl md:text-5xl text-sm-navy mb-4">Our Services</h1>
         <p className="text-lg text-gray-600 mb-12 max-w-2xl">

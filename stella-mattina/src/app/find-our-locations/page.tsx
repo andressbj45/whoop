@@ -3,16 +3,30 @@ import { LOCATION_ADDRESSES } from '@/data/location-addresses'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
 import type { Metadata } from 'next'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 export const metadata: Metadata = {
   title: 'Find Our Locations | Stella Mattina',
   description: "Stella Mattina women's health clinics in Dallas, Arlington, Mesquite, and Carrollton, TX. Find a location near you.",
+  alternates: { canonical: '/find-our-locations' },
+  openGraph: {
+    title: 'Find Our Locations | Stella Mattina',
+    description: "Stella Mattina women's health clinics in Dallas, Arlington, Mesquite, and Carrollton, TX. Find a location near you.",
+    url: '/find-our-locations',
+    type: 'website',
+    images: [defaultOgImage],
+  },
 }
 
 export default function LocationsListingPage() {
   const locations = getLocations()
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://stellamattina.com' },
+        { name: 'Locations', url: 'https://stellamattina.com/find-our-locations' },
+      ]} />
       <div className="mx-auto max-w-4xl px-4 py-16">
         <h1 className="font-display text-4xl text-sm-navy mb-4">Find Our Locations</h1>
         <p className="text-gray-600 mb-12 max-w-2xl">
