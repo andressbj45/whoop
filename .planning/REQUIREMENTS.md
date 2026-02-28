@@ -68,8 +68,8 @@
 
 ### Site-wide SEO & AIO
 
-- [ ] **SEO-01**: Auto-generated `sitemap.xml` covering all pages
-- [ ] **SEO-02**: `robots.txt` configured with AI crawlers allowed (ChatGPT-User, PerplexityBot, etc.)
+- [x] **SEO-01**: Auto-generated `sitemap.xml` covering all pages
+- [x] **SEO-02**: `robots.txt` configured with AI crawlers allowed (ChatGPT-User, PerplexityBot, etc.)
 - [ ] **SEO-03**: Per-page OG images and meta descriptions (title, description) for all page types
 - [ ] **SEO-04**: BreadcrumbList JSON-LD on all non-home pages
 - [ ] **SEO-05**: Canonical URLs set on all pages to prevent duplicate content
@@ -137,8 +137,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LOC-02 | Phase 2 | Complete |
 | LOC-03 | Phase 2 | Complete |
 | CAR-01 | Phase 2 | Complete |
-| SEO-01 | Phase 4 | Pending |
-| SEO-02 | Phase 4 | Pending |
+| SEO-01 | Phase 4 | Complete |
+| SEO-02 | Phase 4 | Complete |
 | SEO-03 | Phase 4 | Pending |
 | SEO-04 | Phase 4 | Pending |
 | SEO-05 | Phase 4 | Pending |

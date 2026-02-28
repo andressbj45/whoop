@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** A warm, trustworthy online presence that makes patients feel confident booking with Stella Mattina — whether they find it through Google, ChatGPT, or a recommendation.
-**Current focus:** Phase 3 — Homepage
+**Current focus:** Phase 4 — SEO Hardening
 
 ## Current Position
 
-Phase: 3 of 4 (Homepage) — IN PROGRESS
-Plan: 1 of 1 — Plan 03-01 complete
-Status: Phase 3 plan 03-01 complete — homepage wired to real data with JSON-LD
-Last activity: 2026-02-27 — 03-01 complete: homepage data wiring + MedicalOrganization JSON-LD
+Phase: 4 of 4 (SEO Hardening) — IN PROGRESS
+Plan: 1 of 4 — Plan 04-01 complete
+Status: Phase 4 plan 04-01 complete — sitemap.ts, robots.ts, metadataBase, and shared OG constant created
+Last activity: 2026-02-28 — 04-01 complete: SEO foundation (sitemap, robots, metadataBase, og.ts)
 
-Progress: [██████████] 85%
+Progress: [██████████] 90%
 
 ## Performance Metrics
 
@@ -46,6 +46,7 @@ Progress: [██████████] 85%
 | Phase 02-content-pages P06 | 2min | 2 tasks | 3 files |
 | Phase 02-content-pages P07 | 2min | 2 tasks | 5 files |
 | Phase 03-homepage P01 | 2min | 2 tasks | 1 files |
+| Phase 04-seo-hardening P01 | 1min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,10 @@ Recent decisions affecting current work:
 - [03-01]: Homepage remains a pure Server Component — getPractitioners()/getLocations() are synchronous, no async/await needed
 - [03-01]: JSON-LD uses Record<string,unknown> consistent with Phase 2 decisions (avoids schema-dts union type conflicts)
 - [03-01]: Location cards use loc.name as heading with static "Dallas-Fort Worth, TX" subtitle — Location type has no separate city field
+- [04-01]: sitemap.ts filters providers-bio from serviceUrls — that route is a server-side redirect to /doctor-directory, not a real page
+- [04-01]: robots.ts uses per-agent rules array to make AI crawler intent explicit and auditable
+- [04-01]: defaultOgImage uses hero-doctor-consultation.jpg (1200x800) — not ideal 1200x630 OG crop, proper crop is v2 task
+- [04-01]: openGraph in root layout uses shallow merge — child pages setting any openGraph field must re-include images: [defaultOgImage]
 
 ### Pending Todos
 
@@ -95,6 +100,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-27
-Stopped at: Completed 03-homepage 03-01-PLAN.md — homepage data wiring and JSON-LD complete
+Last session: 2026-02-28
+Stopped at: Completed 04-seo-hardening 04-01-PLAN.md — SEO foundation (sitemap, robots, metadataBase, og.ts) complete
 Resume file: None
