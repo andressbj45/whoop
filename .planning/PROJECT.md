@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A modern Next.js website for Stella Mattina, a medical clinic. The site rebuilds the existing stellamattina.com with a new design inspired by Ask Tia's clean, minimal, and warm aesthetic — while preserving all existing SM brand assets (colors, logo, copy, and photography). It targets both traditional search engines and AI-powered search (ChatGPT, Perplexity, Google AI Overviews).
+A modern Next.js website for Stella Mattina, a medical clinic in Dallas. Rebuilt from WordPress to Next.js 15 App Router with an Ask Tia-inspired clean/warm design. 121 static pages covering all doctors, services, locations, blog posts, and static pages — fully optimized for traditional search and AI-powered search (ChatGPT, Perplexity, Google AI Overviews). Shipped as v1.0 on 2026-02-28.
 
 ## Core Value
 
@@ -10,55 +10,63 @@ A warm, trustworthy online presence that makes patients feel confident booking w
 
 ## Requirements
 
-### Validated
+### Validated (v1.0)
 
-(None yet — ship to validate)
+- ✓ Rebuild all existing SM pages in Next.js — v1.0 (121 static pages)
+- ✓ Apply Ask Tia-inspired design: clean minimal layout, warm personal feel — v1.0
+- ✓ Use existing SM brand assets: colors, logo, copy, and photography — v1.0
+- ✓ Booking CTA links to existing patient portal (external URL) — v1.0
+- ✓ SEO-optimized: semantic HTML, meta tags, schema.org, sitemap, robots.txt — v1.0
+- ✓ AIO-optimized: content structured for AI search visibility — v1.0
+- ✓ Service pages: Gynecology, Obstetrics, Hormone Therapy, and others — v1.0 (10 service pages)
+- ✓ Blog with existing posts migrated — v1.0 (61 posts)
+- ✓ Doctor Directory page — v1.0 (29 doctors)
+- ✓ Locations page — v1.0 (7 locations)
+- ✓ Mobile-responsive — v1.0
 
-### Active
+### Active (v1.1 candidates)
 
-- [ ] Rebuild all existing SM pages in Next.js (Home, About Us, Doctor Directory, Locations, Services, Blog, Careers, Contact)
-- [ ] Apply Ask Tia-inspired design: clean minimal layout, warm personal feel
-- [ ] Use existing SM brand assets: colors, logo, copy (editable), and photography from scraped site
-- [ ] Booking CTA links to existing patient portal (external URL)
-- [ ] SEO-optimized: semantic HTML, meta tags, structured data (schema.org), sitemap, robots.txt
-- [ ] AIO-optimized: content structured for AI search visibility (ChatGPT, Perplexity, Google AI Overviews)
-- [ ] Service pages: Gynecology, Obstetrics, Hormone Therapy (Biote, Pellet), and others from existing site
-- [ ] Blog with existing posts migrated
-- [ ] Doctor Directory page
-- [ ] Locations page
-- [ ] Mobile-responsive
+- [ ] Online booking integration (replace external portal link)
+- [ ] Real patient testimonials
+- [ ] Per-page OG images (custom 1200×630 per service/doctor)
+- [ ] Spanish language pages (infrastructure exists: /ginecologo-dallas)
+- [ ] Google Business Profile + medical directory listings (Healthgrades, Zocdoc)
 
 ### Out of Scope
 
-- Custom booking system — patient portal is external, we only link to it
+- Custom booking system v1 — patient portal is external, we only link to it
 - New copywriting from scratch — use and edit existing SM copy
 - New photography — use existing SM photos from scraped site
-- Backend CMS for first version — static/file-based content is fine
+- Backend CMS — static/file-based content for v1
 
 ## Context
 
-- Existing site: WordPress-based stellamattina.com (fully scraped to `scraped-sites/stellamattina/`)
-- Design reference: Ask Tia website (scraped to `scraped-sites/asktia/`) — clean minimal layout, warm personal feel
-- Brand assets available in scraped data: colors, logo, photography, all copy
-- Extracted/processed data in `scraped-sites/output/` and `scraped-sites/stellamattina/extracted/`
-- Medical clinic serving patients in Dallas area (gynecology, obstetrics, hormone therapy focus)
-- AIO = AI search optimization: structured content so answers appear in ChatGPT, Perplexity, Google AI Overviews
+- **Shipped:** stellamattina.com rebuilt as Next.js 15 static site, deployed on Vercel
+- **Codebase:** `stella-mattina/` — ~3,806 lines TypeScript/TSX
+- **Content source:** 5 JSON files in `stella-mattina/src/data/` (practitioners, services, locations, blog_posts, contact_info)
+- **Pages:** 121 static routes — 29 doctor bios, 10 service pages, 61 blog posts, 7 location pages, listings, static pages, homepage
+- **Schema.org:** Physician, MedicalClinic, FAQPage, Article, MedicalOrganization, LocalBusiness, BreadcrumbList on all pages
+- **Analytics:** Vercel Analytics (HIPAA-safe — no GA4, no Meta Pixel)
 
 ## Constraints
 
-- **Tech Stack**: Next.js — user explicitly selected, good for SEO/performance
-- **Brand**: Must use existing SM colors, logo, copy, and photos — no rebrand
-- **Design inspiration**: Ask Tia aesthetic (clean minimal + warm) — not a copy, just the vibe
-- **Booking**: Link to existing patient portal — no custom scheduling built
+- **Tech Stack**: Next.js 15 App Router, TypeScript, Tailwind CSS, shadcn/ui — locked in
+- **Brand**: SM colors, logo, copy, and photos — no rebrand
+- **Booking**: External patient portal link — no custom scheduling
+- **HIPAA**: No GA4, no Meta Pixel, contact form is mailto: only (name/email/message)
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Next.js over WordPress | Better SEO control, performance, modern DX | — Pending |
-| Reuse existing copy | User explicitly wants editable but existing SM copy | — Pending |
-| External patient portal link | No custom booking needed, portal already exists | — Pending |
-| AIO via content structure | Optimizing for AI search with semantic HTML, FAQs, schema.org | — Pending |
+| Next.js over WordPress | Better SEO control, performance, modern DX | ✓ Correct — 121 static pages, fast build |
+| Reuse existing copy | Editable existing SM copy | ✓ Good — content accurate and live |
+| External patient portal link | No custom booking needed | ✓ Good — BookingButton works everywhere |
+| AIO via schema.org + FAQ content | Structured data for AI search | ✓ Done — all page types have JSON-LD |
+| Record<string,unknown> for JSON-LD | schema-dts union types incompatible | ✓ Correct — avoids TypeScript errors |
+| No trailing slash | WordPress canonical URL preservation | ✓ Correct — SEO equity preserved |
+| ContactForm as mailto: | HIPAA-safe, no PHI stored | ✓ Correct — 3-field form only |
+| Content layer from JSON at build time | No runtime CMS needed for v1 | ✓ Good — instant static pages |
 
 ---
-*Last updated: 2026-02-26 after initialization*
+*Last updated: 2026-02-28 after v1.0 milestone*
