@@ -4,6 +4,8 @@ import { getLocations, getLocationWithProviders } from '@/lib/content/locations'
 import { LOCATION_ADDRESSES } from '@/data/location-addresses'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 // Server Component — no 'use client' directive
 // MedicalClinic JSON-LD uses Record<string,unknown> (consistent with codebase pattern)
@@ -27,9 +29,19 @@ export async function generateMetadata({
 
   const address = LOCATION_ADDRESSES[location.slug]
 
+  const description = `Stella Mattina women's health clinic at ${address?.streetAddress ?? ''}, ${address?.addressLocality ?? ''}, ${address?.addressRegion ?? ''}. Book an appointment today.`
+
   return {
     title: `${location.name} | Stella Mattina Locations`,
-    description: `Stella Mattina women's health clinic at ${address?.streetAddress ?? ''}, ${address?.addressLocality ?? ''}, ${address?.addressRegion ?? ''}. Book an appointment today.`,
+    description,
+    alternates: { canonical: `/find-our-locations/${slug}` },
+    openGraph: {
+      title: `${location.name} | Stella Mattina Locations`,
+      description,
+      url: `/find-our-locations/${slug}`,
+      type: 'website',
+      images: [defaultOgImage],
+    },
   }
 }
 
@@ -76,6 +88,13 @@ export default async function LocationDetailPage({
 
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://stellamattina.com' },
+          { name: 'Locations', url: 'https://stellamattina.com/find-our-locations' },
+          { name: location.name, url: `https://stellamattina.com/find-our-locations/${location.slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

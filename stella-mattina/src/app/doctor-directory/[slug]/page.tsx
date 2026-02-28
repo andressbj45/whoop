@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import { getPractitioners, getPractitionerBySlug } from '@/lib/content/practitioners'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BookingButton } from '@/components/common/BookingButton'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 // Server Component — no 'use client' directive
 
@@ -30,6 +32,14 @@ export async function generateMetadata({
   return {
     title: `${p.name} | ${p.specialty} | Stella Mattina`,
     description,
+    alternates: { canonical: `/doctor-directory/${slug}` },
+    openGraph: {
+      title: `${p.name} | ${p.specialty} | Stella Mattina`,
+      description,
+      url: `/doctor-directory/${slug}`,
+      type: 'website',
+      images: [defaultOgImage],
+    },
   }
 }
 
@@ -64,6 +74,13 @@ export default async function DoctorBioPage({
 
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://stellamattina.com' },
+          { name: 'Doctor Directory', url: 'https://stellamattina.com/doctor-directory' },
+          { name: p.name, url: `https://stellamattina.com/doctor-directory/${p.slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
