@@ -14,7 +14,7 @@ function Wave({ fromColor, toColor, flip = false }: { fromColor: string; toColor
     ? 'M0,36 C240,0 480,72 720,36 C960,0 1200,72 1440,36 L1440,72 L0,72 Z'
     : 'M0,36 C180,72 360,0 540,36 C720,72 900,0 1080,36 C1260,72 1440,20 1440,36 L1440,72 L0,72 Z'
   return (
-    <div style={{ background: fromColor }} className="overflow-hidden leading-none">
+    <div style={{ background: fromColor }} className="overflow-hidden leading-none -mb-px">
       <svg viewBox="0 0 1440 72" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
         <path d={path} fill={toColor} />
       </svg>
