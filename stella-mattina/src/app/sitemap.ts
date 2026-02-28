@@ -120,12 +120,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  const blogUrls: MetadataRoute.Sitemap = getBlogPosts().map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.published_date),
-    changeFrequency: 'never' as const,
-    priority: 0.5,
-  }))
+  const blogUrls: MetadataRoute.Sitemap = getBlogPosts().map((post) => {
+    const pubDate = post.published_date ? new Date(post.published_date) : null
+    const lastModified =
+      pubDate && !isNaN(pubDate.getTime()) ? pubDate : new Date()
+    return {
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified,
+      changeFrequency: 'never' as const,
+      priority: 0.5,
+    }
+  })
 
   const locationUrls: MetadataRoute.Sitemap = getLocations().map((loc) => ({
     url: `${BASE_URL}/find-our-locations/${loc.slug}`,
