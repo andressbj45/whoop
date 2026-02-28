@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 
 ## Current Position
 
-Phase: 4 of 4 (SEO Hardening) — IN PROGRESS
-Plan: 3 of 4 — Plan 04-03 complete
-Status: Phase 4 plan 04-03 complete — canonical URLs, OG metadata, and BreadcrumbList JSON-LD added to all 97 dynamic pages
-Last activity: 2026-02-27 — 04-03 complete: canonical + OG + BreadcrumbJsonLd on doctor, blog, and location dynamic routes
+Phase: 4 of 4 (SEO Hardening) — COMPLETE
+Plan: 4 of 4 — Plan 04-04 complete
+Status: Phase 4 complete — all 5 SEO requirements (sitemap, robots.txt, canonical, OG, BreadcrumbList JSON-LD) verified in browser. Production build clean at 121 routes.
+Last activity: 2026-02-27 — 04-04 complete: human verification approved, production build passed, Phase 4 SEO hardening done
 
-Progress: [██████████] 93%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -49,6 +49,7 @@ Progress: [██████████] 93%
 | Phase 04-seo-hardening P01 | 1min | 2 tasks | 4 files |
 | Phase 04-seo-hardening P02 | 4min | 2 tasks | 19 files |
 | Phase 04-seo-hardening P03 | 2min | 2 tasks | 3 files |
+| Phase 04-seo-hardening P04 | 5min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -95,6 +96,7 @@ Recent decisions affecting current work:
 - [04-02]: All openGraph blocks must include images:[defaultOgImage] — Next.js shallow-merges openGraph, omitting images drops root layout OG image
 - [Phase 04-seo-hardening]: [04-03]: Blog posts use type:'article' in openGraph — correct OG type for blog content, enables richer social sharing previews
 - [Phase 04-seo-hardening]: [04-03]: Doctor bio pages use bio.slice(0,155) as OG description with fallback to constructed string
+- [04-04]: sitemap.ts isNaN guard skips blog posts with empty published_date — omission is safer than surfacing a wrong date to Google
 
 ### Pending Todos
 
@@ -109,5 +111,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 04-seo-hardening 04-03-PLAN.md — canonical, OG, and BreadcrumbJsonLd on all 3 dynamic route types (97 pages)
+Stopped at: Completed 04-seo-hardening 04-04-PLAN.md — human verification approved, Phase 4 SEO hardening complete
 Resume file: None

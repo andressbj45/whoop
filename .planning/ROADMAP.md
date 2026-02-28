@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - Scaffold Next.js project with typed content layer, design tokens, and HIPAA-safe analytics (completed 2026-02-26)
 - [x] **Phase 2: Content Pages** - Build all detail, listing, and static pages (doctors, services, blog, locations, contact, careers) (completed 2026-02-26)
 - [x] **Phase 3: Homepage** - Assemble homepage by composing Phase 2 component types into the primary patient acquisition surface (completed 2026-02-27)
-- [ ] **Phase 4: SEO Hardening** - Generate sitemap, robots.txt, canonical URLs, and Open Graph coverage across all routes
+- [x] **Phase 4: SEO Hardening** - Generate sitemap, robots.txt, canonical URLs, and Open Graph coverage across all routes (completed 2026-02-28)
 
 ## Phase Details
 
@@ -100,4 +100,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 5/5 | Complete   | 2026-02-26 |
 | 2. Content Pages | 7/8 | In Progress|  |
 | 3. Homepage | 1/1 | Complete    | 2026-02-27 |
-| 4. SEO Hardening | 3/4 | In Progress|  |
+| 4. SEO Hardening | 4/4 | Complete   | 2026-02-28 |
