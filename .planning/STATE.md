@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 4 of 4 (SEO Hardening) — IN PROGRESS
-Plan: 2 of 4 — Plan 04-02 complete
-Status: Phase 4 plan 04-02 complete — canonical URLs, OG metadata, and BreadcrumbList JSON-LD added to all 19 static pages
-Last activity: 2026-02-27 — 04-02 complete: BreadcrumbJsonLd component + canonical + OG on all 19 pages
+Plan: 3 of 4 — Plan 04-03 complete
+Status: Phase 4 plan 04-03 complete — canonical URLs, OG metadata, and BreadcrumbList JSON-LD added to all 97 dynamic pages
+Last activity: 2026-02-27 — 04-03 complete: canonical + OG + BreadcrumbJsonLd on doctor, blog, and location dynamic routes
 
 Progress: [██████████] 93%
 
@@ -48,6 +48,7 @@ Progress: [██████████] 93%
 | Phase 03-homepage P01 | 2min | 2 tasks | 1 files |
 | Phase 04-seo-hardening P01 | 1min | 2 tasks | 4 files |
 | Phase 04-seo-hardening P02 | 4min | 2 tasks | 19 files |
+| Phase 04-seo-hardening P03 | 2min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -92,6 +93,8 @@ Recent decisions affecting current work:
 - [04-02]: Homepage gets canonical + OG but NO BreadcrumbJsonLd — single-item BreadcrumbList is schema.org non-compliant
 - [04-02]: gynecology and biote-hormone-therapy use 3-item breadcrumbs (Home > Services > Page) — they are sub-pages of the services index
 - [04-02]: All openGraph blocks must include images:[defaultOgImage] — Next.js shallow-merges openGraph, omitting images drops root layout OG image
+- [Phase 04-seo-hardening]: [04-03]: Blog posts use type:'article' in openGraph — correct OG type for blog content, enables richer social sharing previews
+- [Phase 04-seo-hardening]: [04-03]: Doctor bio pages use bio.slice(0,155) as OG description with fallback to constructed string
 
 ### Pending Todos
 
@@ -106,5 +109,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 04-seo-hardening 04-02-PLAN.md — canonical URLs, OG metadata, and BreadcrumbList JSON-LD on all 19 static pages
+Stopped at: Completed 04-seo-hardening 04-03-PLAN.md — canonical, OG, and BreadcrumbJsonLd on all 3 dynamic route types (97 pages)
 Resume file: None
