@@ -252,6 +252,7 @@ export default function HomePage() {
                 title: "Women's Health",
                 services: ['Obstetrics', 'Gynecology', 'Maternal-Fetal Medicine'],
                 desc: "Expert care for every stage of a woman's life — from annual exams to high-risk pregnancy management.",
+                href: '/womens-health',
               },
               {
                 icon: (
@@ -263,6 +264,7 @@ export default function HomePage() {
                 title: 'Primary Care',
                 services: ['Family Medicine', 'Immigration Physicals', 'Preventive Care'],
                 desc: 'Full-service primary care for your whole family — chronic conditions, urgent care, and preventive screenings.',
+                href: '/primary-care-physician-dallas',
               },
               {
                 icon: (
@@ -274,6 +276,7 @@ export default function HomePage() {
                 title: 'BioTE Hormone Therapy',
                 services: ['Pellet Therapy', 'Hormone Optimization', 'Energy & Vitality'],
                 desc: 'Personalized bioidentical hormone therapy to restore balance, energy, and quality of life.',
+                href: '/biote-hormone-therapy',
               },
             ].map((service) => (
               <div
@@ -293,7 +296,7 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <p className="text-sm text-gray-400 leading-relaxed">{service.desc}</p>
-                <a href="/services" className="mt-5 inline-flex items-center text-sm font-semibold text-sm-blue gap-1 group-hover:gap-2 transition-all">
+                <a href={service.href} className="mt-5 inline-flex items-center text-sm font-semibold text-sm-blue gap-1 group-hover:gap-2 transition-all">
                   Learn More →
                 </a>
               </div>
