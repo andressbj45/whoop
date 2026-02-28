@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import type { WithContext, Article } from 'schema-dts'
 import { getBlogPosts, getBlogPostBySlug } from '@/lib/content/blog'
 import { PageWrapper } from '@/components/layout/PageWrapper'
+import { defaultOgImage } from '@/lib/seo/og'
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 
 // Server Component — no 'use client' directive
 
@@ -29,11 +31,23 @@ export async function generateMetadata({
   const { slug } = await params
   const post = getBlogPostBySlug(slug)
   if (!post) {
-    return { title: 'Post Not Found | Stella Mattina Blog' }
+    return { title: 'Post Not Found | Stella Mattina' }
   }
+
+  const title = `${post.heading} | Stella Mattina Blog`
+  const description = post.meta_description ?? post.full_text.substring(0, 155)
+
   return {
-    title: `${post.heading} | Stella Mattina Blog`,
-    description: post.meta_description ?? post.full_text.substring(0, 155),
+    title,
+    description,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `/blog/${slug}`,
+      type: 'article',
+      images: [defaultOgImage],
+    },
   }
 }
 
@@ -71,6 +85,13 @@ export default async function BlogPostPage({
 
   return (
     <PageWrapper>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://stellamattina.com' },
+          { name: 'Blog', url: 'https://stellamattina.com/blog' },
+          { name: post.heading, url: `https://stellamattina.com/blog/${post.slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
