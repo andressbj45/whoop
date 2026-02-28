@@ -70,9 +70,9 @@
 
 - [x] **SEO-01**: Auto-generated `sitemap.xml` covering all pages
 - [x] **SEO-02**: `robots.txt` configured with AI crawlers allowed (ChatGPT-User, PerplexityBot, etc.)
-- [ ] **SEO-03**: Per-page OG images and meta descriptions (title, description) for all page types
-- [ ] **SEO-04**: BreadcrumbList JSON-LD on all non-home pages
-- [ ] **SEO-05**: Canonical URLs set on all pages to prevent duplicate content
+- [x] **SEO-03**: Per-page OG images and meta descriptions (title, description) for all page types
+- [x] **SEO-04**: BreadcrumbList JSON-LD on all non-home pages
+- [x] **SEO-05**: Canonical URLs set on all pages to prevent duplicate content
 
 ## v2 Requirements
 
@@ -139,9 +139,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CAR-01 | Phase 2 | Complete |
 | SEO-01 | Phase 4 | Complete |
 | SEO-02 | Phase 4 | Complete |
-| SEO-03 | Phase 4 | Pending |
-| SEO-04 | Phase 4 | Pending |
-| SEO-05 | Phase 4 | Pending |
+| SEO-03 | Phase 4 | Complete |
+| SEO-04 | Phase 4 | Complete |
+| SEO-05 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 33 total

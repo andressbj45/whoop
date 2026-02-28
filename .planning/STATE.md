@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 4 of 4 (SEO Hardening) — IN PROGRESS
-Plan: 1 of 4 — Plan 04-01 complete
-Status: Phase 4 plan 04-01 complete — sitemap.ts, robots.ts, metadataBase, and shared OG constant created
-Last activity: 2026-02-28 — 04-01 complete: SEO foundation (sitemap, robots, metadataBase, og.ts)
+Plan: 2 of 4 — Plan 04-02 complete
+Status: Phase 4 plan 04-02 complete — canonical URLs, OG metadata, and BreadcrumbList JSON-LD added to all 19 static pages
+Last activity: 2026-02-27 — 04-02 complete: BreadcrumbJsonLd component + canonical + OG on all 19 pages
 
-Progress: [██████████] 90%
+Progress: [██████████] 93%
 
 ## Performance Metrics
 
@@ -47,6 +47,7 @@ Progress: [██████████] 90%
 | Phase 02-content-pages P07 | 2min | 2 tasks | 5 files |
 | Phase 03-homepage P01 | 2min | 2 tasks | 1 files |
 | Phase 04-seo-hardening P01 | 1min | 2 tasks | 4 files |
+| Phase 04-seo-hardening P02 | 4min | 2 tasks | 19 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,10 @@ Recent decisions affecting current work:
 - [04-01]: robots.ts uses per-agent rules array to make AI crawler intent explicit and auditable
 - [04-01]: defaultOgImage uses hero-doctor-consultation.jpg (1200x800) — not ideal 1200x630 OG crop, proper crop is v2 task
 - [04-01]: openGraph in root layout uses shallow merge — child pages setting any openGraph field must re-include images: [defaultOgImage]
+- [04-02]: BreadcrumbJsonLd uses Record<string,unknown> consistent with all other JSON-LD in project — avoids schema-dts union type issues
+- [04-02]: Homepage gets canonical + OG but NO BreadcrumbJsonLd — single-item BreadcrumbList is schema.org non-compliant
+- [04-02]: gynecology and biote-hormone-therapy use 3-item breadcrumbs (Home > Services > Page) — they are sub-pages of the services index
+- [04-02]: All openGraph blocks must include images:[defaultOgImage] — Next.js shallow-merges openGraph, omitting images drops root layout OG image
 
 ### Pending Todos
 
@@ -100,6 +105,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-28
-Stopped at: Completed 04-seo-hardening 04-01-PLAN.md — SEO foundation (sitemap, robots, metadataBase, og.ts) complete
+Last session: 2026-02-27
+Stopped at: Completed 04-seo-hardening 04-02-PLAN.md — canonical URLs, OG metadata, and BreadcrumbList JSON-LD on all 19 static pages
 Resume file: None
