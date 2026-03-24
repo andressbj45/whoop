@@ -19,6 +19,18 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: ['Googlebot', 'Google-Extended'],
         allow: '/',
       },
+      {
+        userAgent: ['ClaudeBot', 'anthropic-ai'],
+        allow: '/',
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        disallow: '/',
+      },
     ],
     sitemap: 'https://stellamattina.com/sitemap.xml',
   }

@@ -6,6 +6,7 @@ import { FaqAccordion } from '@/components/home/FaqAccordion'
 import { getPractitioners } from '@/lib/content/practitioners'
 import { getLocations } from '@/lib/content/locations'
 import { defaultOgImage } from '@/lib/seo/og'
+import { HOME_FAQS } from '@/data/home-faqs'
 
 // ─── Reusable wave dividers ──────────────────────────────────────────────────
 
@@ -54,6 +55,19 @@ const INSURERS = [
   'Blue Cross Blue Shield', 'Aetna', 'Cigna', 'UnitedHealthcare',
   'Humana', 'Medicare', 'Medicaid', 'TriCare',
 ]
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: HOME_FAQS.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+}
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
@@ -130,6 +144,20 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Stella Mattina',
+          url: 'https://stellamattina.com',
+          description: "Expert women's health and primary care in Dallas-Fort Worth",
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* ══════════════════════════════════════════════

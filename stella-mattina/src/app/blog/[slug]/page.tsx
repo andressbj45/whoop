@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import type { WithContext, Article } from 'schema-dts'
 import { getBlogPosts, getBlogPostBySlug } from '@/lib/content/blog'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { defaultOgImage } from '@/lib/seo/og'
@@ -63,22 +62,27 @@ export default async function BlogPostPage({
     notFound()
   }
 
-  const jsonLd: WithContext<Article> = {
+  const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.heading,
+    '@type': 'BlogPosting',
+    headline: post.page_title,
+    description: post.meta_description,
     author: {
       '@type': 'Person',
-      name: post.author,
+      name: post.author || 'Stella Mattina',
     },
-    datePublished: post.published_date,
-    description: post.meta_description ?? post.full_text.substring(0, 155),
     publisher: {
       '@type': 'Organization',
       name: 'Stella Mattina',
       url: 'https://stellamattina.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://stellamattina.com/images/logo.png',
+      },
     },
+    datePublished: post.published_date || undefined,
     url: `https://stellamattina.com/blog/${post.slug}`,
+    mainEntityOfPage: `https://stellamattina.com/blog/${post.slug}`,
   }
 
   const paragraphs = renderBlogContent(post.full_text)

@@ -39,6 +39,26 @@ export default function GynecologistDallasPage() {
     })),
   }
 
+  const medicalWebPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalWebPage',
+    name: `${service.title} | Stella Mattina`,
+    description: service.meta_description ?? service.full_text.substring(0, 155),
+    url: 'https://stellamattina.com/gynecologist-dallas',
+    about: {
+      '@type': 'MedicalSpecialty',
+      name: 'Gynecology',
+    },
+    audience: {
+      '@type': 'Patient',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Stella Mattina',
+      url: 'https://stellamattina.com',
+    },
+  }
+
   return (
     <PageWrapper>
       <BreadcrumbJsonLd items={[
@@ -48,6 +68,10 @@ export default function GynecologistDallasPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
       />
       <ServicePageContent service={service} faqs={faqs} />
     </PageWrapper>
