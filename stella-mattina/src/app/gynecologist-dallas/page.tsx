@@ -10,13 +10,15 @@ import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd'
 const SLUG = 'gynecologist-dallas'
 const service = getServiceBySlug(SLUG)!
 
+const GYNECOLOGIST_DALLAS_DESCRIPTION = "Stella Mattina's board-certified OB-GYNs offer comprehensive gynecology care in Dallas — from well-woman exams and Pap smears to treatment of fibroids, endometriosis, and PCOS. Same-day appointments available."
+
 export const metadata: Metadata = {
   title: `${service.title} | Stella Mattina`,
-  description: service.meta_description ?? service.full_text.substring(0, 155),
+  description: GYNECOLOGIST_DALLAS_DESCRIPTION,
   alternates: { canonical: '/gynecologist-dallas' },
   openGraph: {
     title: `${service.title} | Stella Mattina`,
-    description: service.meta_description ?? service.full_text.substring(0, 155),
+    description: GYNECOLOGIST_DALLAS_DESCRIPTION,
     url: '/gynecologist-dallas',
     type: 'website',
     images: [defaultOgImage],

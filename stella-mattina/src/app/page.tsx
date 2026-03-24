@@ -32,15 +32,15 @@ function AccentLine() {
 
 const TESTIMONIALS = [
   {
-    quote: "I've been a patient at Stella Mattina for three years and I've never felt more heard or cared for. Dr. Goswami took the time to walk me through every option.",
-    name: 'Maria L.',
+    quote: "If it wasn't for Dr. Qureshi pushing me to get my mammogram, I would've never found out I had stage one breast cancer. I've been coming here since 2017 and I've always had the best experience.",
+    name: 'Patient at Stella Mattina',
     location: 'Dallas',
     rating: 5,
   },
   {
-    quote: 'Same-day appointment was available when I really needed it. The staff was warm, professional, and my OB was incredibly knowledgeable. Highly recommend.',
-    name: 'Jennifer R.',
-    location: 'Mesquite',
+    quote: "I've been a patient at Stella Mattina for three years and I've never felt more heard or cared for. Dr. Goswami took the time to walk me through every option.",
+    name: 'Maria L.',
+    location: 'Dallas',
     rating: 5,
   },
   {
@@ -173,12 +173,11 @@ export default function HomePage() {
                 Women&apos;s Health &amp; Family Care · Dallas–Fort Worth
               </p>
               <h1 className="font-display text-5xl sm:text-6xl font-bold text-sm-navy leading-tight">
-                Expert Women&apos;s &amp; Family Care,{' '}
-                <span className="text-sm-blue">Same Day</span>
+                DFW&apos;s Most Trusted{' '}
+                <span className="text-sm-blue">Women&apos;s Health Network</span>
               </h1>
               <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-lg">
-                Board-certified OBGYNs, family care physicians, and primary care
-                providers accepting most major insurance — across 15+ DFW locations.
+                25+ board-certified OBGYNs, maternal-fetal medicine specialists, and primary care physicians — trained at top medical programs across the country, with same-day availability across 15+ DFW locations.
               </p>
 
               <div className="mt-8">
@@ -197,7 +196,7 @@ export default function HomePage() {
 
               {/* Inline trust checks */}
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-                {['Same-Day Appointments', 'Walk-ins Welcome', 'All Major Insurance'].map((label) => (
+                {['Board-Certified OB-GYNs & MDs', 'Same-Day Appointments', 'All Major Insurance Accepted'].map((label) => (
                   <span key={label} className="flex items-center gap-1.5 text-sm text-gray-400">
                     <svg className="w-4 h-4 text-sm-blue shrink-0" fill="none" viewBox="0 0 16 16">
                       <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -236,10 +235,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
-              { value: '30+',    label: 'Years Experience' },
-              { value: '15+',    label: 'DFW Locations' },
-              { value: '25+',    label: 'Providers' },
+              { value: '25+',    label: 'Board-Certified Providers' },
+              { value: '30+',    label: 'Years of Excellence' },
               { value: '4.8★',  label: 'Google Rating' },
+              { value: '15+',    label: 'DFW Locations' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-1">
                 <span className="text-3xl font-bold text-white">{item.value}</span>
@@ -260,10 +259,10 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <AccentLine />
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-sm-navy">
-              Healthcare Solutions
+              Clinical Specialties
             </h2>
             <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-              Comprehensive, compassionate care for women and families at every stage of life.
+              Expert clinical care for women and families — from routine gynecology and primary care to high-risk obstetrics and hormone therapy.
             </p>
           </div>
 
@@ -279,7 +278,7 @@ export default function HomePage() {
                 ),
                 title: "Women's Health",
                 services: ['Obstetrics', 'Gynecology', 'Maternal-Fetal Medicine'],
-                desc: "Expert care for every stage of a woman's life — from annual exams to high-risk pregnancy management.",
+                desc: "Expert clinical care for every stage of a woman's life — from annual exams and high-risk pregnancy management to minimally invasive gynecological surgery.",
                 href: '/womens-health',
               },
               {
@@ -291,7 +290,7 @@ export default function HomePage() {
                 ),
                 title: 'Primary Care',
                 services: ['Family Medicine', 'Immigration Physicals', 'Preventive Care'],
-                desc: 'Full-service primary care for your whole family — chronic conditions, urgent care, and preventive screenings.',
+                desc: 'Comprehensive primary care for your whole family — chronic disease management, preventive screenings, immigration physicals, and urgent care.',
                 href: '/primary-care-physician-dallas',
               },
               {
@@ -303,7 +302,7 @@ export default function HomePage() {
                 ),
                 title: 'BioTE Hormone Therapy',
                 services: ['Pellet Therapy', 'Hormone Optimization', 'Energy & Vitality'],
-                desc: 'Personalized bioidentical hormone therapy to restore balance, energy, and quality of life.',
+                desc: 'Evidence-based bioidentical hormone pellet therapy administered by certified providers — clinically designed to restore balance, energy, and quality of life.',
                 href: '/biote-hormone-therapy',
               },
             ].map((service) => (
@@ -376,7 +375,7 @@ export default function HomePage() {
               Meet Our Providers
             </h2>
             <p className="mt-4 text-gray-500">
-              Board-certified physicians dedicated to compassionate, expert care.
+              Our physicians trained at programs including Emory University, UT Southwestern, Florida State College of Medicine, and St. Louis University — bringing that expertise to your neighborhood.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
@@ -400,6 +399,13 @@ export default function HomePage() {
                 <p className="text-xs text-gray-400">{p.locations[0] ?? ''}</p>
               </a>
             ))}
+          </div>
+          <div className="mt-10 mb-4 rounded-xl border border-sm-gray bg-[#F8F9FC] p-6 flex flex-col sm:flex-row gap-4 items-start">
+            <div>
+              <p className="text-xs font-semibold tracking-widest uppercase text-sm-blue mb-1">Medical Director</p>
+              <p className="font-display text-lg font-bold text-sm-navy">Dr. Gonzalo Venegas, MD</p>
+              <p className="text-sm text-gray-500 mt-1">Former Chairman, Dept. of OB-GYN — Methodist Dallas Medical Center · Parkland Health &amp; Hospital System Board · Clinical Faculty, UT Southwestern · 40+ years serving Dallas women</p>
+            </div>
           </div>
           <div className="text-center mt-10">
             <a
